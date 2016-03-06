@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nVCC=21
+nVCC=16
 GPIODIR=/sys/class/gpio
 
 if [ $# != 1 ]; then

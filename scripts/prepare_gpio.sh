@@ -1,7 +1,7 @@
 #!/bin/bash
 
-nVPP=16
-nVCC=21
+nVPP=21
+nVCC=16
 DO=20
 DI=19
 CK=26
