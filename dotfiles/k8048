@@ -75,7 +75,7 @@ SLEEP=10
 #BITRULES=0x4F00
 
 #RPI GPIO with custom frontend
-BITRULES=0x0F04
+BITRULES=0x0F14
 
 # I/O busy cursor (0=DISABLED)
 #
