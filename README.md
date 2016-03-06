@@ -97,7 +97,7 @@ I powered up the thing.
 
 No smoke, that's a good indication :)
 
-![The crappy-hacky setup](images/setup.png)
+![The crappy-hacky setup](images/setup.jpg)
 
 You can see other wires on the RPi; those are the serial cable (for tty), and
 a reset cable, connected to a little ARM board you can spot on the left. I use it
