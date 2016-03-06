@@ -87,6 +87,14 @@ could readily made with spare parts I had at home :)
 The jumper purpose is to eventually disable the resistors if I want to switch back
 to 5V signals.
 
+In my programmer I used a 7812 regulator to obtain the 13V supply from an external supply,
+and a 7805 to obtain the +5V from the +13V rail.
+
+In order to make the 7812 to ouput about 13V I put a couple of diodes in series to its GND pin. The external power supply is something around 18V.
+
+I have also two leds on the front panel (they are not visible in the pictures) to monitor
+the VCC (+5V) and VPP (+13V) states.
+
 Finally I build a simple cable to connect the RPi GPIOs to the DB-25 connector of
 my old parallel programmer.
 
