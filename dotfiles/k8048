@@ -168,7 +168,7 @@ PGD=11
 VPP=21
 
 # PGM              - no PGM,
-PGM=22
+PGM=255
 
 # PGC CLOCK
 PGC=26
