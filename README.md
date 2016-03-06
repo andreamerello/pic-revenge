@@ -89,6 +89,31 @@ my old parallel programmer.
 
 ![LPT RPi cable](images/cable.jpg)
 
+Here is the diagram for the RPi pin I choose
+
+```
+                                                     vcc  do  vpp
+                                                 gnd g16  g20 g21
++----------------------------------------------------------------+
+| 02 04 06 08 10 12 14 16 18 20 22 24 26 28 30 32 34  36  38  40 |
+| 01 03 05 07 09 11 13 15 17 19 21 23 25 27 29 31 33  35  37  39 |
++----------------------------------------------------------------+
+                                                      g19 g26 gnd
+						      di  clk
+```
+
+The cable wiring diagram is
+```
+DB25 RPi function
+2    38  DO
+3    37  CLK
+4    26  VCC
+5    40  VDD
+10   35  DI
+18   29  GND
+```
+NOTE: VCC and VPP are actually VCC nEnable and VPP nEnable control signals.
+
 And finally..
 -------------
 
