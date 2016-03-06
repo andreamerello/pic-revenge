@@ -26,11 +26,14 @@ DEVICE=RPI
 # RASPBERRY PI VELLEMAN K8048
 #SLEEP=10
 # RASPBERRY PI GPIO
-SLEEP=1
+#SLEEP=1
 # MCP23017 I2C
 #SLEEP=0
 # GPIO BIT-BANG
 #SLEEP=1
+
+# RASPBERRY PI 2 (with my custom hw frontend, with OC driver, PUP and slow rise time)
+SLEEP=10
 
 # I/O bit rules.
 #       These rules determine the polarity of the control lines and whether
