@@ -87,7 +87,7 @@ to 5V signals.
 Finally I build a simple cable to connect the RPi GPIOs to the DB-25 connector of
 my old parallel programmer.
 
-![LPT RPi cable](images/cable.png)
+![LPT RPi cable](images/cable.jpg)
 
 And finally..
 -------------
