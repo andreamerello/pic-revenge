@@ -99,7 +99,7 @@ Here is the diagram for the RPi pin I choose
 | 01 03 05 07 09 11 13 15 17 19 21 23 25 27 29 31 33  35  37  39 |
 +----------------------------------------------------------------+
                                                       g19 g26 gnd
-						      di  clk
+                                                      di  clk
 ```
 
 The cable wiring diagram is
