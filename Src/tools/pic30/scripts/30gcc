@@ -1,0 +1,20 @@
+#!/bin/sh
+source $(dirname "$0")/include
+
+rm -Rf ${BUILD}/gcc-coff
+mkdir -p ${BUILD}/gcc-coff
+cd ${BUILD}/gcc-coff
+${GCCSRC}/gcc/configure --target=pic30-coff --disable-libgcc --disable-lto --disable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --disable-hosted-libstdcxx --with-gnu-as --with-gnu-ld --enable-languages=c --disable-nls --disable-libgomp --without-headers --disable-libffi --disable-bootstrap --prefix=${TARGET} --libexecdir=${TARGET}/lib --program-prefix="coff-" --with-host-libstdcxx="-lm -Wl,-Bstatic,-lstdc++,-Bdynamic"
+make -j 8
+make install
+cd ${CWD}
+
+#rm -Rf ${BUILD}/gcc-elf
+#mkdir -p ${BUILD}/gcc-elf
+#cd ${BUILD}/gcc-elf
+#${GCCSRC}/gcc/configure --target=pic30-elf --with-dwarf2 --disable-libgcc --disable-lto --disable-threads --disable-libmudflap --disable-libssp --disable-libstdcxx-pch --disable-hosted-libstdcxx --with-gnu-as --with-gnu-ld --enable-languages=c --disable-nls --disable-libgomp --without-headers --disable-libffi --disable-bootstrap --prefix=${TARGET} --libexecdir=${TARGET}/lib --program-prefix="elf-" --with-host-libstdcxx="-lm -Wl,-Bstatic,-lstdc++,-Bdynamic"
+#make -j 8
+#make install
+#cd ${CWD}
+
+exit 0

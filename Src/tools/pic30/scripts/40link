@@ -1,0 +1,10 @@
+#!/bin/bash
+source $(dirname "$0")/include
+
+FILES=`find ${TARGET}/bin/ -name "*-coff-*"`
+for F in ${FILES}; do
+	L=`echo ${F} | awk -F- '{ print $4 }'`
+	ln -f ${F} ${TARGET}/lib/gcc/pic30-coff/4.5.1/${L}
+done
+
+exit 0

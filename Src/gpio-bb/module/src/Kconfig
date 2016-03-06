@@ -1,0 +1,6 @@
+config GPIO_BIT_BANG
+    tristate "GPIO bit-bang"
+    depends on GENERIC_GPIO
+    select GPIO_BIT_BANG
+    help
+      GPIO bit-bang driver
