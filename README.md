@@ -77,6 +77,9 @@ The only problem was about the logic level of the data from the programmer to th
 RPi, that has 5V high level. I don't know if the RPi inputs are 5V tolerant, I
 think they aren't, and I wanted to go safe, so I decided to modify the circuit.
 
+**NOTE: this means that you will probably FRY you RPi** without the resistor and if you forget
+to close the jumper.
+
 As you can see, in red, I have added a couple of resistors to lower the 5V signal
 to about 3.3V. Maybe there are better solutions, but this was something that I
 could readily made with spare parts I had at home :)
