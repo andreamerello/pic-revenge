@@ -1,0 +1,37 @@
+This following list contains items that need to be completed.  This 
+list is in no particular order.
+
+gputils
+  * grep the source for FIXME and fix.
+  * Add a check for the version of flex.
+  * Start migrating to the GNU coding style.
+  * Prefix all visible library functions with gp_. Add _ to all 
+    others.
+  * Switch to xmalloc and obstacks.
+  * Use dejagnu for testing.
+
+gpasm
+  * Implement nested while loops.
+  * Clean up the byte verses word, data memory/program memory stuff.
+  * Move opcode generator from /gpasm/directive.c to 
+    /libgputils/opcode.c.
+  * Move COD file generation to library.
+  * Add macro names to symbol table in listing file.
+  * Undefined coff symbols are always at the end of the coff table.
+  * Add relocations for the difference between symbols in the same section.
+  * Allow multiple symbols with the same name in different sections of COFF
+    asm files.
+  * Allow expressions in .direct.  Reduce to operators, numbers, and controls.
+
+gplink
+  * Removed unnecessary page and bank switches.
+  * Peep-like optimization.  Consider using pcode from sdcc-pic14.
+  * Partial linking.
+  * Use extended COD file types.
+
+gpvc
+  * Use the disassembler to decode the program memory sections.
+
+gpprocessor.c
+  * Coff_type of the pic18lf47k40 bogus. (Microchip error in the MPLABX-3.15, original value is 0x0000.)
+    Temporarily fixed to 0xFFFF.

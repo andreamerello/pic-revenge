@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC16F707</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC16F707-feat.html">Features</a>
+      <a class="selected" href="PIC16F707-conf.html">Configuration Bits</a>
+      <a href="PIC16F707-ram.html">RAM map</a>
+      <a href="PIC16F707-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC16F707</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1 (address:0x2007, mask:0x177F, <span class="confSwDefault">default:0x177F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FOSC -- Oscillator Selection bits (bitmask:0x0007)</th></tr>
+      <tr>
+        <td class="confSwName">FOSC = LP_OSC</td>
+        <td class="confSwValue">0x3FF8</td>
+        <td class="confSwExpl">LP oscillator: Low-power crystal on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = XT_OSC</td>
+        <td class="confSwValue">0x3FF9</td>
+        <td class="confSwExpl">XT oscillator: Crystal/resonator on RA6/OSC2/CLKIN and RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = HS_OSC</td>
+        <td class="confSwValue">0x3FFA</td>
+        <td class="confSwExpl">HS oscillator: High Speed crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = EC_OSC</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">EC oscillator: I/O function on RA6/OSC2/CLKOUT pin, CLKIN on RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = INTOSCIO</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN pins.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = INTOSC</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function  on RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = EXTRCIO</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FOSC = EXTRC</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTE -- Watchdog Timer Enable bit (bitmask:0x0008)</th></tr>
+      <tr>
+        <td class="confSwName">WDTE = OFF</td>
+        <td class="confSwValue">0x3FF7</td>
+        <td class="confSwExpl">WDT disabled and can be enabled by SWDTEN bit of the WDTCON register.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRTE -- Power-up Timer Enable bit (bitmask:0x0010)</th></tr>
+      <tr>
+        <td class="confSwName">PWRTE = ON</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRTE = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MCLRE -- RE3/MCLR Pin Function Select bit (bitmask:0x0020)</th></tr>
+      <tr>
+        <td class="confSwName">MCLRE = OFF</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">RE3/MCLR pin function is digital input, MCLR internally tied to VDD.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MCLRE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">RE3/MCLR pin function is MCLR.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP -- Code Protection bit (bitmask:0x0040)</th></tr>
+      <tr>
+        <td class="confSwName">CP = ON</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">Program memory code protection is enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Program memory code protection is disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOREN -- Brown-out Reset Selection bits (bitmask:0x0300)</th></tr>
+      <tr>
+        <td class="confSwName">BOREN = OFF</td>
+        <td class="confSwValue">0x3CFF</td>
+        <td class="confSwExpl">BOR disabled (Preconditioned State).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOREN = NSLEEP</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">BOR enabled during operation and disabled in Sleep.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">BOR enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BORV -- Brown-out Reset Voltage Selection bit (bitmask:0x0400)</th></tr>
+      <tr>
+        <td class="confSwName">BORV = 25</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">Brown-out Reset Voltage (VBOR) set to 2.5 V nominal.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BORV = 19</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset Voltage (VBOR) set to 1.9 V nominal.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PLLEN -- INTOSC PLLEN Enable Bit (bitmask:0x1000)</th></tr>
+      <tr>
+        <td class="confSwName">PLLEN = OFF</td>
+        <td class="confSwValue">0x2FFF</td>
+        <td class="confSwExpl">INTOSC Frequency is 500 kHz.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PLLEN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">INTOSC Frequency is 16 MHz (32x).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2 (address:0x2008, mask:0x0030, <span class="confSwDefault">default:0x0030</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">VCAPEN -- Voltage Regulator Capacitor Enable bits (bitmask:0x0030)</th></tr>
+      <tr>
+        <td class="confSwName">VCAPEN = RA0</td>
+        <td class="confSwValue">0x3FCF</td>
+        <td class="confSwExpl">VCAP functionality is enabled on RA0.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">VCAPEN = RA5</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">VCAP functionality is enabled on RA5.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">VCAPEN = RA6</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">VCAP functionality is enabled on RA6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">VCAPEN = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">All VCAP pin functions are disabled.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:22 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

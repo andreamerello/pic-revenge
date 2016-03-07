@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC17C752</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic16_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC17C752-feat.html">Features</a>
+      <a class="selected" href="PIC17C752-conf.html">Configuration Bits</a>
+      <a href="PIC17C752-ram.html">RAM map</a>
+      <a href="PIC17C752-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC17C752</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG (address:0xFE00-0xFE0F)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MODE -- Processor Mode Select bits (bitmask:0xFFFF)</th></tr>
+      <tr>
+        <td class="confSwName">MODE = _PMC_MODE</td>
+        <td class="confSwValue">0x7FAF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">MODE = _XMC_MODE</td>
+        <td class="confSwValue">0xFFBF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">MODE = _MC_MODE</td>
+        <td class="confSwValue">0xFFEF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">MODE = _MP_MODE</td>
+        <td class="confSwValue">0xFFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BODEN -- Brown-out Detect Enable (bitmask:0xFFFF)</th></tr>
+      <tr>
+        <td class="confSwName">BODEN = _BODEN_OFF</td>
+        <td class="confSwValue">0xBFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">BODEN = _BODEN_ON</td>
+        <td class="confSwValue">0xFFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDT -- WDT Postscaler Select bits (bitmask:0xFFFF)</th></tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_NORM</td>
+        <td class="confSwValue">0xFFF3</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_OFF</td>
+        <td class="confSwValue">0xFFF3</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_64</td>
+        <td class="confSwValue">0xFFF7</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_256</td>
+        <td class="confSwValue">0xFFFB</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_1</td>
+        <td class="confSwValue">0xFFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDT = _WDT_0</td>
+        <td class="confSwValue">0xFFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">OSC -- Oscillator Select bits (bitmask:0xFFFF)</th></tr>
+      <tr>
+        <td class="confSwName">OSC = _LF_OSC</td>
+        <td class="confSwValue">0xFFFC</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = _RC_OSC</td>
+        <td class="confSwValue">0xFFFD</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = _XT_OSC</td>
+        <td class="confSwValue">0xFFFE</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = _EC_OSC</td>
+        <td class="confSwValue">0xFFFF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:24 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

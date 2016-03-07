@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC18F1330</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic16e_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC18F1330-feat.html">Features</a>
+      <a class="selected" href="PIC18F1330-conf.html">Configuration Bits</a>
+      <a href="PIC18F1330-ram.html">RAM map</a>
+      <a href="PIC18F1330-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC18F1330</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1H (address:0x300001, mask:0xCF, <span class="confSwDefault">default:0x07</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">OSC -- Oscillator (bitmask:0x0F)</th></tr>
+      <tr>
+        <td class="confSwName">OSC = LP</td>
+        <td class="confSwValue">0xF0</td>
+        <td class="confSwExpl">LP Oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = XT</td>
+        <td class="confSwValue">0xF1</td>
+        <td class="confSwExpl">XT Oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = HS</td>
+        <td class="confSwValue">0xF2</td>
+        <td class="confSwExpl">HS Oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = RC</td>
+        <td class="confSwValue">0xF3</td>
+        <td class="confSwExpl">External RC oscillator, CLKO function on RA6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = EC</td>
+        <td class="confSwValue">0xF4</td>
+        <td class="confSwExpl">EC oscillator, CLKO function on RA6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = ECIO</td>
+        <td class="confSwValue">0xF5</td>
+        <td class="confSwExpl">EC oscillator, port function on RA6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = HSPLL</td>
+        <td class="confSwValue">0xF6</td>
+        <td class="confSwExpl">HS oscillator, PLL enabled (Clock Frequency = 4 x FOSC1).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">OSC = RCIO</td>
+        <td class="confSwValue confSwDefault">0xF7</td>
+        <td class="confSwExpl confSwDefault">External RC oscillator, port function on RA6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = INTIO2</td>
+        <td class="confSwValue">0xF8</td>
+        <td class="confSwExpl">Internal oscillator, port function on RA6 and RA7.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = INTIO1</td>
+        <td class="confSwValue">0xF9</td>
+        <td class="confSwExpl">Internal oscillator, CLKO function on RA6, port function on RA7.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FCMEN -- Fail-Safe Clock Monitor Enable bit (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName confSwDefault">FCMEN = OFF</td>
+        <td class="confSwValue confSwDefault">0xBF</td>
+        <td class="confSwExpl confSwDefault">Fail-Safe Clock Monitor disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FCMEN = ON</td>
+        <td class="confSwValue">0xFF</td>
+        <td class="confSwExpl">Fail-Safe Clock Monitor enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">IESO -- Internal/External Oscillator Switchover bit (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName confSwDefault">IESO = OFF</td>
+        <td class="confSwValue confSwDefault">0x7F</td>
+        <td class="confSwExpl confSwDefault">Oscillator Switchover mode disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">IESO = ON</td>
+        <td class="confSwValue">0xFF</td>
+        <td class="confSwExpl">Oscillator Switchover mode enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2L (address:0x300002, mask:0x1F, <span class="confSwDefault">default:0x1F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRT -- Power-up Timer Enable bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">PWRT = ON</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRT = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOR -- Brown-out Reset Enable bits (bitmask:0x06)</th></tr>
+      <tr>
+        <td class="confSwName">BOR = OFF</td>
+        <td class="confSwValue">0xF9</td>
+        <td class="confSwExpl">Brown-out Reset disabled in hardware and software.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOR = SBORENCTRL</td>
+        <td class="confSwValue">0xFB</td>
+        <td class="confSwExpl">Brown-out Reset enabled and controlled by software (SBOREN is enabled).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOR = BOACTIVE</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">Brown-out Reset enabled in hardware only and disabled in Sleep mode (SBOREN is disabled).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOR = BOHW</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset enabled in hardware only (SBOREN is disabled).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BORV -- Brown-out Reset Voltage bits (bitmask:0x18)</th></tr>
+      <tr>
+        <td class="confSwName">BORV = 0</td>
+        <td class="confSwValue">0xE7</td>
+        <td class="confSwExpl">Maximum setting.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BORV = 1</td>
+        <td class="confSwValue">0xEF</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName">BORV = 2</td>
+        <td class="confSwValue">0xF7</td>
+        <td class="confSwExpl"></td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BORV = 3</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Minimum setting.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2H (address:0x300003, mask:0x1F, <span class="confSwDefault">default:0x1F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDT -- Watchdog Timer Enable bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">WDT = OFF</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">WDT disabled (control is placed on the SWDTEN bit).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDT = ON</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTPS -- Watchdog Timer Postscale Select bits (bitmask:0x1E)</th></tr>
+      <tr>
+        <td class="confSwName">WDTPS = 1</td>
+        <td class="confSwValue">0xE1</td>
+        <td class="confSwExpl">1:1.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 2</td>
+        <td class="confSwValue">0xE3</td>
+        <td class="confSwExpl">1:2.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 4</td>
+        <td class="confSwValue">0xE5</td>
+        <td class="confSwExpl">1:4.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 8</td>
+        <td class="confSwValue">0xE7</td>
+        <td class="confSwExpl">1:8.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 16</td>
+        <td class="confSwValue">0xE9</td>
+        <td class="confSwExpl">1:16.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 32</td>
+        <td class="confSwValue">0xEB</td>
+        <td class="confSwExpl">1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 64</td>
+        <td class="confSwValue">0xED</td>
+        <td class="confSwExpl">1:64.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 128</td>
+        <td class="confSwValue">0xEF</td>
+        <td class="confSwExpl">1:128.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 256</td>
+        <td class="confSwValue">0xF1</td>
+        <td class="confSwExpl">1:256.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 512</td>
+        <td class="confSwValue">0xF3</td>
+        <td class="confSwExpl">1:512.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 1024</td>
+        <td class="confSwValue">0xF5</td>
+        <td class="confSwExpl">1:1024.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 2048</td>
+        <td class="confSwValue">0xF7</td>
+        <td class="confSwExpl">1:2048.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 4096</td>
+        <td class="confSwValue">0xF9</td>
+        <td class="confSwExpl">1:4096.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 8192</td>
+        <td class="confSwValue">0xFB</td>
+        <td class="confSwExpl">1:8192.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 16384</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">1:16384.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTPS = 32768</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">1:32768.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG3L (address:0x300004, mask:0x0E, <span class="confSwDefault">default:0x0E</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWMPIN -- PWM Output Pins Reset State Control bit (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">PWMPIN = ON</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">PWM outputs drive active states upon Reset.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWMPIN = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">PWM outputs disabled upon Reset.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">LPOL -- Low-Side Transistors Polarity bit (Even PWM Output Polarity Control bit) (bitmask:0x04)</th></tr>
+      <tr>
+        <td class="confSwName">LPOL = LOW</td>
+        <td class="confSwValue">0xFB</td>
+        <td class="confSwExpl">PWM0, PWM2 and PWM4 are active-low.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">LPOL = HIGH</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">PWM0, PWM2 and PWM4 are active-high (default).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">HPOL -- High Side Transistors Polarity bit (Odd PWM Output Polarity Control bit) (bitmask:0x08)</th></tr>
+      <tr>
+        <td class="confSwName">HPOL = LOW</td>
+        <td class="confSwValue">0xF7</td>
+        <td class="confSwExpl">PWM1, PWM3 and PWM5 are active-low.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">HPOL = HIGH</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">PWM1, PWM3 and PWM5 are active-high (default).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG3H (address:0x300005, mask:0x89, <span class="confSwDefault">default:0x81</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FLTAMX -- FLTA Mux bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">FLTAMX = RA7</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">FLTA input is muxed onto RA7.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FLTAMX = RA5</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">FLTA input is muxed onto RA5.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">T1OSCMX -- T1OSO/T1CKI MUX bit (bitmask:0x08)</th></tr>
+      <tr>
+        <td class="confSwName confSwDefault">T1OSCMX = LOW</td>
+        <td class="confSwValue confSwDefault">0xF7</td>
+        <td class="confSwExpl confSwDefault">T1OSO/T1CKI pin resides on RB2.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">T1OSCMX = HIGH</td>
+        <td class="confSwValue">0xFF</td>
+        <td class="confSwExpl">T1OSO/T1CKI pin resides on RA6.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MCLRE -- Master Clear Enable bit (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">MCLRE = OFF</td>
+        <td class="confSwValue">0x7F</td>
+        <td class="confSwExpl">RA5 input pin enabled, MCLR pin disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MCLRE = ON</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">MCLR pin enabled, RA5 input pin disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG4L (address:0x300006, mask:0xF1, <span class="confSwDefault">default:0x81</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">STVREN -- Stack Overflow/Underflow Reset Enable bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">STVREN = OFF</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">Reset on stack overflow/underflow disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">STVREN = ON</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Reset on stack overflow/underflow enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BBSIZ -- Boot Block Size Select bits (bitmask:0x30)</th></tr>
+      <tr>
+        <td class="confSwName confSwDefault">BBSIZ = BB256</td>
+        <td class="confSwValue confSwDefault">0xCF</td>
+        <td class="confSwExpl confSwDefault">256 Words (512 Bytes) Boot Block size.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BBSIZ = BB512</td>
+        <td class="confSwValue">0xDF</td>
+        <td class="confSwExpl">512 Words (1024 Bytes) Boot Block size.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BBSIZ = BB1K</td>
+        <td class="confSwValue">0xFF</td>
+        <td class="confSwExpl">1K Words (2048 Bytes) Boot Block size.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">XINST -- Extended Instruction Set Enable bit (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName confSwDefault">XINST = OFF</td>
+        <td class="confSwValue confSwDefault">0xBF</td>
+        <td class="confSwExpl confSwDefault">Instruction set extension and Indexed Addressing mode disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">XINST = ON</td>
+        <td class="confSwValue">0xFF</td>
+        <td class="confSwExpl">Instruction set extension and Indexed Addressing mode enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DEBUG -- Background Debugger Enable bit (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">DEBUG = ON</td>
+        <td class="confSwValue">0x7F</td>
+        <td class="confSwExpl">Background debugger enabled, RB6 and RB7 are dedicated to In-Circuit Debug.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DEBUG = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Background debugger disabled, RB6 and RB7 configured as general purpose I/O pins.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG5L (address:0x300008, mask:0x03, <span class="confSwDefault">default:0x03</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP0 -- Code Protection bit Block 0 (000800-000FFF) (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">CP0 = ON</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">Block 0 is code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP0 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 0 is not code-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP1 -- Code Protection bit Block 1 (001000-001FFF) (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">CP1 = ON</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">Block 1 is code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP1 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 1 is not code-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG5H (address:0x300009, mask:0xC0, <span class="confSwDefault">default:0xC0</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPB -- Code Protection bit (Boot Block Memory Area) (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName">CPB = ON</td>
+        <td class="confSwValue">0xBF</td>
+        <td class="confSwExpl">Boot Block is code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPB = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Boot Block is not code-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPD -- Code Protection bit (Data EEPROM) (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">CPD = ON</td>
+        <td class="confSwValue">0x7F</td>
+        <td class="confSwExpl">Data EEPROM is code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPD = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Data EEPROM is not code-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG6L (address:0x30000A, mask:0x03, <span class="confSwDefault">default:0x03</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRT0 -- Write Protection bit Block 0 (000800-000FFF) (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">WRT0 = ON</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">Block 0 is write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRT0 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 0 is not write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRT1 -- Write Protection bit Block 1 (001000-001FFF) (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">WRT1 = ON</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">Block 1 is write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRT1 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 1 is not write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG6H (address:0x30000B, mask:0xE0, <span class="confSwDefault">default:0xE0</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRTC -- Write Protection bit (Configuration Registers) (bitmask:0x20)</th></tr>
+      <tr>
+        <td class="confSwName">WRTC = ON</td>
+        <td class="confSwValue">0xDF</td>
+        <td class="confSwExpl">Configuration registers are write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRTC = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Configuration registers are not write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRTB -- Write Protection bit (Boot Block Memory Area) (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName">WRTB = ON</td>
+        <td class="confSwValue">0xBF</td>
+        <td class="confSwExpl">Boot Block is write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRTB = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Boot Block is not write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRTD -- Write Protection bit (Data EEPROM) (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">WRTD = ON</td>
+        <td class="confSwValue">0x7F</td>
+        <td class="confSwExpl">Data EEPROM is write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRTD = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Data EEPROM is not write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG7L (address:0x30000C, mask:0x03, <span class="confSwDefault">default:0x03</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">EBTR0 -- Table Read Protection bit Block 0 (000800-000FFF) (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">EBTR0 = ON</td>
+        <td class="confSwValue">0xFE</td>
+        <td class="confSwExpl">Block 0 is protected from table reads executed in other blocks.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">EBTR0 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 0 is not protected from table reads executed in other blocks.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">EBTR1 -- Table Read Protection bit Block 1 (001000-001FFF) (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">EBTR1 = ON</td>
+        <td class="confSwValue">0xFD</td>
+        <td class="confSwExpl">Block 1 is protected from table reads executed in other blocks.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">EBTR1 = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Block 1 is not protected from table reads executed in other blocks.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG7H (address:0x30000D, mask:0x40, <span class="confSwDefault">default:0x40</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">EBTRB -- Table Read Protection bit (Boot Block Memory Area) (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName">EBTRB = ON</td>
+        <td class="confSwValue">0xBF</td>
+        <td class="confSwExpl">Boot Block is protected from table reads executed in other blocks.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">EBTRB = OFF</td>
+        <td class="confSwValue confSwDefault">0xFF</td>
+        <td class="confSwExpl confSwDefault">Boot Block is not protected from table reads executed in other blocks.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:25 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

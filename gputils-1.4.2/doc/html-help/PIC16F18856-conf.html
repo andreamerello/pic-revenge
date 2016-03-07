@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC16F18856</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14e_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC16F18856-feat.html">Features</a>
+      <a class="selected" href="PIC16F18856-conf.html">Configuration Bits</a>
+      <a href="PIC16F18856-ram.html">RAM map</a>
+      <a href="PIC16F18856-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC16F18856</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1 (address:0x8007, mask:0x2977, <span class="confSwDefault">default:0x2977</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FEXTOSC -- External Oscillator mode selection bits (bitmask:0x0007)</th></tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = LP</td>
+        <td class="confSwValue">0x3FF8</td>
+        <td class="confSwExpl">LP (crystal oscillator) optimized for 32.768kHz; PFM set to low power.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = XT</td>
+        <td class="confSwValue">0x3FF9</td>
+        <td class="confSwExpl">XT (crystal oscillator) above 500kHz, below 4MHz; PFM set to medium power.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = HS</td>
+        <td class="confSwValue">0x3FFA</td>
+        <td class="confSwExpl">HS (crystal oscillator) above 4MHz; PFM set to high power.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = Reserved</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">Reserved.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = OFF</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">Oscillator not enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = ECL</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">EC below 500kHz; PFM set to low power.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FEXTOSC = ECM</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">EC for 500kHz to 8MHz; PFM set to medium power.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FEXTOSC = ECH</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">EC above 8MHz; PFM set to high power.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">RSTOSC -- Power-up default value for COSC bits (bitmask:0x0070)</th></tr>
+      <tr>
+        <td class="confSwName">RSTOSC = HFINT32</td>
+        <td class="confSwValue">0x3F8F</td>
+        <td class="confSwExpl">HFINTOSC with OSCFRQ= 32 MHz and CDIV = 1:1.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = HFINTPLL</td>
+        <td class="confSwValue">0x3F9F</td>
+        <td class="confSwExpl">HFINTOSC with 2x PLL, with OSCFRQ = 16 MHz and CDIV = 1:! (FOSC = 32 MHz).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = EXT4X</td>
+        <td class="confSwValue">0x3FAF</td>
+        <td class="confSwExpl">EXTOSC with 4x PLL, with EXTOSC operating per FEXTOSC bits.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = Reserved</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">Reserved.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = SOSC</td>
+        <td class="confSwValue">0x3FCF</td>
+        <td class="confSwExpl">SOSC.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = LFINT</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">LFINTOSC.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">RSTOSC = HFINT1</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">HFINTOSC (1MHz).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">RSTOSC = EXT1X</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">EXTOSC operating per FEXTOSC bits.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CLKOUTEN -- Clock Out Enable bit (bitmask:0x0100)</th></tr>
+      <tr>
+        <td class="confSwName">CLKOUTEN = ON</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">CLKOUT function is enabled; FOSC/4 clock appears at OSC2.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CLKOUTEN = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">CLKOUT function is disabled; i/o or oscillator function on OSC2.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CSWEN -- Clock Switch Enable bit (bitmask:0x0800)</th></tr>
+      <tr>
+        <td class="confSwName">CSWEN = OFF</td>
+        <td class="confSwValue">0x37FF</td>
+        <td class="confSwExpl">The NOSC and NDIV bits cannot be changed by user software.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CSWEN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Writing to NOSC and NDIV is allowed.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FCMEN -- Fail-Safe Clock Monitor Enable bit (bitmask:0x2000)</th></tr>
+      <tr>
+        <td class="confSwName">FCMEN = OFF</td>
+        <td class="confSwValue">0x1FFF</td>
+        <td class="confSwExpl">FSCM timer disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FCMEN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">FSCM timer enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2 (address:0x8008, mask:0x1EE3, <span class="confSwDefault">default:0x1EE3</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MCLRE -- Master Clear Enable bit (bitmask:0x0001)</th></tr>
+      <tr>
+        <td class="confSwName">MCLRE = OFF</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">MCLR pin function is port defined function.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MCLRE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">MCLR pin is Master Clear function.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRTE -- Power-up Timer Enable bit (bitmask:0x0002)</th></tr>
+      <tr>
+        <td class="confSwName">PWRTE = ON</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRTE = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">LPBOREN -- Low-Power BOR enable bit (bitmask:0x0020)</th></tr>
+      <tr>
+        <td class="confSwName">LPBOREN = ON</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">ULPBOR enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">LPBOREN = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">ULPBOR disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOREN -- Brown-out reset enable bits (bitmask:0x00C0)</th></tr>
+      <tr>
+        <td class="confSwName">BOREN = OFF</td>
+        <td class="confSwValue">0x3F3F</td>
+        <td class="confSwExpl">Brown-out reset disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOREN = SBOREN</td>
+        <td class="confSwValue">0x3F7F</td>
+        <td class="confSwExpl">Brown-out reset enabled according to SBOREN bit.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOREN = NSLEEP</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">Brown-out Reset enabled while running, disabled in sleep; SBOREN is ignored.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset Enabled, SBOREN bit is ignored.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BORV -- Brown-out Reset Voltage Selection (bitmask:0x0200)</th></tr>
+      <tr>
+        <td class="confSwName">BORV = HI</td>
+        <td class="confSwValue">0x3DFF</td>
+        <td class="confSwExpl">Brown-out Reset Voltage (VBOR) is set to 2.7V.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BORV = LO</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset Voltage (VBOR) set to 1.9V on LF, and 2.45V on F Devices.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">ZCD -- Zero-cross detect disable (bitmask:0x0400)</th></tr>
+      <tr>
+        <td class="confSwName">ZCD = ON</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">Zero-cross detect circuit is always enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">ZCD = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Zero-cross detect circuit is disabled at POR.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PPS1WAY -- Peripheral Pin Select one-way control (bitmask:0x0800)</th></tr>
+      <tr>
+        <td class="confSwName">PPS1WAY = OFF</td>
+        <td class="confSwValue">0x37FF</td>
+        <td class="confSwExpl">The PPSLOCK bit can be set and cleared repeatedly by software.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PPS1WAY = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">The PPSLOCK bit can be cleared and set only once in software.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">STVREN -- Stack Overflow/Underflow Reset Enable bit (bitmask:0x1000)</th></tr>
+      <tr>
+        <td class="confSwName">STVREN = OFF</td>
+        <td class="confSwValue">0x2FFF</td>
+        <td class="confSwExpl">Stack Overflow or Underflow will not cause a reset.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">STVREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Stack Overflow or Underflow will cause a reset.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG3 (address:0x8009, mask:0x3F7F, <span class="confSwDefault">default:0x3F7F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTCPS -- WDT Period Select bits (bitmask:0x001F)</th></tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_0</td>
+        <td class="confSwValue">0x3FE0</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_1</td>
+        <td class="confSwValue">0x3FE1</td>
+        <td class="confSwExpl">Divider ratio 1:64.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_2</td>
+        <td class="confSwValue">0x3FE2</td>
+        <td class="confSwExpl">Divider ratio 1:128.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_3</td>
+        <td class="confSwValue">0x3FE3</td>
+        <td class="confSwExpl">Divider ratio 1:256.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_4</td>
+        <td class="confSwValue">0x3FE4</td>
+        <td class="confSwExpl">Divider ratio 1:512.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_5</td>
+        <td class="confSwValue">0x3FE5</td>
+        <td class="confSwExpl">Divider ratio 1:1024.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_6</td>
+        <td class="confSwValue">0x3FE6</td>
+        <td class="confSwExpl">Divider ratio 1:2048.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_7</td>
+        <td class="confSwValue">0x3FE7</td>
+        <td class="confSwExpl">Divider ratio 1:4096.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_8</td>
+        <td class="confSwValue">0x3FE8</td>
+        <td class="confSwExpl">Divider ratio 1:8192.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_9</td>
+        <td class="confSwValue">0x3FE9</td>
+        <td class="confSwExpl">Divider ratio 1:16384.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_10</td>
+        <td class="confSwValue">0x3FEA</td>
+        <td class="confSwExpl">Divider ratio 1:32768.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_11</td>
+        <td class="confSwValue">0x3FEB</td>
+        <td class="confSwExpl">Divider ratio 1:65536.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_12</td>
+        <td class="confSwValue">0x3FEC</td>
+        <td class="confSwExpl">Divider ratio 1:131072.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_13</td>
+        <td class="confSwValue">0x3FED</td>
+        <td class="confSwExpl">Divider ratio 1:262144.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_14</td>
+        <td class="confSwValue">0x3FEE</td>
+        <td class="confSwExpl">Divider ratio 1:524299.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_15</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">Divider ratio 1:1048576.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_16</td>
+        <td class="confSwValue">0x3FF0</td>
+        <td class="confSwExpl">Divider ratio 1:2097152.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_17</td>
+        <td class="confSwValue">0x3FF1</td>
+        <td class="confSwExpl">Divider ratio 1:4194304.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_18</td>
+        <td class="confSwValue">0x3FF2</td>
+        <td class="confSwExpl">Divider ratio 1:8388608.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_19</td>
+        <td class="confSwValue">0x3FF3</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_20</td>
+        <td class="confSwValue">0x3FF4</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_21</td>
+        <td class="confSwValue">0x3FF5</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_22</td>
+        <td class="confSwValue">0x3FF6</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_23</td>
+        <td class="confSwValue">0x3FF7</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_24</td>
+        <td class="confSwValue">0x3FF8</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_25</td>
+        <td class="confSwValue">0x3FF9</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_26</td>
+        <td class="confSwValue">0x3FFA</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_27</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_28</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_29</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCPS = WDTCPS_30</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">Divider ratio 1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTCPS = WDTCPS_31</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Divider ratio 1:65536; software control of WDTPS.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTE -- WDT operating mode (bitmask:0x0060)</th></tr>
+      <tr>
+        <td class="confSwName">WDTE = OFF</td>
+        <td class="confSwValue">0x3F9F</td>
+        <td class="confSwExpl">WDT Disabled, SWDTEN is ignored.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTE = SWDTEN</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">WDT enabled/disabled by SWDTEN bit in WDTCON0.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTE = NSLEEP</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">WDT enabled while sleep=0, suspended when sleep=1; SWDTEN ignored.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled regardless of sleep; SWDTEN ignored.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTCWS -- WDT Window Select bits (bitmask:0x0700)</th></tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_0</td>
+        <td class="confSwValue">0x38FF</td>
+        <td class="confSwExpl">window delay = 87.5 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_1</td>
+        <td class="confSwValue">0x39FF</td>
+        <td class="confSwExpl">window delay = 75 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_2</td>
+        <td class="confSwValue">0x3AFF</td>
+        <td class="confSwExpl">window delay = 62.5 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_3</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">window delay = 50 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_4</td>
+        <td class="confSwValue">0x3CFF</td>
+        <td class="confSwExpl">window delay = 37.5 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_5</td>
+        <td class="confSwValue">0x3DFF</td>
+        <td class="confSwExpl">window delay = 25 percent of time; no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCWS = WDTCWS_6</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">window always open (100%); no software control; keyed access required.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTCWS = WDTCWS_7</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">window always open (100%); software control; keyed access not required.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTCCS -- WDT input clock selector (bitmask:0x3800)</th></tr>
+      <tr>
+        <td class="confSwName">WDTCCS = LFINTOSC</td>
+        <td class="confSwValue">0x07FF</td>
+        <td class="confSwExpl">WDT reference clock is the 31.0kHz LFINTOSC output.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTCCS = HFINTOSC</td>
+        <td class="confSwValue">0x0FFF</td>
+        <td class="confSwExpl">WDT reference clock is the 31.25 kHz HFINTOSC.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTCCS = SC</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Software Control.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG4 (address:0x800A, mask:0x3003, <span class="confSwDefault">default:0x3003</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRT -- UserNVM self-write protection bits (bitmask:0x0003)</th></tr>
+      <tr>
+        <td class="confSwName">WRT = ON</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">0x0000 to 0x1FFF write protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = WRT_lower</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">0x0000 to x0FFF write protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = WRT_upper</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">0x0000 to 0x01FF write protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRT = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Write protection off.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">SCANE -- Scanner Enable bit (bitmask:0x1000)</th></tr>
+      <tr>
+        <td class="confSwName">SCANE = not_available</td>
+        <td class="confSwValue">0x2FFF</td>
+        <td class="confSwExpl">Scanner module is not available for use.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">SCANE = available</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Scanner module is available for use.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">LVP -- Low Voltage Programming Enable bit (bitmask:0x2000)</th></tr>
+      <tr>
+        <td class="confSwName">LVP = OFF</td>
+        <td class="confSwValue">0x1FFF</td>
+        <td class="confSwExpl">High Voltage on MCLR/Vpp must be used for programming.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">LVP = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Low Voltage programming enabled. MCLR/Vpp pin function is MCLR.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG5 (address:0x800B, mask:0x0003, <span class="confSwDefault">default:0x0003</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP -- UserNVM Program memory code protection bit (bitmask:0x0001)</th></tr>
+      <tr>
+        <td class="confSwName">CP = ON</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">UserNVM code protection enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">UserNVM code protection disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPD -- DataNVM code protection bit (bitmask:0x0002)</th></tr>
+      <tr>
+        <td class="confSwName">CPD = ON</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">DataNVM code protection enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPD = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">DataNVM code protection disabled.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:23 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

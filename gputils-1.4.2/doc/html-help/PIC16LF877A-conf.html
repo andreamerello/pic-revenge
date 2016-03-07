@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC16LF877A</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC16LF877A-feat.html">Features</a>
+      <a class="selected" href="PIC16LF877A-conf.html">Configuration Bits</a>
+      <a href="PIC16LF877A-ram.html">RAM map</a>
+      <a href="PIC16LF877A-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC16LF877A</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG (address:0x2007, mask:0x2FCF, <span class="confSwDefault">default:0x2FCF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FOSC -- Oscillator Selection bits (bitmask:0x0003)</th></tr>
+      <tr>
+        <td class="confSwName">FOSC = LP</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">LP oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = XT</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">XT oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = HS</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">HS oscillator.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FOSC = EXTRC</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">RC oscillator.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTE -- Watchdog Timer Enable bit (bitmask:0x0004)</th></tr>
+      <tr>
+        <td class="confSwName">WDTE = OFF</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">WDT disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRTE -- Power-up Timer Enable bit (bitmask:0x0008)</th></tr>
+      <tr>
+        <td class="confSwName">PWRTE = ON</td>
+        <td class="confSwValue">0x3FF7</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRTE = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOREN -- Brown-out Reset Enable bit (bitmask:0x0040)</th></tr>
+      <tr>
+        <td class="confSwName">BOREN = OFF</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">BOR disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">BOR enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">LVP -- Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (bitmask:0x0080)</th></tr>
+      <tr>
+        <td class="confSwName">LVP = OFF</td>
+        <td class="confSwValue">0x3F7F</td>
+        <td class="confSwExpl">RB3 is digital I/O, HV on MCLR must be used for programming.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">LVP = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">RB3/PGM pin has PGM function; low-voltage programming enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPD -- Data EEPROM Memory Code Protection bit (bitmask:0x0100)</th></tr>
+      <tr>
+        <td class="confSwName">CPD = ON</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">Data EEPROM code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPD = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Data EEPROM code protection off.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRT -- Flash Program Memory Write Enable bits (bitmask:0x0600)</th></tr>
+      <tr>
+        <td class="confSwName">WRT = HALF</td>
+        <td class="confSwValue">0x39FF</td>
+        <td class="confSwExpl">0000h to 0FFFh write-protected; 1000h to 1FFFh may be written to by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = 1FOURTH</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">0000h to 07FFh write-protected; 0800h to 1FFFh may be written to by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = 256</td>
+        <td class="confSwValue">0x3DFF</td>
+        <td class="confSwExpl">0000h to 00FFh write-protected; 0100h to 1FFFh may be written to by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRT = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Write protection off; all program memory may be written to by EECON control.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DEBUG -- In-Circuit Debugger Mode bit (bitmask:0x0800)</th></tr>
+      <tr>
+        <td class="confSwName">DEBUG = ON</td>
+        <td class="confSwValue">0x37FF</td>
+        <td class="confSwExpl">In-Circuit Debugger enabled, RB6 and RB7 are dedicated to the debugger.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DEBUG = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">In-Circuit Debugger disabled, RB6 and RB7 are general purpose I/O pins.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP -- Flash Program Memory Code Protection bit (bitmask:0x2000)</th></tr>
+      <tr>
+        <td class="confSwName">CP = ON</td>
+        <td class="confSwValue">0x1FFF</td>
+        <td class="confSwExpl">All program memory code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Code protection off.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:23 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

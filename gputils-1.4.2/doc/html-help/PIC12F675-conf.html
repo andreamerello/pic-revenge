@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC12F675</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC12F675-feat.html">Features</a>
+      <a class="selected" href="PIC12F675-conf.html">Configuration Bits</a>
+      <a href="PIC12F675-ram.html">RAM map</a>
+      <a href="PIC12F675-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC12F675</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG (address:0x2007, mask:0x01FF, <span class="confSwDefault">default:0x01FF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FOSC -- Oscillator Selection bits (bitmask:0x0007)</th></tr>
+      <tr>
+        <td class="confSwName">FOSC = LP</td>
+        <td class="confSwValue">0x3FF8</td>
+        <td class="confSwExpl">LP oscillator: Low power crystal on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = XT</td>
+        <td class="confSwValue">0x3FF9</td>
+        <td class="confSwExpl">XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = HS</td>
+        <td class="confSwValue">0x3FFA</td>
+        <td class="confSwExpl">HS oscillator: High speed crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = EC</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">EC: I/O function on GP4/OSC2/CLKOUT pin, CLKIN on GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = INTRCIO</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">INTOSC oscillator: I/O function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = INTRCCLK</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">INTOSC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = EXTRCIO</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">RC oscillator: I/O function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FOSC = EXTRCCLK</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTE -- Watchdog Timer Enable bit (bitmask:0x0008)</th></tr>
+      <tr>
+        <td class="confSwName">WDTE = OFF</td>
+        <td class="confSwValue">0x3FF7</td>
+        <td class="confSwExpl">WDT disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRTE -- Power-Up Timer Enable bit (bitmask:0x0010)</th></tr>
+      <tr>
+        <td class="confSwName">PWRTE = ON</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRTE = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MCLRE -- GP3/MCLR pin function select (bitmask:0x0020)</th></tr>
+      <tr>
+        <td class="confSwName">MCLRE = OFF</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">GP3/MCLR pin function is digital I/O, MCLR internally tied to VDD.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MCLRE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">GP3/MCLR pin function is MCLR.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOREN -- Brown-out Detect Enable bit (bitmask:0x0040)</th></tr>
+      <tr>
+        <td class="confSwName">BOREN = OFF</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">BOD disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">BOD enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP -- Code Protection bit (bitmask:0x0080)</th></tr>
+      <tr>
+        <td class="confSwName">CP = ON</td>
+        <td class="confSwValue">0x3F7F</td>
+        <td class="confSwExpl">Program Memory code protection is enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Program Memory code protection is disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPD -- Data Code Protection bit (bitmask:0x0100)</th></tr>
+      <tr>
+        <td class="confSwName">CPD = ON</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">Data memory code protection is enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPD = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Data memory code protection is disabled.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:22 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

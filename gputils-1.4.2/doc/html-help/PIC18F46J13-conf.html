@@ -1,0 +1,878 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC18F46J13</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic16e_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC18F46J13-feat.html">Features</a>
+      <a class="selected" href="PIC18F46J13-conf.html">Configuration Bits</a>
+      <a href="PIC18F46J13-ram.html">RAM map</a>
+      <a href="PIC18F46J13-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC18F46J13</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1L (address:0x00FFF8, mask:0x7F, <span class="confSwDefault">default:0x7F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTEN -- Watchdog Timer (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">WDTEN = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled - Controlled by SWDTEN bit.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTEN = ON</td>
+        <td class="confSwValue confSwDefault">0x01</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PLLDIV -- 96MHz PLL Prescaler Selection (PLLSEL=0) (bitmask:0x0E)</th></tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 12</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Divide by 12 (48 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 10</td>
+        <td class="confSwValue">0x02</td>
+        <td class="confSwExpl">Divide by 10 (40 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 6</td>
+        <td class="confSwValue">0x04</td>
+        <td class="confSwExpl">Divide by 6 (24 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 5</td>
+        <td class="confSwValue">0x06</td>
+        <td class="confSwExpl">Divide by 5 (20 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 4</td>
+        <td class="confSwValue">0x08</td>
+        <td class="confSwExpl">Divide by 4 (16 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 3</td>
+        <td class="confSwValue">0x0A</td>
+        <td class="confSwExpl">Divide by 3 (12 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">PLLDIV = 2</td>
+        <td class="confSwValue">0x0C</td>
+        <td class="confSwExpl">Divide by 2 (8 MHz oscillator input).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PLLDIV = 1</td>
+        <td class="confSwValue confSwDefault">0x0E</td>
+        <td class="confSwExpl confSwDefault">No prescale (4 MHz oscillator input drives PLL directly).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CFGPLLEN -- PLL Enable Configuration Bit (bitmask:0x10)</th></tr>
+      <tr>
+        <td class="confSwName">CFGPLLEN = ON</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">PLL Enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CFGPLLEN = OFF</td>
+        <td class="confSwValue confSwDefault">0x10</td>
+        <td class="confSwExpl confSwDefault">PLL Disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">STVREN -- Stack Overflow/Underflow Reset (bitmask:0x20)</th></tr>
+      <tr>
+        <td class="confSwName">STVREN = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">STVREN = ON</td>
+        <td class="confSwValue confSwDefault">0x20</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">XINST -- Extended Instruction Set (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName">XINST = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">XINST = ON</td>
+        <td class="confSwValue confSwDefault">0x40</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1H (address:0x00FFF9, mask:0x04, <span class="confSwDefault">default:0x04</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP0 -- Code Protect (bitmask:0x04)</th></tr>
+      <tr>
+        <td class="confSwName">CP0 = ON</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Program memory is code-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP0 = OFF</td>
+        <td class="confSwValue confSwDefault">0x04</td>
+        <td class="confSwExpl confSwDefault">Program memory is not code-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2L (address:0x00FFFA, mask:0xFF, <span class="confSwDefault">default:0xFF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">OSC -- Oscillator (bitmask:0x07)</th></tr>
+      <tr>
+        <td class="confSwName">OSC = INTOSC</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">INTOSC.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = INTOSCO</td>
+        <td class="confSwValue">0x01</td>
+        <td class="confSwExpl">INTOSCO (CLKO-RA6).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = INTOSCPLL</td>
+        <td class="confSwValue">0x02</td>
+        <td class="confSwExpl">INTOSCPLL.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = INTOSCPLLO</td>
+        <td class="confSwValue">0x03</td>
+        <td class="confSwExpl">INTOSCPLLO (CLKO-RA6).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = HS</td>
+        <td class="confSwValue">0x04</td>
+        <td class="confSwExpl">HS.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = HSPLL</td>
+        <td class="confSwValue">0x05</td>
+        <td class="confSwExpl">HS+PLL.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">OSC = EC</td>
+        <td class="confSwValue">0x06</td>
+        <td class="confSwExpl">EC (CLKO-RA6).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">OSC = ECPLL</td>
+        <td class="confSwValue confSwDefault">0x07</td>
+        <td class="confSwExpl confSwDefault">EC+PLL (CLKO-RA6).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">SOSCSEL -- T1OSC/SOSC Power Selection Bits (bitmask:0x18)</th></tr>
+      <tr>
+        <td class="confSwName">SOSCSEL = RESERVED</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Reserved.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">SOSCSEL = LOW</td>
+        <td class="confSwValue">0x08</td>
+        <td class="confSwExpl">Low Power T1OSC/SOSC circuit selected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">SOSCSEL = DIG</td>
+        <td class="confSwValue">0x10</td>
+        <td class="confSwExpl">Digital (SCLKI) mode selected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">SOSCSEL = HIGH</td>
+        <td class="confSwValue confSwDefault">0x18</td>
+        <td class="confSwExpl confSwDefault">High Power T1OSC/SOSC circuit selected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CLKOEC -- EC Clock Out Enable Bit  (bitmask:0x20)</th></tr>
+      <tr>
+        <td class="confSwName">CLKOEC = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">CLKO output disabled on the RA6 pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CLKOEC = ON</td>
+        <td class="confSwValue confSwDefault">0x20</td>
+        <td class="confSwExpl confSwDefault">CLKO output enabled on the RA6 pin.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FCMEN -- Fail-Safe Clock Monitor (bitmask:0x40)</th></tr>
+      <tr>
+        <td class="confSwName">FCMEN = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FCMEN = ON</td>
+        <td class="confSwValue confSwDefault">0x40</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">IESO -- Internal External Oscillator Switch Over Mode (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">IESO = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">IESO = ON</td>
+        <td class="confSwValue confSwDefault">0x80</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2H (address:0x00FFFB, mask:0x0F, <span class="confSwDefault">default:0x0F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTPS -- Watchdog Postscaler (bitmask:0x0F)</th></tr>
+      <tr>
+        <td class="confSwName">WDTPS = 1</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">1:1.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 2</td>
+        <td class="confSwValue">0x01</td>
+        <td class="confSwExpl">1:2.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 4</td>
+        <td class="confSwValue">0x02</td>
+        <td class="confSwExpl">1:4.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 8</td>
+        <td class="confSwValue">0x03</td>
+        <td class="confSwExpl">1:8.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 16</td>
+        <td class="confSwValue">0x04</td>
+        <td class="confSwExpl">1:16.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 32</td>
+        <td class="confSwValue">0x05</td>
+        <td class="confSwExpl">1:32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 64</td>
+        <td class="confSwValue">0x06</td>
+        <td class="confSwExpl">1:64.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 128</td>
+        <td class="confSwValue">0x07</td>
+        <td class="confSwExpl">1:128.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 256</td>
+        <td class="confSwValue">0x08</td>
+        <td class="confSwExpl">1:256.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 512</td>
+        <td class="confSwValue">0x09</td>
+        <td class="confSwExpl">1:512.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 1024</td>
+        <td class="confSwValue">0x0A</td>
+        <td class="confSwExpl">1:1024.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 2048</td>
+        <td class="confSwValue">0x0B</td>
+        <td class="confSwExpl">1:2048.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 4096</td>
+        <td class="confSwValue">0x0C</td>
+        <td class="confSwExpl">1:4096.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 8192</td>
+        <td class="confSwValue">0x0D</td>
+        <td class="confSwExpl">1:8192.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTPS = 16384</td>
+        <td class="confSwValue">0x0E</td>
+        <td class="confSwExpl">1:16384.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTPS = 32768</td>
+        <td class="confSwValue confSwDefault">0x0F</td>
+        <td class="confSwExpl confSwDefault">1:32768.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG3L (address:0x00FFFC, mask:0xFF, <span class="confSwDefault">default:0xFF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DSWDTOSC -- DSWDT Clock Select (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">DSWDTOSC = T1OSCREF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">DSWDT uses T1OSC/T1CKI.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DSWDTOSC = INTOSCREF</td>
+        <td class="confSwValue confSwDefault">0x01</td>
+        <td class="confSwExpl confSwDefault">DSWDT uses INTRC.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">RTCOSC -- RTCC Clock Select (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">RTCOSC = INTOSCREF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">RTCC uses INTRC.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">RTCOSC = T1OSCREF</td>
+        <td class="confSwValue confSwDefault">0x02</td>
+        <td class="confSwExpl confSwDefault">RTCC uses T1OSC/T1CKI.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DSBOREN -- Deep Sleep BOR (bitmask:0x04)</th></tr>
+      <tr>
+        <td class="confSwName">DSBOREN = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DSBOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x04</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DSWDTEN -- Deep Sleep Watchdog Timer (bitmask:0x08)</th></tr>
+      <tr>
+        <td class="confSwName">DSWDTEN = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DSWDTEN = ON</td>
+        <td class="confSwValue confSwDefault">0x08</td>
+        <td class="confSwExpl confSwDefault">Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DSWDTPS -- Deep Sleep Watchdog Postscaler (bitmask:0xF0)</th></tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 2</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">1:2 (2.1 ms).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 8</td>
+        <td class="confSwValue">0x10</td>
+        <td class="confSwExpl">1:8 (8.3 ms).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 32</td>
+        <td class="confSwValue">0x20</td>
+        <td class="confSwExpl">1:32 (33 ms).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 128</td>
+        <td class="confSwValue">0x30</td>
+        <td class="confSwExpl">1:128 (132 ms).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 512</td>
+        <td class="confSwValue">0x40</td>
+        <td class="confSwExpl">1:512 (528 ms).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 2048</td>
+        <td class="confSwValue">0x50</td>
+        <td class="confSwExpl">1:2,048 (2.1 seconds).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = 8192</td>
+        <td class="confSwValue">0x60</td>
+        <td class="confSwExpl">1:8,192 (8.5 seconds).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = K32</td>
+        <td class="confSwValue">0x70</td>
+        <td class="confSwExpl">1:32,768 (34 seconds).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = K131</td>
+        <td class="confSwValue">0x80</td>
+        <td class="confSwExpl">1:131,072 (135 seconds).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = K524</td>
+        <td class="confSwValue">0x90</td>
+        <td class="confSwExpl">1:524,288 (9 minutes).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = M2</td>
+        <td class="confSwValue">0xA0</td>
+        <td class="confSwExpl">1:2,097,152 (36 minutes).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = M8</td>
+        <td class="confSwValue">0xB0</td>
+        <td class="confSwExpl">1:8,388,608 (2.4 hours).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = M33</td>
+        <td class="confSwValue">0xC0</td>
+        <td class="confSwExpl">1:33,554,432 (9.6 hours).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = M134</td>
+        <td class="confSwValue">0xD0</td>
+        <td class="confSwExpl">1:134,217,728 (38.5 hours).</td>
+      </tr>
+      <tr>
+        <td class="confSwName">DSWDTPS = M536</td>
+        <td class="confSwValue">0xE0</td>
+        <td class="confSwExpl">1:536,870,912 (6.4 days).</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DSWDTPS = G2</td>
+        <td class="confSwValue confSwDefault">0xF0</td>
+        <td class="confSwExpl confSwDefault">1:2,147,483,648 (25.7 days).</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG3H (address:0x00FFFD, mask:0x0F, <span class="confSwDefault">default:0x0F</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">IOL1WAY -- IOLOCK One-Way Set Enable bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">IOL1WAY = OFF</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">The IOLOCK bit (PPSCON<0>) can be set and cleared as needed.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">IOL1WAY = ON</td>
+        <td class="confSwValue confSwDefault">0x01</td>
+        <td class="confSwExpl confSwDefault">The IOLOCK bit (PPSCON<0>) can be set once.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">ADCSEL -- ADC 10 or 12 Bit Select (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">ADCSEL = BIT12</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">12 - Bit ADC Enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">ADCSEL = BIT10</td>
+        <td class="confSwValue confSwDefault">0x02</td>
+        <td class="confSwExpl confSwDefault">10 - Bit ADC Enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PLLSEL -- PLL Selection Bit (bitmask:0x04)</th></tr>
+      <tr>
+        <td class="confSwName">PLLSEL = PLL96</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Selects 96MHz PLL.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PLLSEL = PLL4X</td>
+        <td class="confSwValue confSwDefault">0x04</td>
+        <td class="confSwExpl confSwDefault">Selects 4x PLL.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MSSP7B_EN -- MSSP address masking (bitmask:0x08)</th></tr>
+      <tr>
+        <td class="confSwName">MSSP7B_EN = MSK5</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">5 Bit address masking mode.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MSSP7B_EN = MSK7</td>
+        <td class="confSwValue confSwDefault">0x08</td>
+        <td class="confSwExpl confSwDefault">7 Bit address masking mode.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG4L (address:0x00FFFE, mask:0xBF, <span class="confSwDefault">default:0xBF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WPFP -- Write/Erase Protect Page Start/End Location (bitmask:0x3F)</th></tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_0</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 0.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_1</td>
+        <td class="confSwValue">0x01</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 1.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_2</td>
+        <td class="confSwValue">0x02</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 2.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_3</td>
+        <td class="confSwValue">0x03</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 3.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_4</td>
+        <td class="confSwValue">0x04</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 4.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_5</td>
+        <td class="confSwValue">0x05</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 5.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_6</td>
+        <td class="confSwValue">0x06</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 6.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_7</td>
+        <td class="confSwValue">0x07</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 7.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_8</td>
+        <td class="confSwValue">0x08</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 8.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_9</td>
+        <td class="confSwValue">0x09</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 9.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_10</td>
+        <td class="confSwValue">0x0A</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 10.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_11</td>
+        <td class="confSwValue">0x0B</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 11.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_12</td>
+        <td class="confSwValue">0x0C</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 12.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_13</td>
+        <td class="confSwValue">0x0D</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 13.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_14</td>
+        <td class="confSwValue">0x0E</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 14.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_15</td>
+        <td class="confSwValue">0x0F</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 15.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_16</td>
+        <td class="confSwValue">0x10</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 16.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_17</td>
+        <td class="confSwValue">0x11</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 17.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_18</td>
+        <td class="confSwValue">0x12</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 18.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_19</td>
+        <td class="confSwValue">0x13</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 19.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_20</td>
+        <td class="confSwValue">0x14</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 20.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_21</td>
+        <td class="confSwValue">0x15</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 21.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_22</td>
+        <td class="confSwValue">0x16</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 22.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_23</td>
+        <td class="confSwValue">0x17</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 23.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_24</td>
+        <td class="confSwValue">0x18</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 24.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_25</td>
+        <td class="confSwValue">0x19</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 25.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_26</td>
+        <td class="confSwValue">0x1A</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 26.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_27</td>
+        <td class="confSwValue">0x1B</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 27.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_28</td>
+        <td class="confSwValue">0x1C</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 28.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_29</td>
+        <td class="confSwValue">0x1D</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 29.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_30</td>
+        <td class="confSwValue">0x1E</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 30.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_31</td>
+        <td class="confSwValue">0x1F</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 31.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_32</td>
+        <td class="confSwValue">0x20</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 32.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_33</td>
+        <td class="confSwValue">0x21</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 33.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_34</td>
+        <td class="confSwValue">0x22</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 34.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_35</td>
+        <td class="confSwValue">0x23</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 35.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_36</td>
+        <td class="confSwValue">0x24</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 36.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_37</td>
+        <td class="confSwValue">0x25</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 37.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_38</td>
+        <td class="confSwValue">0x26</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 38.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_39</td>
+        <td class="confSwValue">0x27</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 39.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_40</td>
+        <td class="confSwValue">0x28</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 40.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_41</td>
+        <td class="confSwValue">0x29</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 41.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_42</td>
+        <td class="confSwValue">0x2A</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 42.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_43</td>
+        <td class="confSwValue">0x2B</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 43.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_44</td>
+        <td class="confSwValue">0x2C</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 44.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_45</td>
+        <td class="confSwValue">0x2D</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 45.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_46</td>
+        <td class="confSwValue">0x2E</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 46.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_47</td>
+        <td class="confSwValue">0x2F</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 47.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_48</td>
+        <td class="confSwValue">0x30</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 48.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_49</td>
+        <td class="confSwValue">0x31</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 49.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_50</td>
+        <td class="confSwValue">0x32</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 50.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_51</td>
+        <td class="confSwValue">0x33</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 51.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_52</td>
+        <td class="confSwValue">0x34</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 52.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_53</td>
+        <td class="confSwValue">0x35</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 53.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_54</td>
+        <td class="confSwValue">0x36</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 54.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_55</td>
+        <td class="confSwValue">0x37</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 55.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_56</td>
+        <td class="confSwValue">0x38</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 56.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_57</td>
+        <td class="confSwValue">0x39</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 57.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_58</td>
+        <td class="confSwValue">0x3A</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 58.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_59</td>
+        <td class="confSwValue">0x3B</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 59.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_60</td>
+        <td class="confSwValue">0x3C</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 60.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_61</td>
+        <td class="confSwValue">0x3D</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 61.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WPFP = PAGE_62</td>
+        <td class="confSwValue">0x3E</td>
+        <td class="confSwExpl">Write Protect Program Flash Page 62.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WPFP = PAGE_63</td>
+        <td class="confSwValue confSwDefault">0x3F</td>
+        <td class="confSwExpl confSwDefault">Write Protect Program Flash Page 63.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WPCFG -- Write/Erase Protect Configuration Region  (bitmask:0x80)</th></tr>
+      <tr>
+        <td class="confSwName">WPCFG = ON</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Configuration Words page erase/write-protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WPCFG = OFF</td>
+        <td class="confSwValue confSwDefault">0x80</td>
+        <td class="confSwExpl confSwDefault">Configuration Words page not erase/write-protected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG4H (address:0x00FFFF, mask:0x03, <span class="confSwDefault">default:0x03</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WPDIS -- Write Protect Disable bit (bitmask:0x01)</th></tr>
+      <tr>
+        <td class="confSwName">WPDIS = ON</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">WPFP<6:0>/WPEND region erase/write protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WPDIS = OFF</td>
+        <td class="confSwValue confSwDefault">0x01</td>
+        <td class="confSwExpl confSwDefault">WPFP<6:0>/WPEND region ignored.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WPEND -- Write/Erase Protect Region Select bit (valid when WPDIS = 0) (bitmask:0x02)</th></tr>
+      <tr>
+        <td class="confSwName">WPEND = PAGE_0</td>
+        <td class="confSwValue">0x00</td>
+        <td class="confSwExpl">Pages 0 through WPFP<6:0> erase/write protected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WPEND = PAGE_WPFP</td>
+        <td class="confSwValue confSwDefault">0x02</td>
+        <td class="confSwExpl confSwDefault">Pages WPFP<6:0> through Configuration Words erase/write protected.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:24 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2903 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC16F1779</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14ex_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC16F1779-feat.html">Features</a>
+      <a href="PIC16F1779-conf.html">Configuration Bits</a>
+      <a href="PIC16F1779-ram.html">RAM map</a>
+      <a class="selected" href="PIC16F1779-sfr.html">SFR map</a>
+    </div>
+    <table class="sfrMap">
+      <tr><th colspan=51 class="sfrTableName">PIC16F1779</th></tr>
+      <tr class="sfrGap"><td></td></tr>
+      <tr class="sfrHead">
+        <th class="sfrBank">Bank&nbsp;0</th>
+        <th class="sfrBank">Bank&nbsp;1</th>
+        <th class="sfrBank">Bank&nbsp;2</th>
+        <th class="sfrBank">Bank&nbsp;3</th>
+        <th class="sfrBank">Bank&nbsp;4</th>
+        <th class="sfrBank">Bank&nbsp;5</th>
+        <th class="sfrBank">Bank&nbsp;6</th>
+        <th class="sfrBank">Bank&nbsp;7</th>
+        <th class="sfrBank">Bank&nbsp;8</th>
+        <th class="sfrBank">Bank&nbsp;9</th>
+        <th class="sfrBank">Bank&nbsp;10</th>
+        <th class="sfrBank">Bank&nbsp;11</th>
+        <th class="sfrBank">Bank&nbsp;12</th>
+        <th class="sfrBank">Bank&nbsp;13</th>
+        <th class="sfrBank">Bank&nbsp;14</th>
+        <th class="sfrBank">Bank&nbsp;15</th>
+        <th class="sfrBank">Bank&nbsp;16</th>
+        <th class="sfrBank">Bank&nbsp;17</th>
+        <th class="sfrBank">Bank&nbsp;18</th>
+        <th class="sfrBank">Bank&nbsp;26</th>
+        <th class="sfrBank">Bank&nbsp;27</th>
+        <th class="sfrBank">Bank&nbsp;28</th>
+        <th class="sfrBank">Bank&nbsp;29</th>
+        <th class="sfrBank">Bank&nbsp;30</th>
+        <th class="sfrBank">Bank&nbsp;31</th>
+      </tr>
+      <tr class="sfrGap"><td></td></tr>
+      <tr>
+        <td class="sfrColumn">
+          <table>
+            <tr id="INDF0">
+              <th class="sfrName">INDF0</th>
+              <td class="sfrAddr">0x000</td>
+            </tr>
+            <tr id="INDF1">
+              <th class="sfrName">INDF1</th>
+              <td class="sfrAddr">0x001</td>
+            </tr>
+            <tr id="PCL">
+              <th class="sfrName">PCL</th>
+              <td class="sfrAddr">0x002</td>
+            </tr>
+            <tr id="STATUS">
+              <th class="sfrName">STATUS</th>
+              <td class="sfrAddr">0x003</td>
+            </tr>
+            <tr id="FSR0">
+              <th class="sfrNameX">FSR0<span>FSR0L</span></th>
+              <td class="sfrAddr">0x004</td>
+            </tr>
+            <tr id="FSR0H">
+              <th class="sfrName">FSR0H</th>
+              <td class="sfrAddr">0x005</td>
+            </tr>
+            <tr id="FSR1">
+              <th class="sfrNameX">FSR1<span>FSR1L</span></th>
+              <td class="sfrAddr">0x006</td>
+            </tr>
+            <tr id="FSR1H">
+              <th class="sfrName">FSR1H</th>
+              <td class="sfrAddr">0x007</td>
+            </tr>
+            <tr id="BSR">
+              <th class="sfrName">BSR</th>
+              <td class="sfrAddr">0x008</td>
+            </tr>
+            <tr id="WREG">
+              <th class="sfrName">WREG</th>
+              <td class="sfrAddr">0x009</td>
+            </tr>
+            <tr id="PCLATH">
+              <th class="sfrName">PCLATH</th>
+              <td class="sfrAddr">0x00A</td>
+            </tr>
+            <tr id="INTCON">
+              <th class="sfrName">INTCON</th>
+              <td class="sfrAddr">0x00B</td>
+            </tr>
+            <tr id="PORTA">
+              <th class="sfrName">PORTA</th>
+              <td class="sfrAddr">0x00C</td>
+            </tr>
+            <tr id="PORTB">
+              <th class="sfrName">PORTB</th>
+              <td class="sfrAddr">0x00D</td>
+            </tr>
+            <tr id="PORTC">
+              <th class="sfrName">PORTC</th>
+              <td class="sfrAddr">0x00E</td>
+            </tr>
+            <tr id="PORTD">
+              <th class="sfrName">PORTD</th>
+              <td class="sfrAddr">0x00F</td>
+            </tr>
+            <tr id="PORTE">
+              <th class="sfrName">PORTE</th>
+              <td class="sfrAddr">0x010</td>
+            </tr>
+            <tr id="PIR1">
+              <th class="sfrName">PIR1</th>
+              <td class="sfrAddr">0x011</td>
+            </tr>
+            <tr id="PIR2">
+              <th class="sfrName">PIR2</th>
+              <td class="sfrAddr">0x012</td>
+            </tr>
+            <tr id="PIR3">
+              <th class="sfrName">PIR3</th>
+              <td class="sfrAddr">0x013</td>
+            </tr>
+            <tr id="PIR4">
+              <th class="sfrName">PIR4</th>
+              <td class="sfrAddr">0x014</td>
+            </tr>
+            <tr id="PIR5">
+              <th class="sfrName">PIR5</th>
+              <td class="sfrAddr">0x015</td>
+            </tr>
+            <tr id="PIR6">
+              <th class="sfrName">PIR6</th>
+              <td class="sfrAddr">0x016</td>
+            </tr>
+            <tr id="TMR0">
+              <th class="sfrName">TMR0</th>
+              <td class="sfrAddr">0x017</td>
+            </tr>
+            <tr id="TMR1">
+              <th class="sfrNameX">TMR1<span>TMR1L</span></th>
+              <td class="sfrAddr">0x018</td>
+            </tr>
+            <tr id="TMR1H">
+              <th class="sfrName">TMR1H</th>
+              <td class="sfrAddr">0x019</td>
+            </tr>
+            <tr id="T1CON">
+              <th class="sfrName">T1CON</th>
+              <td class="sfrAddr">0x01A</td>
+            </tr>
+            <tr id="T1GCON">
+              <th class="sfrName">T1GCON</th>
+              <td class="sfrAddr">0x01B</td>
+            </tr>
+            <tr id="TMR3">
+              <th class="sfrNameX">TMR3<span>TMR3L</span></th>
+              <td class="sfrAddr">0x01C</td>
+            </tr>
+            <tr id="TMR3H">
+              <th class="sfrName">TMR3H</th>
+              <td class="sfrAddr">0x01D</td>
+            </tr>
+            <tr id="T3CON">
+              <th class="sfrName">T3CON</th>
+              <td class="sfrAddr">0x01E</td>
+            </tr>
+            <tr id="T3GCON">
+              <th class="sfrName">T3GCON</th>
+              <td class="sfrAddr">0x01F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="TRISA">
+              <th class="sfrName">TRISA</th>
+              <td class="sfrAddr">0x08C</td>
+            </tr>
+            <tr id="TRISB">
+              <th class="sfrName">TRISB</th>
+              <td class="sfrAddr">0x08D</td>
+            </tr>
+            <tr id="TRISC">
+              <th class="sfrName">TRISC</th>
+              <td class="sfrAddr">0x08E</td>
+            </tr>
+            <tr id="TRISD">
+              <th class="sfrName">TRISD</th>
+              <td class="sfrAddr">0x08F</td>
+            </tr>
+            <tr id="TRISE">
+              <th class="sfrName">TRISE</th>
+              <td class="sfrAddr">0x090</td>
+            </tr>
+            <tr id="PIE1">
+              <th class="sfrName">PIE1</th>
+              <td class="sfrAddr">0x091</td>
+            </tr>
+            <tr id="PIE2">
+              <th class="sfrName">PIE2</th>
+              <td class="sfrAddr">0x092</td>
+            </tr>
+            <tr id="PIE3">
+              <th class="sfrName">PIE3</th>
+              <td class="sfrAddr">0x093</td>
+            </tr>
+            <tr id="PIE4">
+              <th class="sfrName">PIE4</th>
+              <td class="sfrAddr">0x094</td>
+            </tr>
+            <tr id="PIE5">
+              <th class="sfrName">PIE5</th>
+              <td class="sfrAddr">0x095</td>
+            </tr>
+            <tr id="PIE6">
+              <th class="sfrName">PIE6</th>
+              <td class="sfrAddr">0x096</td>
+            </tr>
+            <tr id="OPTION_REG">
+              <th class="sfrName">OPTION_REG</th>
+              <td class="sfrAddr">0x097</td>
+            </tr>
+            <tr id="PCON">
+              <th class="sfrName">PCON</th>
+              <td class="sfrAddr">0x098</td>
+            </tr>
+            <tr id="WDTCON">
+              <th class="sfrName">WDTCON</th>
+              <td class="sfrAddr">0x099</td>
+            </tr>
+            <tr id="OSCTUNE">
+              <th class="sfrName">OSCTUNE</th>
+              <td class="sfrAddr">0x09A</td>
+            </tr>
+            <tr id="OSCCON">
+              <th class="sfrName">OSCCON</th>
+              <td class="sfrAddr">0x09B</td>
+            </tr>
+            <tr id="OSCSTAT">
+              <th class="sfrName">OSCSTAT</th>
+              <td class="sfrAddr">0x09C</td>
+            </tr>
+            <tr id="BORCON">
+              <th class="sfrName">BORCON</th>
+              <td class="sfrAddr">0x09D</td>
+            </tr>
+            <tr id="FVRCON">
+              <th class="sfrName">FVRCON</th>
+              <td class="sfrAddr">0x09E</td>
+            </tr>
+            <tr id="ZCD1CON">
+              <th class="sfrName">ZCD1CON</th>
+              <td class="sfrAddr">0x09F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="LATA">
+              <th class="sfrName">LATA</th>
+              <td class="sfrAddr">0x10C</td>
+            </tr>
+            <tr id="LATB">
+              <th class="sfrName">LATB</th>
+              <td class="sfrAddr">0x10D</td>
+            </tr>
+            <tr id="LATC">
+              <th class="sfrName">LATC</th>
+              <td class="sfrAddr">0x10E</td>
+            </tr>
+            <tr id="LATD">
+              <th class="sfrName">LATD</th>
+              <td class="sfrAddr">0x10F</td>
+            </tr>
+            <tr id="LATE">
+              <th class="sfrName">LATE</th>
+              <td class="sfrAddr">0x110</td>
+            </tr>
+            <tr id="CMOUT">
+              <th class="sfrName">CMOUT</th>
+              <td class="sfrAddr">0x111</td>
+            </tr>
+            <tr id="CM1CON0">
+              <th class="sfrName">CM1CON0</th>
+              <td class="sfrAddr">0x112</td>
+            </tr>
+            <tr id="CM1CON1">
+              <th class="sfrName">CM1CON1</th>
+              <td class="sfrAddr">0x113</td>
+            </tr>
+            <tr id="CM1NSEL">
+              <th class="sfrName">CM1NSEL</th>
+              <td class="sfrAddr">0x114</td>
+            </tr>
+            <tr id="CM1PSEL">
+              <th class="sfrName">CM1PSEL</th>
+              <td class="sfrAddr">0x115</td>
+            </tr>
+            <tr id="CM2CON0">
+              <th class="sfrName">CM2CON0</th>
+              <td class="sfrAddr">0x116</td>
+            </tr>
+            <tr id="CM2CON1">
+              <th class="sfrName">CM2CON1</th>
+              <td class="sfrAddr">0x117</td>
+            </tr>
+            <tr id="CM2NSEL">
+              <th class="sfrName">CM2NSEL</th>
+              <td class="sfrAddr">0x118</td>
+            </tr>
+            <tr id="CM2PSEL">
+              <th class="sfrName">CM2PSEL</th>
+              <td class="sfrAddr">0x119</td>
+            </tr>
+            <tr id="CM3CON0">
+              <th class="sfrName">CM3CON0</th>
+              <td class="sfrAddr">0x11A</td>
+            </tr>
+            <tr id="CM3CON1">
+              <th class="sfrName">CM3CON1</th>
+              <td class="sfrAddr">0x11B</td>
+            </tr>
+            <tr id="CM3NSEL">
+              <th class="sfrName">CM3NSEL</th>
+              <td class="sfrAddr">0x11C</td>
+            </tr>
+            <tr id="CM3PSEL">
+              <th class="sfrName">CM3PSEL</th>
+              <td class="sfrAddr">0x11D</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="ANSELA">
+              <th class="sfrName">ANSELA</th>
+              <td class="sfrAddr">0x18C</td>
+            </tr>
+            <tr id="ANSELB">
+              <th class="sfrName">ANSELB</th>
+              <td class="sfrAddr">0x18D</td>
+            </tr>
+            <tr id="ANSELC">
+              <th class="sfrName">ANSELC</th>
+              <td class="sfrAddr">0x18E</td>
+            </tr>
+            <tr id="ANSELD">
+              <th class="sfrName">ANSELD</th>
+              <td class="sfrAddr">0x18F</td>
+            </tr>
+            <tr id="ANSELE">
+              <th class="sfrName">ANSELE</th>
+              <td class="sfrAddr">0x190</td>
+            </tr>
+            <tr id="PMADR">
+              <th class="sfrNameX">PMADR<span>PMADRL</span></th>
+              <td class="sfrAddr">0x191</td>
+            </tr>
+            <tr id="PMADRH">
+              <th class="sfrName">PMADRH</th>
+              <td class="sfrAddr">0x192</td>
+            </tr>
+            <tr id="PMDAT">
+              <th class="sfrNameX">PMDAT<span>PMDATL</span></th>
+              <td class="sfrAddr">0x193</td>
+            </tr>
+            <tr id="PMDATH">
+              <th class="sfrName">PMDATH</th>
+              <td class="sfrAddr">0x194</td>
+            </tr>
+            <tr id="PMCON1">
+              <th class="sfrName">PMCON1</th>
+              <td class="sfrAddr">0x195</td>
+            </tr>
+            <tr id="PMCON2">
+              <th class="sfrName">PMCON2</th>
+              <td class="sfrAddr">0x196</td>
+            </tr>
+            <tr id="VREGCON">
+              <th class="sfrName">VREGCON</th>
+              <td class="sfrAddr">0x197</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="RC1REG">
+              <th class="sfrNameX">RC1REG<span>RCREG<br>RCREG1</span></th>
+              <td class="sfrAddr">0x199</td>
+            </tr>
+            <tr id="TX1REG">
+              <th class="sfrNameX">TX1REG<span>TXREG<br>TXREG1</span></th>
+              <td class="sfrAddr">0x19A</td>
+            </tr>
+            <tr id="SP1BRG">
+              <th class="sfrNameX">SP1BRG<span>SP1BRGL<br>SPBRG<br>SPBRG1<br>SPBRGL</span></th>
+              <td class="sfrAddr">0x19B</td>
+            </tr>
+            <tr id="SP1BRGH">
+              <th class="sfrNameX">SP1BRGH<span>SPBRGH<br>SPBRGH1</span></th>
+              <td class="sfrAddr">0x19C</td>
+            </tr>
+            <tr id="RC1STA">
+              <th class="sfrNameX">RC1STA<span>RCSTA<br>RCSTA1</span></th>
+              <td class="sfrAddr">0x19D</td>
+            </tr>
+            <tr id="TX1STA">
+              <th class="sfrNameX">TX1STA<span>TXSTA<br>TXSTA1</span></th>
+              <td class="sfrAddr">0x19E</td>
+            </tr>
+            <tr id="BAUD1CON">
+              <th class="sfrNameX">BAUD1CON<span>BAUDCON<br>BAUDCON1<br>BAUDCTL<br>BAUDCTL1</span></th>
+              <td class="sfrAddr">0x19F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="WPUA">
+              <th class="sfrName">WPUA</th>
+              <td class="sfrAddr">0x20C</td>
+            </tr>
+            <tr id="WPUB">
+              <th class="sfrName">WPUB</th>
+              <td class="sfrAddr">0x20D</td>
+            </tr>
+            <tr id="WPUC">
+              <th class="sfrName">WPUC</th>
+              <td class="sfrAddr">0x20E</td>
+            </tr>
+            <tr id="WPUD">
+              <th class="sfrName">WPUD</th>
+              <td class="sfrAddr">0x20F</td>
+            </tr>
+            <tr id="WPUE">
+              <th class="sfrName">WPUE</th>
+              <td class="sfrAddr">0x210</td>
+            </tr>
+            <tr id="SSP1BUF">
+              <th class="sfrNameX">SSP1BUF<span>SSPBUF</span></th>
+              <td class="sfrAddr">0x211</td>
+            </tr>
+            <tr id="SSP1ADD">
+              <th class="sfrNameX">SSP1ADD<span>SSPADD</span></th>
+              <td class="sfrAddr">0x212</td>
+            </tr>
+            <tr id="SSP1MSK">
+              <th class="sfrNameX">SSP1MSK<span>SSPMSK</span></th>
+              <td class="sfrAddr">0x213</td>
+            </tr>
+            <tr id="SSP1STAT">
+              <th class="sfrNameX">SSP1STAT<span>SSPSTAT</span></th>
+              <td class="sfrAddr">0x214</td>
+            </tr>
+            <tr id="SSP1CON">
+              <th class="sfrNameX">SSP1CON<span>SSP1CON1<br>SSPCON<br>SSPCON1</span></th>
+              <td class="sfrAddr">0x215</td>
+            </tr>
+            <tr id="SSP1CON2">
+              <th class="sfrNameX">SSP1CON2<span>SSPCON2</span></th>
+              <td class="sfrAddr">0x216</td>
+            </tr>
+            <tr id="SSP1CON3">
+              <th class="sfrNameX">SSP1CON3<span>SSPCON3</span></th>
+              <td class="sfrAddr">0x217</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="MD3CON0">
+              <th class="sfrName">MD3CON0</th>
+              <td class="sfrAddr">0x21B</td>
+            </tr>
+            <tr id="MD3CON1">
+              <th class="sfrName">MD3CON1</th>
+              <td class="sfrAddr">0x21C</td>
+            </tr>
+            <tr id="MD3SRC">
+              <th class="sfrName">MD3SRC</th>
+              <td class="sfrAddr">0x21D</td>
+            </tr>
+            <tr id="MD3CARL">
+              <th class="sfrName">MD3CARL</th>
+              <td class="sfrAddr">0x21E</td>
+            </tr>
+            <tr id="MD3CARH">
+              <th class="sfrName">MD3CARH</th>
+              <td class="sfrAddr">0x21F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="ODCONA">
+              <th class="sfrName">ODCONA</th>
+              <td class="sfrAddr">0x28C</td>
+            </tr>
+            <tr id="ODCONB">
+              <th class="sfrName">ODCONB</th>
+              <td class="sfrAddr">0x28D</td>
+            </tr>
+            <tr id="ODCONC">
+              <th class="sfrName">ODCONC</th>
+              <td class="sfrAddr">0x28E</td>
+            </tr>
+            <tr id="ODCOND">
+              <th class="sfrName">ODCOND</th>
+              <td class="sfrAddr">0x28F</td>
+            </tr>
+            <tr id="ODCONE">
+              <th class="sfrName">ODCONE</th>
+              <td class="sfrAddr">0x290</td>
+            </tr>
+            <tr id="CCPR1">
+              <th class="sfrNameX">CCPR1<span>CCPR1L</span></th>
+              <td class="sfrAddr">0x291</td>
+            </tr>
+            <tr id="CCPR1H">
+              <th class="sfrName">CCPR1H</th>
+              <td class="sfrAddr">0x292</td>
+            </tr>
+            <tr id="CCP1CON">
+              <th class="sfrName">CCP1CON</th>
+              <td class="sfrAddr">0x293</td>
+            </tr>
+            <tr id="CCP1CAP">
+              <th class="sfrName">CCP1CAP</th>
+              <td class="sfrAddr">0x294</td>
+            </tr>
+            <tr id="CCPR2">
+              <th class="sfrNameX">CCPR2<span>CCPR2L</span></th>
+              <td class="sfrAddr">0x295</td>
+            </tr>
+            <tr id="CCPR2H">
+              <th class="sfrName">CCPR2H</th>
+              <td class="sfrAddr">0x296</td>
+            </tr>
+            <tr id="CCP2CON">
+              <th class="sfrName">CCP2CON</th>
+              <td class="sfrAddr">0x297</td>
+            </tr>
+            <tr id="CCP2CAP">
+              <th class="sfrName">CCP2CAP</th>
+              <td class="sfrAddr">0x298</td>
+            </tr>
+            <tr id="CCPR7">
+              <th class="sfrNameX">CCPR7<span>CCPR7L</span></th>
+              <td class="sfrAddr">0x299</td>
+            </tr>
+            <tr id="CCPR7H">
+              <th class="sfrName">CCPR7H</th>
+              <td class="sfrAddr">0x29A</td>
+            </tr>
+            <tr id="CCP7CON">
+              <th class="sfrName">CCP7CON</th>
+              <td class="sfrAddr">0x29B</td>
+            </tr>
+            <tr id="CCP7CAP">
+              <th class="sfrName">CCP7CAP</th>
+              <td class="sfrAddr">0x29C</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="CCPTMRS1">
+              <th class="sfrName">CCPTMRS1</th>
+              <td class="sfrAddr">0x29E</td>
+            </tr>
+            <tr id="CCPTMRS2">
+              <th class="sfrName">CCPTMRS2</th>
+              <td class="sfrAddr">0x29F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="SLRCONA">
+              <th class="sfrName">SLRCONA</th>
+              <td class="sfrAddr">0x30C</td>
+            </tr>
+            <tr id="SLRCONB">
+              <th class="sfrName">SLRCONB</th>
+              <td class="sfrAddr">0x30D</td>
+            </tr>
+            <tr id="SLRCONC">
+              <th class="sfrName">SLRCONC</th>
+              <td class="sfrAddr">0x30E</td>
+            </tr>
+            <tr id="SLRCOND">
+              <th class="sfrName">SLRCOND</th>
+              <td class="sfrAddr">0x30F</td>
+            </tr>
+            <tr id="SLRCONE">
+              <th class="sfrName">SLRCONE</th>
+              <td class="sfrAddr">0x310</td>
+            </tr>
+            <tr id="CCPR4">
+              <th class="sfrNameX">CCPR4<span>CCPR4L</span></th>
+              <td class="sfrAddr">0x311</td>
+            </tr>
+            <tr id="CCPR4H">
+              <th class="sfrName">CCPR4H</th>
+              <td class="sfrAddr">0x312</td>
+            </tr>
+            <tr id="CCP4CON">
+              <th class="sfrName">CCP4CON</th>
+              <td class="sfrAddr">0x313</td>
+            </tr>
+            <tr id="CCP4CAP">
+              <th class="sfrName">CCP4CAP</th>
+              <td class="sfrAddr">0x314</td>
+            </tr>
+            <tr id="MD1CON0">
+              <th class="sfrName">MD1CON0</th>
+              <td class="sfrAddr">0x315</td>
+            </tr>
+            <tr id="MD1CON1">
+              <th class="sfrName">MD1CON1</th>
+              <td class="sfrAddr">0x316</td>
+            </tr>
+            <tr id="MD1SRC">
+              <th class="sfrName">MD1SRC</th>
+              <td class="sfrAddr">0x317</td>
+            </tr>
+            <tr id="MD1CARL">
+              <th class="sfrName">MD1CARL</th>
+              <td class="sfrAddr">0x318</td>
+            </tr>
+            <tr id="MD1CARH">
+              <th class="sfrName">MD1CARH</th>
+              <td class="sfrAddr">0x319</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="MD2CON0">
+              <th class="sfrName">MD2CON0</th>
+              <td class="sfrAddr">0x31B</td>
+            </tr>
+            <tr id="MD2CON1">
+              <th class="sfrName">MD2CON1</th>
+              <td class="sfrAddr">0x31C</td>
+            </tr>
+            <tr id="MD2SRC">
+              <th class="sfrName">MD2SRC</th>
+              <td class="sfrAddr">0x31D</td>
+            </tr>
+            <tr id="MD2CARL">
+              <th class="sfrName">MD2CARL</th>
+              <td class="sfrAddr">0x31E</td>
+            </tr>
+            <tr id="MD2CARH">
+              <th class="sfrName">MD2CARH</th>
+              <td class="sfrAddr">0x31F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="INLVLA">
+              <th class="sfrName">INLVLA</th>
+              <td class="sfrAddr">0x38C</td>
+            </tr>
+            <tr id="INLVLB">
+              <th class="sfrName">INLVLB</th>
+              <td class="sfrAddr">0x38D</td>
+            </tr>
+            <tr id="INLVLC">
+              <th class="sfrName">INLVLC</th>
+              <td class="sfrAddr">0x38E</td>
+            </tr>
+            <tr id="INLVLD">
+              <th class="sfrName">INLVLD</th>
+              <td class="sfrAddr">0x38F</td>
+            </tr>
+            <tr id="INLVE">
+              <th class="sfrName">INLVE</th>
+              <td class="sfrAddr">0x390</td>
+            </tr>
+            <tr id="IOCAP">
+              <th class="sfrName">IOCAP</th>
+              <td class="sfrAddr">0x391</td>
+            </tr>
+            <tr id="IOCAN">
+              <th class="sfrName">IOCAN</th>
+              <td class="sfrAddr">0x392</td>
+            </tr>
+            <tr id="IOCAF">
+              <th class="sfrName">IOCAF</th>
+              <td class="sfrAddr">0x393</td>
+            </tr>
+            <tr id="IOCBP">
+              <th class="sfrName">IOCBP</th>
+              <td class="sfrAddr">0x394</td>
+            </tr>
+            <tr id="IOCBN">
+              <th class="sfrName">IOCBN</th>
+              <td class="sfrAddr">0x395</td>
+            </tr>
+            <tr id="IOCBF">
+              <th class="sfrName">IOCBF</th>
+              <td class="sfrAddr">0x396</td>
+            </tr>
+            <tr id="IOCCP">
+              <th class="sfrName">IOCCP</th>
+              <td class="sfrAddr">0x397</td>
+            </tr>
+            <tr id="IOCCN">
+              <th class="sfrName">IOCCN</th>
+              <td class="sfrAddr">0x398</td>
+            </tr>
+            <tr id="IOCCF">
+              <th class="sfrName">IOCCF</th>
+              <td class="sfrAddr">0x399</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="IOCEP">
+              <th class="sfrName">IOCEP</th>
+              <td class="sfrAddr">0x39D</td>
+            </tr>
+            <tr id="IOCEN">
+              <th class="sfrName">IOCEN</th>
+              <td class="sfrAddr">0x39E</td>
+            </tr>
+            <tr id="IOCEF">
+              <th class="sfrName">IOCEF</th>
+              <td class="sfrAddr">0x39F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="HIDRVB">
+              <th class="sfrName">HIDRVB</th>
+              <td class="sfrAddr">0x40D</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="TMR5">
+              <th class="sfrNameX">TMR5<span>TMR5L</span></th>
+              <td class="sfrAddr">0x40F</td>
+            </tr>
+            <tr id="TMR5H">
+              <th class="sfrName">TMR5H</th>
+              <td class="sfrAddr">0x410</td>
+            </tr>
+            <tr id="T5CON">
+              <th class="sfrName">T5CON</th>
+              <td class="sfrAddr">0x411</td>
+            </tr>
+            <tr id="T5GCON">
+              <th class="sfrName">T5GCON</th>
+              <td class="sfrAddr">0x412</td>
+            </tr>
+            <tr id="T4TMR">
+              <th class="sfrNameX">T4TMR<span>TMR4</span></th>
+              <td class="sfrAddr">0x413</td>
+            </tr>
+            <tr id="PR4">
+              <th class="sfrNameX">PR4<span>T4PR</span></th>
+              <td class="sfrAddr">0x414</td>
+            </tr>
+            <tr id="T4CON">
+              <th class="sfrName">T4CON</th>
+              <td class="sfrAddr">0x415</td>
+            </tr>
+            <tr id="T4HLT">
+              <th class="sfrName">T4HLT</th>
+              <td class="sfrAddr">0x416</td>
+            </tr>
+            <tr id="T4CLKCON">
+              <th class="sfrName">T4CLKCON</th>
+              <td class="sfrAddr">0x417</td>
+            </tr>
+            <tr id="T4RST">
+              <th class="sfrName">T4RST</th>
+              <td class="sfrAddr">0x418</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="T6TMR">
+              <th class="sfrNameX">T6TMR<span>TMR6</span></th>
+              <td class="sfrAddr">0x41A</td>
+            </tr>
+            <tr id="PR6">
+              <th class="sfrNameX">PR6<span>T6PR</span></th>
+              <td class="sfrAddr">0x41B</td>
+            </tr>
+            <tr id="T6CON">
+              <th class="sfrName">T6CON</th>
+              <td class="sfrAddr">0x41C</td>
+            </tr>
+            <tr id="T6HLT">
+              <th class="sfrName">T6HLT</th>
+              <td class="sfrAddr">0x41D</td>
+            </tr>
+            <tr id="T6CLKCON">
+              <th class="sfrName">T6CLKCON</th>
+              <td class="sfrAddr">0x41E</td>
+            </tr>
+            <tr id="T6RST">
+              <th class="sfrName">T6RST</th>
+              <td class="sfrAddr">0x41F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="ADRESL">
+              <th class="sfrName">ADRESL</th>
+              <td class="sfrAddr">0x48E</td>
+            </tr>
+            <tr id="ADRESH">
+              <th class="sfrName">ADRESH</th>
+              <td class="sfrAddr">0x48F</td>
+            </tr>
+            <tr id="ADCON0">
+              <th class="sfrName">ADCON0</th>
+              <td class="sfrAddr">0x490</td>
+            </tr>
+            <tr id="ADCON1">
+              <th class="sfrName">ADCON1</th>
+              <td class="sfrAddr">0x491</td>
+            </tr>
+            <tr id="ADCON2">
+              <th class="sfrName">ADCON2</th>
+              <td class="sfrAddr">0x492</td>
+            </tr>
+            <tr id="T2TMR">
+              <th class="sfrNameX">T2TMR<span>TMR2</span></th>
+              <td class="sfrAddr">0x493</td>
+            </tr>
+            <tr id="PR2">
+              <th class="sfrNameX">PR2<span>T2PR</span></th>
+              <td class="sfrAddr">0x494</td>
+            </tr>
+            <tr id="T2CON">
+              <th class="sfrName">T2CON</th>
+              <td class="sfrAddr">0x495</td>
+            </tr>
+            <tr id="T2HLT">
+              <th class="sfrName">T2HLT</th>
+              <td class="sfrAddr">0x496</td>
+            </tr>
+            <tr id="T2CLKCON">
+              <th class="sfrName">T2CLKCON</th>
+              <td class="sfrAddr">0x497</td>
+            </tr>
+            <tr id="T2RST">
+              <th class="sfrName">T2RST</th>
+              <td class="sfrAddr">0x498</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="T8TMR">
+              <th class="sfrNameX">T8TMR<span>TMR8</span></th>
+              <td class="sfrAddr">0x49A</td>
+            </tr>
+            <tr id="PR8">
+              <th class="sfrNameX">PR8<span>T8PR</span></th>
+              <td class="sfrAddr">0x49B</td>
+            </tr>
+            <tr id="T8CON">
+              <th class="sfrName">T8CON</th>
+              <td class="sfrAddr">0x49C</td>
+            </tr>
+            <tr id="T8HLT">
+              <th class="sfrName">T8HLT</th>
+              <td class="sfrAddr">0x49D</td>
+            </tr>
+            <tr id="T8CLKCON">
+              <th class="sfrName">T8CLKCON</th>
+              <td class="sfrAddr">0x49E</td>
+            </tr>
+            <tr id="T8RST">
+              <th class="sfrName">T8RST</th>
+              <td class="sfrAddr">0x49F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="OPA1NCHS">
+              <th class="sfrName">OPA1NCHS</th>
+              <td class="sfrAddr">0x50F</td>
+            </tr>
+            <tr id="OPA1PCHS">
+              <th class="sfrName">OPA1PCHS</th>
+              <td class="sfrAddr">0x510</td>
+            </tr>
+            <tr id="OPA1CON">
+              <th class="sfrName">OPA1CON</th>
+              <td class="sfrAddr">0x511</td>
+            </tr>
+            <tr id="OPA1ORS">
+              <th class="sfrName">OPA1ORS</th>
+              <td class="sfrAddr">0x512</td>
+            </tr>
+            <tr id="OPA2NCHS">
+              <th class="sfrName">OPA2NCHS</th>
+              <td class="sfrAddr">0x513</td>
+            </tr>
+            <tr id="OPA2PCHS">
+              <th class="sfrName">OPA2PCHS</th>
+              <td class="sfrAddr">0x514</td>
+            </tr>
+            <tr id="OPA2CON">
+              <th class="sfrName">OPA2CON</th>
+              <td class="sfrAddr">0x515</td>
+            </tr>
+            <tr id="OPA2ORS">
+              <th class="sfrName">OPA2ORS</th>
+              <td class="sfrAddr">0x516</td>
+            </tr>
+            <tr id="OPA3NCHS">
+              <th class="sfrName">OPA3NCHS</th>
+              <td class="sfrAddr">0x517</td>
+            </tr>
+            <tr id="OPA3PCHS">
+              <th class="sfrName">OPA3PCHS</th>
+              <td class="sfrAddr">0x518</td>
+            </tr>
+            <tr id="OPA3CON">
+              <th class="sfrName">OPA3CON</th>
+              <td class="sfrAddr">0x519</td>
+            </tr>
+            <tr id="OPA3ORS">
+              <th class="sfrName">OPA3ORS</th>
+              <td class="sfrAddr">0x51A</td>
+            </tr>
+            <tr id="OPA4NCHS">
+              <th class="sfrName">OPA4NCHS</th>
+              <td class="sfrAddr">0x51B</td>
+            </tr>
+            <tr id="OPA4PCHS">
+              <th class="sfrName">OPA4PCHS</th>
+              <td class="sfrAddr">0x51C</td>
+            </tr>
+            <tr id="OPA4CON">
+              <th class="sfrName">OPA4CON</th>
+              <td class="sfrAddr">0x51D</td>
+            </tr>
+            <tr id="OPA4ORS">
+              <th class="sfrName">OPA4ORS</th>
+              <td class="sfrAddr">0x51E</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="DACLD">
+              <th class="sfrName">DACLD</th>
+              <td class="sfrAddr">0x58D</td>
+            </tr>
+            <tr id="DAC1CON0">
+              <th class="sfrName">DAC1CON0</th>
+              <td class="sfrAddr">0x58E</td>
+            </tr>
+            <tr id="DAC1CON1">
+              <th class="sfrNameX">DAC1CON1<span>DAC1REF<br>DAC1REFL</span></th>
+              <td class="sfrAddr">0x58F</td>
+            </tr>
+            <tr id="DAC1CON2">
+              <th class="sfrNameX">DAC1CON2<span>DAC1REFH</span></th>
+              <td class="sfrAddr">0x590</td>
+            </tr>
+            <tr id="DAC2CON0">
+              <th class="sfrName">DAC2CON0</th>
+              <td class="sfrAddr">0x591</td>
+            </tr>
+            <tr id="DAC2CON1">
+              <th class="sfrNameX">DAC2CON1<span>DAC2REF<br>DAC2REFL</span></th>
+              <td class="sfrAddr">0x592</td>
+            </tr>
+            <tr id="DAC2CON2">
+              <th class="sfrNameX">DAC2CON2<span>DAC2REFH</span></th>
+              <td class="sfrAddr">0x593</td>
+            </tr>
+            <tr id="DAC3CON0">
+              <th class="sfrName">DAC3CON0</th>
+              <td class="sfrAddr">0x594</td>
+            </tr>
+            <tr id="DAC3CON1">
+              <th class="sfrNameX">DAC3CON1<span>DAC3REF</span></th>
+              <td class="sfrAddr">0x595</td>
+            </tr>
+            <tr id="DAC4CON0">
+              <th class="sfrName">DAC4CON0</th>
+              <td class="sfrAddr">0x596</td>
+            </tr>
+            <tr id="DAC4CON1">
+              <th class="sfrNameX">DAC4CON1<span>DAC4REF</span></th>
+              <td class="sfrAddr">0x597</td>
+            </tr>
+            <tr id="DAC5CON0">
+              <th class="sfrName">DAC5CON0</th>
+              <td class="sfrAddr">0x598</td>
+            </tr>
+            <tr id="DAC5CON1">
+              <th class="sfrNameX">DAC5CON1<span>DAC5REF<br>DAC5REFL</span></th>
+              <td class="sfrAddr">0x599</td>
+            </tr>
+            <tr id="DAC5CON2">
+              <th class="sfrNameX">DAC5CON2<span>DAC5REFH</span></th>
+              <td class="sfrAddr">0x59A</td>
+            </tr>
+            <tr id="DAC6CON0">
+              <th class="sfrName">DAC6CON0</th>
+              <td class="sfrAddr">0x59B</td>
+            </tr>
+            <tr id="DAC6CON1">
+              <th class="sfrNameX">DAC6CON1<span>DAC6REF<br>DAC6REFL</span></th>
+              <td class="sfrAddr">0x59C</td>
+            </tr>
+            <tr id="DAC6CON2">
+              <th class="sfrNameX">DAC6CON2<span>DAC6REFH</span></th>
+              <td class="sfrAddr">0x59D</td>
+            </tr>
+            <tr id="DAC7CON0">
+              <th class="sfrName">DAC7CON0</th>
+              <td class="sfrAddr">0x59E</td>
+            </tr>
+            <tr id="DAC7CON1">
+              <th class="sfrNameX">DAC7CON1<span>DAC7REF</span></th>
+              <td class="sfrAddr">0x59F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="DAC8CON0">
+              <th class="sfrName">DAC8CON0</th>
+              <td class="sfrAddr">0x60C</td>
+            </tr>
+            <tr id="DAC8CON1">
+              <th class="sfrNameX">DAC8CON1<span>DAC8REF</span></th>
+              <td class="sfrAddr">0x60D</td>
+            </tr>
+            <tr id="PRG8RTSS">
+              <th class="sfrName">PRG8RTSS</th>
+              <td class="sfrAddr">0x60E</td>
+            </tr>
+            <tr id="PRG8FTSS">
+              <th class="sfrName">PRG8FTSS</th>
+              <td class="sfrAddr">0x60F</td>
+            </tr>
+            <tr id="PRG8INS">
+              <th class="sfrName">PRG8INS</th>
+              <td class="sfrAddr">0x610</td>
+            </tr>
+            <tr id="PRG8CON0">
+              <th class="sfrName">PRG8CON0</th>
+              <td class="sfrAddr">0x611</td>
+            </tr>
+            <tr id="PRG8CON1">
+              <th class="sfrName">PRG8CON1</th>
+              <td class="sfrAddr">0x612</td>
+            </tr>
+            <tr id="PRG8CON2">
+              <th class="sfrName">PRG8CON2</th>
+              <td class="sfrAddr">0x613</td>
+            </tr>
+            <tr id="PWM3DCL">
+              <th class="sfrName">PWM3DCL</th>
+              <td class="sfrAddr">0x614</td>
+            </tr>
+            <tr id="PWM3DCH">
+              <th class="sfrName">PWM3DCH</th>
+              <td class="sfrAddr">0x615</td>
+            </tr>
+            <tr id="PWM3CON">
+              <th class="sfrName">PWM3CON</th>
+              <td class="sfrAddr">0x616</td>
+            </tr>
+            <tr id="PWM4DCL">
+              <th class="sfrName">PWM4DCL</th>
+              <td class="sfrAddr">0x617</td>
+            </tr>
+            <tr id="PWM4DCH">
+              <th class="sfrName">PWM4DCH</th>
+              <td class="sfrAddr">0x618</td>
+            </tr>
+            <tr id="PWM4CON">
+              <th class="sfrName">PWM4CON</th>
+              <td class="sfrAddr">0x619</td>
+            </tr>
+            <tr id="PWM9DCL">
+              <th class="sfrName">PWM9DCL</th>
+              <td class="sfrAddr">0x61A</td>
+            </tr>
+            <tr id="PWM9DCH">
+              <th class="sfrName">PWM9DCH</th>
+              <td class="sfrAddr">0x61B</td>
+            </tr>
+            <tr id="PWM9CON">
+              <th class="sfrName">PWM9CON</th>
+              <td class="sfrAddr">0x61C</td>
+            </tr>
+            <tr id="PWM10DCL">
+              <th class="sfrName">PWM10DCL</th>
+              <td class="sfrAddr">0x61D</td>
+            </tr>
+            <tr id="PWM10DCH">
+              <th class="sfrName">PWM10DCH</th>
+              <td class="sfrAddr">0x61E</td>
+            </tr>
+            <tr id="PWM10CON">
+              <th class="sfrName">PWM10CON</th>
+              <td class="sfrAddr">0x61F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="COG1PHR">
+              <th class="sfrName">COG1PHR</th>
+              <td class="sfrAddr">0x68D</td>
+            </tr>
+            <tr id="COG1PHF">
+              <th class="sfrName">COG1PHF</th>
+              <td class="sfrAddr">0x68E</td>
+            </tr>
+            <tr id="COG1BLKR">
+              <th class="sfrName">COG1BLKR</th>
+              <td class="sfrAddr">0x68F</td>
+            </tr>
+            <tr id="COG1BLKF">
+              <th class="sfrName">COG1BLKF</th>
+              <td class="sfrAddr">0x690</td>
+            </tr>
+            <tr id="COG1DBR">
+              <th class="sfrName">COG1DBR</th>
+              <td class="sfrAddr">0x691</td>
+            </tr>
+            <tr id="COG1DBF">
+              <th class="sfrName">COG1DBF</th>
+              <td class="sfrAddr">0x692</td>
+            </tr>
+            <tr id="COG1CON0">
+              <th class="sfrName">COG1CON0</th>
+              <td class="sfrAddr">0x693</td>
+            </tr>
+            <tr id="COG1CON1">
+              <th class="sfrName">COG1CON1</th>
+              <td class="sfrAddr">0x694</td>
+            </tr>
+            <tr id="COG1RIS0">
+              <th class="sfrName">COG1RIS0</th>
+              <td class="sfrAddr">0x695</td>
+            </tr>
+            <tr id="COG1RIS1">
+              <th class="sfrName">COG1RIS1</th>
+              <td class="sfrAddr">0x696</td>
+            </tr>
+            <tr id="COG1RSIM0">
+              <th class="sfrName">COG1RSIM0</th>
+              <td class="sfrAddr">0x697</td>
+            </tr>
+            <tr id="COG1RSIM1">
+              <th class="sfrName">COG1RSIM1</th>
+              <td class="sfrAddr">0x698</td>
+            </tr>
+            <tr id="COG1FIS0">
+              <th class="sfrName">COG1FIS0</th>
+              <td class="sfrAddr">0x699</td>
+            </tr>
+            <tr id="COG1FIS1">
+              <th class="sfrName">COG1FIS1</th>
+              <td class="sfrAddr">0x69A</td>
+            </tr>
+            <tr id="COG1FSIM0">
+              <th class="sfrName">COG1FSIM0</th>
+              <td class="sfrAddr">0x69B</td>
+            </tr>
+            <tr id="COG1FSIM1">
+              <th class="sfrName">COG1FSIM1</th>
+              <td class="sfrAddr">0x69C</td>
+            </tr>
+            <tr id="COG1ASD0">
+              <th class="sfrName">COG1ASD0</th>
+              <td class="sfrAddr">0x69D</td>
+            </tr>
+            <tr id="COG1ASD1">
+              <th class="sfrName">COG1ASD1</th>
+              <td class="sfrAddr">0x69E</td>
+            </tr>
+            <tr id="COG1STR">
+              <th class="sfrName">COG1STR</th>
+              <td class="sfrAddr">0x69F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="COG2PHR">
+              <th class="sfrName">COG2PHR</th>
+              <td class="sfrAddr">0x70D</td>
+            </tr>
+            <tr id="COG2PHF">
+              <th class="sfrName">COG2PHF</th>
+              <td class="sfrAddr">0x70E</td>
+            </tr>
+            <tr id="COG2BLKR">
+              <th class="sfrName">COG2BLKR</th>
+              <td class="sfrAddr">0x70F</td>
+            </tr>
+            <tr id="COG2BLKF">
+              <th class="sfrName">COG2BLKF</th>
+              <td class="sfrAddr">0x710</td>
+            </tr>
+            <tr id="COG2DBR">
+              <th class="sfrName">COG2DBR</th>
+              <td class="sfrAddr">0x711</td>
+            </tr>
+            <tr id="COG2DBF">
+              <th class="sfrName">COG2DBF</th>
+              <td class="sfrAddr">0x712</td>
+            </tr>
+            <tr id="COG2CON0">
+              <th class="sfrName">COG2CON0</th>
+              <td class="sfrAddr">0x713</td>
+            </tr>
+            <tr id="COG2CON1">
+              <th class="sfrName">COG2CON1</th>
+              <td class="sfrAddr">0x714</td>
+            </tr>
+            <tr id="COG2RIS0">
+              <th class="sfrName">COG2RIS0</th>
+              <td class="sfrAddr">0x715</td>
+            </tr>
+            <tr id="COG2RIS1">
+              <th class="sfrName">COG2RIS1</th>
+              <td class="sfrAddr">0x716</td>
+            </tr>
+            <tr id="COG2RSIM0">
+              <th class="sfrName">COG2RSIM0</th>
+              <td class="sfrAddr">0x717</td>
+            </tr>
+            <tr id="COG2RSIM1">
+              <th class="sfrName">COG2RSIM1</th>
+              <td class="sfrAddr">0x718</td>
+            </tr>
+            <tr id="COG2FIS0">
+              <th class="sfrName">COG2FIS0</th>
+              <td class="sfrAddr">0x719</td>
+            </tr>
+            <tr id="COG2FIS1">
+              <th class="sfrName">COG2FIS1</th>
+              <td class="sfrAddr">0x71A</td>
+            </tr>
+            <tr id="COG2FSIM0">
+              <th class="sfrName">COG2FSIM0</th>
+              <td class="sfrAddr">0x71B</td>
+            </tr>
+            <tr id="COG2FSIM1">
+              <th class="sfrName">COG2FSIM1</th>
+              <td class="sfrAddr">0x71C</td>
+            </tr>
+            <tr id="COG2ASD0">
+              <th class="sfrName">COG2ASD0</th>
+              <td class="sfrAddr">0x71D</td>
+            </tr>
+            <tr id="COG2ASD1">
+              <th class="sfrName">COG2ASD1</th>
+              <td class="sfrAddr">0x71E</td>
+            </tr>
+            <tr id="COG2STR">
+              <th class="sfrName">COG2STR</th>
+              <td class="sfrAddr">0x71F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="PRG1RTSS">
+              <th class="sfrName">PRG1RTSS</th>
+              <td class="sfrAddr">0x78E</td>
+            </tr>
+            <tr id="PRG1FTSS">
+              <th class="sfrName">PRG1FTSS</th>
+              <td class="sfrAddr">0x78F</td>
+            </tr>
+            <tr id="PRG1INS">
+              <th class="sfrName">PRG1INS</th>
+              <td class="sfrAddr">0x790</td>
+            </tr>
+            <tr id="PRG1CON0">
+              <th class="sfrName">PRG1CON0</th>
+              <td class="sfrAddr">0x791</td>
+            </tr>
+            <tr id="PRG1CON1">
+              <th class="sfrName">PRG1CON1</th>
+              <td class="sfrAddr">0x792</td>
+            </tr>
+            <tr id="PRG1CON2">
+              <th class="sfrName">PRG1CON2</th>
+              <td class="sfrAddr">0x793</td>
+            </tr>
+            <tr id="PRG2RTSS">
+              <th class="sfrName">PRG2RTSS</th>
+              <td class="sfrAddr">0x794</td>
+            </tr>
+            <tr id="PRG2FTSS">
+              <th class="sfrName">PRG2FTSS</th>
+              <td class="sfrAddr">0x795</td>
+            </tr>
+            <tr id="PRG2INS">
+              <th class="sfrName">PRG2INS</th>
+              <td class="sfrAddr">0x796</td>
+            </tr>
+            <tr id="PRG2CON0">
+              <th class="sfrName">PRG2CON0</th>
+              <td class="sfrAddr">0x797</td>
+            </tr>
+            <tr id="PRG2CON1">
+              <th class="sfrName">PRG2CON1</th>
+              <td class="sfrAddr">0x798</td>
+            </tr>
+            <tr id="PRG2CON2">
+              <th class="sfrName">PRG2CON2</th>
+              <td class="sfrAddr">0x799</td>
+            </tr>
+            <tr id="PRG3RTSS">
+              <th class="sfrName">PRG3RTSS</th>
+              <td class="sfrAddr">0x79A</td>
+            </tr>
+            <tr id="PRG3FTSS">
+              <th class="sfrName">PRG3FTSS</th>
+              <td class="sfrAddr">0x79B</td>
+            </tr>
+            <tr id="PRG3INS">
+              <th class="sfrName">PRG3INS</th>
+              <td class="sfrAddr">0x79C</td>
+            </tr>
+            <tr id="PRG3CON0">
+              <th class="sfrName">PRG3CON0</th>
+              <td class="sfrAddr">0x79D</td>
+            </tr>
+            <tr id="PRG3CON1">
+              <th class="sfrName">PRG3CON1</th>
+              <td class="sfrAddr">0x79E</td>
+            </tr>
+            <tr id="PRG3CON2">
+              <th class="sfrName">PRG3CON2</th>
+              <td class="sfrAddr">0x79F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="COG3PHR">
+              <th class="sfrName">COG3PHR</th>
+              <td class="sfrAddr">0x80D</td>
+            </tr>
+            <tr id="COG3PHF">
+              <th class="sfrName">COG3PHF</th>
+              <td class="sfrAddr">0x80E</td>
+            </tr>
+            <tr id="COG3BLKR">
+              <th class="sfrName">COG3BLKR</th>
+              <td class="sfrAddr">0x80F</td>
+            </tr>
+            <tr id="COG3BLKF">
+              <th class="sfrName">COG3BLKF</th>
+              <td class="sfrAddr">0x810</td>
+            </tr>
+            <tr id="COG3DBR">
+              <th class="sfrName">COG3DBR</th>
+              <td class="sfrAddr">0x811</td>
+            </tr>
+            <tr id="COG3DBF">
+              <th class="sfrName">COG3DBF</th>
+              <td class="sfrAddr">0x812</td>
+            </tr>
+            <tr id="COG3CON0">
+              <th class="sfrName">COG3CON0</th>
+              <td class="sfrAddr">0x813</td>
+            </tr>
+            <tr id="COG3CON1">
+              <th class="sfrName">COG3CON1</th>
+              <td class="sfrAddr">0x814</td>
+            </tr>
+            <tr id="COG3RIS0">
+              <th class="sfrName">COG3RIS0</th>
+              <td class="sfrAddr">0x815</td>
+            </tr>
+            <tr id="COG3RIS1">
+              <th class="sfrName">COG3RIS1</th>
+              <td class="sfrAddr">0x816</td>
+            </tr>
+            <tr id="COG3RSIM0">
+              <th class="sfrName">COG3RSIM0</th>
+              <td class="sfrAddr">0x817</td>
+            </tr>
+            <tr id="COG3RSIM1">
+              <th class="sfrName">COG3RSIM1</th>
+              <td class="sfrAddr">0x818</td>
+            </tr>
+            <tr id="COG3FIS0">
+              <th class="sfrName">COG3FIS0</th>
+              <td class="sfrAddr">0x819</td>
+            </tr>
+            <tr id="COG3FIS1">
+              <th class="sfrName">COG3FIS1</th>
+              <td class="sfrAddr">0x81A</td>
+            </tr>
+            <tr id="COG3FSIM0">
+              <th class="sfrName">COG3FSIM0</th>
+              <td class="sfrAddr">0x81B</td>
+            </tr>
+            <tr id="COG3FSIM1">
+              <th class="sfrName">COG3FSIM1</th>
+              <td class="sfrAddr">0x81C</td>
+            </tr>
+            <tr id="COG3ASD0">
+              <th class="sfrName">COG3ASD0</th>
+              <td class="sfrAddr">0x81D</td>
+            </tr>
+            <tr id="COG3ASD1">
+              <th class="sfrName">COG3ASD1</th>
+              <td class="sfrAddr">0x81E</td>
+            </tr>
+            <tr id="COG3STR">
+              <th class="sfrName">COG3STR</th>
+              <td class="sfrAddr">0x81F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="COG4PHR">
+              <th class="sfrName">COG4PHR</th>
+              <td class="sfrAddr">0x88D</td>
+            </tr>
+            <tr id="COG4PHF">
+              <th class="sfrName">COG4PHF</th>
+              <td class="sfrAddr">0x88E</td>
+            </tr>
+            <tr id="COG4BLKR">
+              <th class="sfrName">COG4BLKR</th>
+              <td class="sfrAddr">0x88F</td>
+            </tr>
+            <tr id="COG4BLKF">
+              <th class="sfrName">COG4BLKF</th>
+              <td class="sfrAddr">0x890</td>
+            </tr>
+            <tr id="COG4DBR">
+              <th class="sfrName">COG4DBR</th>
+              <td class="sfrAddr">0x891</td>
+            </tr>
+            <tr id="COG4DBF">
+              <th class="sfrName">COG4DBF</th>
+              <td class="sfrAddr">0x892</td>
+            </tr>
+            <tr id="COG4CON0">
+              <th class="sfrName">COG4CON0</th>
+              <td class="sfrAddr">0x893</td>
+            </tr>
+            <tr id="COG4CON1">
+              <th class="sfrName">COG4CON1</th>
+              <td class="sfrAddr">0x894</td>
+            </tr>
+            <tr id="COG4RIS0">
+              <th class="sfrName">COG4RIS0</th>
+              <td class="sfrAddr">0x895</td>
+            </tr>
+            <tr id="COG4RIS1">
+              <th class="sfrName">COG4RIS1</th>
+              <td class="sfrAddr">0x896</td>
+            </tr>
+            <tr id="COG4RSIM0">
+              <th class="sfrName">COG4RSIM0</th>
+              <td class="sfrAddr">0x897</td>
+            </tr>
+            <tr id="COG4RSIM1">
+              <th class="sfrName">COG4RSIM1</th>
+              <td class="sfrAddr">0x898</td>
+            </tr>
+            <tr id="COG4FIS0">
+              <th class="sfrName">COG4FIS0</th>
+              <td class="sfrAddr">0x899</td>
+            </tr>
+            <tr id="COG4FIS1">
+              <th class="sfrName">COG4FIS1</th>
+              <td class="sfrAddr">0x89A</td>
+            </tr>
+            <tr id="COG4FSIM0">
+              <th class="sfrName">COG4FSIM0</th>
+              <td class="sfrAddr">0x89B</td>
+            </tr>
+            <tr id="COG4FSIM1">
+              <th class="sfrName">COG4FSIM1</th>
+              <td class="sfrAddr">0x89C</td>
+            </tr>
+            <tr id="COG4ASD0">
+              <th class="sfrName">COG4ASD0</th>
+              <td class="sfrAddr">0x89D</td>
+            </tr>
+            <tr id="COG4ASD1">
+              <th class="sfrName">COG4ASD1</th>
+              <td class="sfrAddr">0x89E</td>
+            </tr>
+            <tr id="COG4STR">
+              <th class="sfrName">COG4STR</th>
+              <td class="sfrAddr">0x89F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="CM4CON0">
+              <th class="sfrName">CM4CON0</th>
+              <td class="sfrAddr">0x90C</td>
+            </tr>
+            <tr id="CM4CON1">
+              <th class="sfrName">CM4CON1</th>
+              <td class="sfrAddr">0x90D</td>
+            </tr>
+            <tr id="CM4NSEL">
+              <th class="sfrName">CM4NSEL</th>
+              <td class="sfrAddr">0x90E</td>
+            </tr>
+            <tr id="CM4PSEL">
+              <th class="sfrName">CM4PSEL</th>
+              <td class="sfrAddr">0x90F</td>
+            </tr>
+            <tr id="CM5CON0">
+              <th class="sfrName">CM5CON0</th>
+              <td class="sfrAddr">0x910</td>
+            </tr>
+            <tr id="CM5CON1">
+              <th class="sfrName">CM5CON1</th>
+              <td class="sfrAddr">0x911</td>
+            </tr>
+            <tr id="CM5NSEL">
+              <th class="sfrName">CM5NSEL</th>
+              <td class="sfrAddr">0x912</td>
+            </tr>
+            <tr id="CM5PSEL">
+              <th class="sfrName">CM5PSEL</th>
+              <td class="sfrAddr">0x913</td>
+            </tr>
+            <tr id="CM6CON0">
+              <th class="sfrName">CM6CON0</th>
+              <td class="sfrAddr">0x914</td>
+            </tr>
+            <tr id="CM6CON1">
+              <th class="sfrName">CM6CON1</th>
+              <td class="sfrAddr">0x915</td>
+            </tr>
+            <tr id="CM6NSEL">
+              <th class="sfrName">CM6NSEL</th>
+              <td class="sfrAddr">0x916</td>
+            </tr>
+            <tr id="CM6PSEL">
+              <th class="sfrName">CM6PSEL</th>
+              <td class="sfrAddr">0x917</td>
+            </tr>
+            <tr id="CM7CON0">
+              <th class="sfrName">CM7CON0</th>
+              <td class="sfrAddr">0x918</td>
+            </tr>
+            <tr id="CM7CON1">
+              <th class="sfrName">CM7CON1</th>
+              <td class="sfrAddr">0x919</td>
+            </tr>
+            <tr id="CM7NSEL">
+              <th class="sfrName">CM7NSEL</th>
+              <td class="sfrAddr">0x91A</td>
+            </tr>
+            <tr id="CM7PSEL">
+              <th class="sfrName">CM7PSEL</th>
+              <td class="sfrAddr">0x91B</td>
+            </tr>
+            <tr id="CM8CON0">
+              <th class="sfrName">CM8CON0</th>
+              <td class="sfrAddr">0x91C</td>
+            </tr>
+            <tr id="CM8CON1">
+              <th class="sfrName">CM8CON1</th>
+              <td class="sfrAddr">0x91D</td>
+            </tr>
+            <tr id="CM8NSEL">
+              <th class="sfrName">CM8NSEL</th>
+              <td class="sfrAddr">0x91E</td>
+            </tr>
+            <tr id="CM8PSEL">
+              <th class="sfrName">CM8PSEL</th>
+              <td class="sfrAddr">0x91F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="MD4CON0">
+              <th class="sfrName">MD4CON0</th>
+              <td class="sfrAddr">0xD1B</td>
+            </tr>
+            <tr id="MD4CON1">
+              <th class="sfrName">MD4CON1</th>
+              <td class="sfrAddr">0xD1C</td>
+            </tr>
+            <tr id="MD4SRC">
+              <th class="sfrName">MD4SRC</th>
+              <td class="sfrAddr">0xD1D</td>
+            </tr>
+            <tr id="MD4CARL">
+              <th class="sfrName">MD4CARL</th>
+              <td class="sfrAddr">0xD1E</td>
+            </tr>
+            <tr id="MD4CARH">
+              <th class="sfrName">MD4CARH</th>
+              <td class="sfrAddr">0xD1F</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="PWMEN">
+              <th class="sfrName">PWMEN</th>
+              <td class="sfrAddr">0xD8E</td>
+            </tr>
+            <tr id="PWMLD">
+              <th class="sfrName">PWMLD</th>
+              <td class="sfrAddr">0xD8F</td>
+            </tr>
+            <tr id="PWMOUT">
+              <th class="sfrName">PWMOUT</th>
+              <td class="sfrAddr">0xD90</td>
+            </tr>
+            <tr id="PWM5PH">
+              <th class="sfrNameX">PWM5PH<span>PWM5PHL</span></th>
+              <td class="sfrAddr">0xD91</td>
+            </tr>
+            <tr id="PWM5PHH">
+              <th class="sfrName">PWM5PHH</th>
+              <td class="sfrAddr">0xD92</td>
+            </tr>
+            <tr id="PWM5DC">
+              <th class="sfrNameX">PWM5DC<span>PWM5DCL</span></th>
+              <td class="sfrAddr">0xD93</td>
+            </tr>
+            <tr id="PWM5DCH">
+              <th class="sfrName">PWM5DCH</th>
+              <td class="sfrAddr">0xD94</td>
+            </tr>
+            <tr id="PWM5PR">
+              <th class="sfrNameX">PWM5PR<span>PWM5PRL</span></th>
+              <td class="sfrAddr">0xD95</td>
+            </tr>
+            <tr id="PWM5PRH">
+              <th class="sfrName">PWM5PRH</th>
+              <td class="sfrAddr">0xD96</td>
+            </tr>
+            <tr id="PWM5OF">
+              <th class="sfrNameX">PWM5OF<span>PWM5OFL</span></th>
+              <td class="sfrAddr">0xD97</td>
+            </tr>
+            <tr id="PWM5OFH">
+              <th class="sfrName">PWM5OFH</th>
+              <td class="sfrAddr">0xD98</td>
+            </tr>
+            <tr id="PWM5TMR">
+              <th class="sfrNameX">PWM5TMR<span>PWM5TMRL</span></th>
+              <td class="sfrAddr">0xD99</td>
+            </tr>
+            <tr id="PWM5TMRH">
+              <th class="sfrName">PWM5TMRH</th>
+              <td class="sfrAddr">0xD9A</td>
+            </tr>
+            <tr id="PWM5CON">
+              <th class="sfrName">PWM5CON</th>
+              <td class="sfrAddr">0xD9B</td>
+            </tr>
+            <tr id="PWM5INTCON">
+              <th class="sfrNameX">PWM5INTCON<span>PWM5INTE</span></th>
+              <td class="sfrAddr">0xD9C</td>
+            </tr>
+            <tr id="PWM5INTF">
+              <th class="sfrNameX">PWM5INTF<span>PWM5INTFLG</span></th>
+              <td class="sfrAddr">0xD9D</td>
+            </tr>
+            <tr id="PWM5CLKCON">
+              <th class="sfrName">PWM5CLKCON</th>
+              <td class="sfrAddr">0xD9E</td>
+            </tr>
+            <tr id="PWM5LDCON">
+              <th class="sfrName">PWM5LDCON</th>
+              <td class="sfrAddr">0xD9F</td>
+            </tr>
+            <tr id="PWM5OFCON">
+              <th class="sfrName">PWM5OFCON</th>
+              <td class="sfrAddr">0xDA0</td>
+            </tr>
+            <tr id="PWM6PH">
+              <th class="sfrNameX">PWM6PH<span>PWM6PHL</span></th>
+              <td class="sfrAddr">0xDA1</td>
+            </tr>
+            <tr id="PWM6PHH">
+              <th class="sfrName">PWM6PHH</th>
+              <td class="sfrAddr">0xDA2</td>
+            </tr>
+            <tr id="PWM6DC">
+              <th class="sfrNameX">PWM6DC<span>PWM6DCL</span></th>
+              <td class="sfrAddr">0xDA3</td>
+            </tr>
+            <tr id="PWM6DCH">
+              <th class="sfrName">PWM6DCH</th>
+              <td class="sfrAddr">0xDA4</td>
+            </tr>
+            <tr id="PWM6PR">
+              <th class="sfrNameX">PWM6PR<span>PWM6PRL</span></th>
+              <td class="sfrAddr">0xDA5</td>
+            </tr>
+            <tr id="PWM6PRH">
+              <th class="sfrName">PWM6PRH</th>
+              <td class="sfrAddr">0xDA6</td>
+            </tr>
+            <tr id="PWM6OF">
+              <th class="sfrNameX">PWM6OF<span>PWM6OFL</span></th>
+              <td class="sfrAddr">0xDA7</td>
+            </tr>
+            <tr id="PWM6OFH">
+              <th class="sfrName">PWM6OFH</th>
+              <td class="sfrAddr">0xDA8</td>
+            </tr>
+            <tr id="PWM6TMR">
+              <th class="sfrNameX">PWM6TMR<span>PWM6TMRL</span></th>
+              <td class="sfrAddr">0xDA9</td>
+            </tr>
+            <tr id="PWM6TMRH">
+              <th class="sfrName">PWM6TMRH</th>
+              <td class="sfrAddr">0xDAA</td>
+            </tr>
+            <tr id="PWM6CON">
+              <th class="sfrName">PWM6CON</th>
+              <td class="sfrAddr">0xDAB</td>
+            </tr>
+            <tr id="PWM6INTCON">
+              <th class="sfrNameX">PWM6INTCON<span>PWM6INTE</span></th>
+              <td class="sfrAddr">0xDAC</td>
+            </tr>
+            <tr id="PWM6INTF">
+              <th class="sfrNameX">PWM6INTF<span>PWM6INTFLG</span></th>
+              <td class="sfrAddr">0xDAD</td>
+            </tr>
+            <tr id="PWM6CLKCON">
+              <th class="sfrName">PWM6CLKCON</th>
+              <td class="sfrAddr">0xDAE</td>
+            </tr>
+            <tr id="PWM6LDCON">
+              <th class="sfrName">PWM6LDCON</th>
+              <td class="sfrAddr">0xDAF</td>
+            </tr>
+            <tr id="PWM6OFCON">
+              <th class="sfrName">PWM6OFCON</th>
+              <td class="sfrAddr">0xDB0</td>
+            </tr>
+            <tr id="PWM11PH">
+              <th class="sfrNameX">PWM11PH<span>PWM11PHL</span></th>
+              <td class="sfrAddr">0xDB1</td>
+            </tr>
+            <tr id="PWM11PHH">
+              <th class="sfrName">PWM11PHH</th>
+              <td class="sfrAddr">0xDB2</td>
+            </tr>
+            <tr id="PWM11DC">
+              <th class="sfrNameX">PWM11DC<span>PWM11DCL</span></th>
+              <td class="sfrAddr">0xDB3</td>
+            </tr>
+            <tr id="PWM11DCH">
+              <th class="sfrName">PWM11DCH</th>
+              <td class="sfrAddr">0xDB4</td>
+            </tr>
+            <tr id="PWM11PR">
+              <th class="sfrNameX">PWM11PR<span>PWM11PRL</span></th>
+              <td class="sfrAddr">0xDB5</td>
+            </tr>
+            <tr id="PWM11PRH">
+              <th class="sfrName">PWM11PRH</th>
+              <td class="sfrAddr">0xDB6</td>
+            </tr>
+            <tr id="PWM11OF">
+              <th class="sfrNameX">PWM11OF<span>PWM11OFL</span></th>
+              <td class="sfrAddr">0xDB7</td>
+            </tr>
+            <tr id="PWM11OFH">
+              <th class="sfrName">PWM11OFH</th>
+              <td class="sfrAddr">0xDB8</td>
+            </tr>
+            <tr id="PWM11TMR">
+              <th class="sfrNameX">PWM11TMR<span>PWM11TMRL</span></th>
+              <td class="sfrAddr">0xDB9</td>
+            </tr>
+            <tr id="PWM11TMRH">
+              <th class="sfrName">PWM11TMRH</th>
+              <td class="sfrAddr">0xDBA</td>
+            </tr>
+            <tr id="PWM11CON">
+              <th class="sfrName">PWM11CON</th>
+              <td class="sfrAddr">0xDBB</td>
+            </tr>
+            <tr id="PWM11INTCON">
+              <th class="sfrNameX">PWM11INTCON<span>PWM11INTE</span></th>
+              <td class="sfrAddr">0xDBC</td>
+            </tr>
+            <tr id="PWM11INTF">
+              <th class="sfrNameX">PWM11INTF<span>PWM11INTFLG</span></th>
+              <td class="sfrAddr">0xDBD</td>
+            </tr>
+            <tr id="PWM11CLKCON">
+              <th class="sfrName">PWM11CLKCON</th>
+              <td class="sfrAddr">0xDBE</td>
+            </tr>
+            <tr id="PWM11LDCON">
+              <th class="sfrName">PWM11LDCON</th>
+              <td class="sfrAddr">0xDBF</td>
+            </tr>
+            <tr id="PWM11OFCON">
+              <th class="sfrName">PWM11OFCON</th>
+              <td class="sfrAddr">0xDC0</td>
+            </tr>
+            <tr id="PWM12PH">
+              <th class="sfrNameX">PWM12PH<span>PWM12PHL</span></th>
+              <td class="sfrAddr">0xDC1</td>
+            </tr>
+            <tr id="PWM12PHH">
+              <th class="sfrName">PWM12PHH</th>
+              <td class="sfrAddr">0xDC2</td>
+            </tr>
+            <tr id="PWM12DC">
+              <th class="sfrNameX">PWM12DC<span>PWM12DCL</span></th>
+              <td class="sfrAddr">0xDC3</td>
+            </tr>
+            <tr id="PWM12DCH">
+              <th class="sfrName">PWM12DCH</th>
+              <td class="sfrAddr">0xDC4</td>
+            </tr>
+            <tr id="PWM12PR">
+              <th class="sfrNameX">PWM12PR<span>PWM12PRL</span></th>
+              <td class="sfrAddr">0xDC5</td>
+            </tr>
+            <tr id="PWM12PRH">
+              <th class="sfrName">PWM12PRH</th>
+              <td class="sfrAddr">0xDC6</td>
+            </tr>
+            <tr id="PWM12OF">
+              <th class="sfrNameX">PWM12OF<span>PWM12OFL</span></th>
+              <td class="sfrAddr">0xDC7</td>
+            </tr>
+            <tr id="PWM12OFH">
+              <th class="sfrName">PWM12OFH</th>
+              <td class="sfrAddr">0xDC8</td>
+            </tr>
+            <tr id="PWM12TMR">
+              <th class="sfrNameX">PWM12TMR<span>PWM12TMRL</span></th>
+              <td class="sfrAddr">0xDC9</td>
+            </tr>
+            <tr id="PWM12TMRH">
+              <th class="sfrName">PWM12TMRH</th>
+              <td class="sfrAddr">0xDCA</td>
+            </tr>
+            <tr id="PWM12CON">
+              <th class="sfrName">PWM12CON</th>
+              <td class="sfrAddr">0xDCB</td>
+            </tr>
+            <tr id="PWM12INTCON">
+              <th class="sfrNameX">PWM12INTCON<span>PWM12INTE</span></th>
+              <td class="sfrAddr">0xDCC</td>
+            </tr>
+            <tr id="PWM12INTF">
+              <th class="sfrNameX">PWM12INTF<span>PWM12INTFLG</span></th>
+              <td class="sfrAddr">0xDCD</td>
+            </tr>
+            <tr id="PWM12CLKCON">
+              <th class="sfrName">PWM12CLKCON</th>
+              <td class="sfrAddr">0xDCE</td>
+            </tr>
+            <tr id="PWM12LDCON">
+              <th class="sfrName">PWM12LDCON</th>
+              <td class="sfrAddr">0xDCF</td>
+            </tr>
+            <tr id="PWM12OFCON">
+              <th class="sfrName">PWM12OFCON</th>
+              <td class="sfrAddr">0xDD0</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="PPSLOCK">
+              <th class="sfrName">PPSLOCK</th>
+              <td class="sfrAddr">0xE0C</td>
+            </tr>
+            <tr id="INTPPS">
+              <th class="sfrName">INTPPS</th>
+              <td class="sfrAddr">0xE0D</td>
+            </tr>
+            <tr id="T0CKIPPS">
+              <th class="sfrName">T0CKIPPS</th>
+              <td class="sfrAddr">0xE0E</td>
+            </tr>
+            <tr id="T1CKIPPS">
+              <th class="sfrName">T1CKIPPS</th>
+              <td class="sfrAddr">0xE0F</td>
+            </tr>
+            <tr id="T1GPPS">
+              <th class="sfrName">T1GPPS</th>
+              <td class="sfrAddr">0xE10</td>
+            </tr>
+            <tr id="T3CKIPPS">
+              <th class="sfrName">T3CKIPPS</th>
+              <td class="sfrAddr">0xE11</td>
+            </tr>
+            <tr id="T3GPPS">
+              <th class="sfrName">T3GPPS</th>
+              <td class="sfrAddr">0xE12</td>
+            </tr>
+            <tr id="T5CKIPPS">
+              <th class="sfrName">T5CKIPPS</th>
+              <td class="sfrAddr">0xE13</td>
+            </tr>
+            <tr id="T5GPPS">
+              <th class="sfrName">T5GPPS</th>
+              <td class="sfrAddr">0xE14</td>
+            </tr>
+            <tr id="T2CKIPPS">
+              <th class="sfrName">T2CKIPPS</th>
+              <td class="sfrAddr">0xE15</td>
+            </tr>
+            <tr id="T4CKIPPS">
+              <th class="sfrName">T4CKIPPS</th>
+              <td class="sfrAddr">0xE16</td>
+            </tr>
+            <tr id="T6CKIPPS">
+              <th class="sfrName">T6CKIPPS</th>
+              <td class="sfrAddr">0xE17</td>
+            </tr>
+            <tr id="T8CKIPPS">
+              <th class="sfrName">T8CKIPPS</th>
+              <td class="sfrAddr">0xE18</td>
+            </tr>
+            <tr id="CCP1PPS">
+              <th class="sfrName">CCP1PPS</th>
+              <td class="sfrAddr">0xE19</td>
+            </tr>
+            <tr id="CCP2PPS">
+              <th class="sfrName">CCP2PPS</th>
+              <td class="sfrAddr">0xE1A</td>
+            </tr>
+            <tr id="CCP7PPS">
+              <th class="sfrName">CCP7PPS</th>
+              <td class="sfrAddr">0xE1B</td>
+            </tr>
+            <tr id="CCP8PPS">
+              <th class="sfrName">CCP8PPS</th>
+              <td class="sfrAddr">0xE1C</td>
+            </tr>
+            <tr id="COG1INPPS">
+              <th class="sfrName">COG1INPPS</th>
+              <td class="sfrAddr">0xE1D</td>
+            </tr>
+            <tr id="COG2INPPS">
+              <th class="sfrName">COG2INPPS</th>
+              <td class="sfrAddr">0xE1E</td>
+            </tr>
+            <tr id="COG3INPPS">
+              <th class="sfrName">COG3INPPS</th>
+              <td class="sfrAddr">0xE1F</td>
+            </tr>
+            <tr id="COG4INPPS">
+              <th class="sfrName">COG4INPPS</th>
+              <td class="sfrAddr">0xE20</td>
+            </tr>
+            <tr id="MD1CLPPS">
+              <th class="sfrName">MD1CLPPS</th>
+              <td class="sfrAddr">0xE21</td>
+            </tr>
+            <tr id="MD1CHPPS">
+              <th class="sfrName">MD1CHPPS</th>
+              <td class="sfrAddr">0xE22</td>
+            </tr>
+            <tr id="MD1MODPPS">
+              <th class="sfrName">MD1MODPPS</th>
+              <td class="sfrAddr">0xE23</td>
+            </tr>
+            <tr id="MD2CLPPS">
+              <th class="sfrName">MD2CLPPS</th>
+              <td class="sfrAddr">0xE24</td>
+            </tr>
+            <tr id="MD2CHPPS">
+              <th class="sfrName">MD2CHPPS</th>
+              <td class="sfrAddr">0xE25</td>
+            </tr>
+            <tr id="MD2MODPPS">
+              <th class="sfrName">MD2MODPPS</th>
+              <td class="sfrAddr">0xE26</td>
+            </tr>
+            <tr id="MD3CLPPS">
+              <th class="sfrName">MD3CLPPS</th>
+              <td class="sfrAddr">0xE27</td>
+            </tr>
+            <tr id="MD3CHPPS">
+              <th class="sfrName">MD3CHPPS</th>
+              <td class="sfrAddr">0xE28</td>
+            </tr>
+            <tr id="MD3MODPPS">
+              <th class="sfrName">MD3MODPPS</th>
+              <td class="sfrAddr">0xE29</td>
+            </tr>
+            <tr id="MD4CLPPS">
+              <th class="sfrName">MD4CLPPS</th>
+              <td class="sfrAddr">0xE2A</td>
+            </tr>
+            <tr id="MD4CHPPS">
+              <th class="sfrName">MD4CHPPS</th>
+              <td class="sfrAddr">0xE2B</td>
+            </tr>
+            <tr id="MD4MODPPS">
+              <th class="sfrName">MD4MODPPS</th>
+              <td class="sfrAddr">0xE2C</td>
+            </tr>
+            <tr id="PRG1RPPS">
+              <th class="sfrName">PRG1RPPS</th>
+              <td class="sfrAddr">0xE2D</td>
+            </tr>
+            <tr id="PRG1FPPS">
+              <th class="sfrName">PRG1FPPS</th>
+              <td class="sfrAddr">0xE2E</td>
+            </tr>
+            <tr id="PRG2RPPS">
+              <th class="sfrName">PRG2RPPS</th>
+              <td class="sfrAddr">0xE2F</td>
+            </tr>
+            <tr id="PRG2FPPS">
+              <th class="sfrName">PRG2FPPS</th>
+              <td class="sfrAddr">0xE30</td>
+            </tr>
+            <tr id="PRG3RPPS">
+              <th class="sfrName">PRG3RPPS</th>
+              <td class="sfrAddr">0xE31</td>
+            </tr>
+            <tr id="PRG3FPPS">
+              <th class="sfrName">PRG3FPPS</th>
+              <td class="sfrAddr">0xE32</td>
+            </tr>
+            <tr id="PRG4RPPS">
+              <th class="sfrName">PRG4RPPS</th>
+              <td class="sfrAddr">0xE33</td>
+            </tr>
+            <tr id="PRG4FPPS">
+              <th class="sfrName">PRG4FPPS</th>
+              <td class="sfrAddr">0xE34</td>
+            </tr>
+            <tr id="CLCIN0PPS">
+              <th class="sfrName">CLCIN0PPS</th>
+              <td class="sfrAddr">0xE35</td>
+            </tr>
+            <tr id="CLCIN1PPS">
+              <th class="sfrName">CLCIN1PPS</th>
+              <td class="sfrAddr">0xE36</td>
+            </tr>
+            <tr id="CLCIN2PPS">
+              <th class="sfrName">CLCIN2PPS</th>
+              <td class="sfrAddr">0xE37</td>
+            </tr>
+            <tr id="CLCIN3PPS">
+              <th class="sfrName">CLCIN3PPS</th>
+              <td class="sfrAddr">0xE38</td>
+            </tr>
+            <tr id="ADCACTPPS">
+              <th class="sfrName">ADCACTPPS</th>
+              <td class="sfrAddr">0xE39</td>
+            </tr>
+            <tr id="SSPCLKPPS">
+              <th class="sfrName">SSPCLKPPS</th>
+              <td class="sfrAddr">0xE3A</td>
+            </tr>
+            <tr id="SSPDATPPS">
+              <th class="sfrName">SSPDATPPS</th>
+              <td class="sfrAddr">0xE3B</td>
+            </tr>
+            <tr id="SSPSSPPS">
+              <th class="sfrName">SSPSSPPS</th>
+              <td class="sfrAddr">0xE3C</td>
+            </tr>
+            <tr id="RXPPS">
+              <th class="sfrName">RXPPS</th>
+              <td class="sfrAddr">0xE3D</td>
+            </tr>
+            <tr id="CKPPS">
+              <th class="sfrName">CKPPS</th>
+              <td class="sfrAddr">0xE3E</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="RA0PPS">
+              <th class="sfrName">RA0PPS</th>
+              <td class="sfrAddr">0xE90</td>
+            </tr>
+            <tr id="RA1PPS">
+              <th class="sfrName">RA1PPS</th>
+              <td class="sfrAddr">0xE91</td>
+            </tr>
+            <tr id="RA2PPS">
+              <th class="sfrName">RA2PPS</th>
+              <td class="sfrAddr">0xE92</td>
+            </tr>
+            <tr id="RA3PPS">
+              <th class="sfrName">RA3PPS</th>
+              <td class="sfrAddr">0xE93</td>
+            </tr>
+            <tr id="RA4PPS">
+              <th class="sfrName">RA4PPS</th>
+              <td class="sfrAddr">0xE94</td>
+            </tr>
+            <tr id="RA5PPS">
+              <th class="sfrName">RA5PPS</th>
+              <td class="sfrAddr">0xE95</td>
+            </tr>
+            <tr id="RA6PPS">
+              <th class="sfrName">RA6PPS</th>
+              <td class="sfrAddr">0xE96</td>
+            </tr>
+            <tr id="RA7PPS">
+              <th class="sfrName">RA7PPS</th>
+              <td class="sfrAddr">0xE97</td>
+            </tr>
+            <tr id="RB0PPS">
+              <th class="sfrName">RB0PPS</th>
+              <td class="sfrAddr">0xE98</td>
+            </tr>
+            <tr id="RB1PPS">
+              <th class="sfrName">RB1PPS</th>
+              <td class="sfrAddr">0xE99</td>
+            </tr>
+            <tr id="RB2PPS">
+              <th class="sfrName">RB2PPS</th>
+              <td class="sfrAddr">0xE9A</td>
+            </tr>
+            <tr id="RB3PPS">
+              <th class="sfrName">RB3PPS</th>
+              <td class="sfrAddr">0xE9B</td>
+            </tr>
+            <tr id="RB4PPS">
+              <th class="sfrName">RB4PPS</th>
+              <td class="sfrAddr">0xE9C</td>
+            </tr>
+            <tr id="RB5PPS">
+              <th class="sfrName">RB5PPS</th>
+              <td class="sfrAddr">0xE9D</td>
+            </tr>
+            <tr id="RB6PPS">
+              <th class="sfrName">RB6PPS</th>
+              <td class="sfrAddr">0xE9E</td>
+            </tr>
+            <tr id="RB7PPS">
+              <th class="sfrName">RB7PPS</th>
+              <td class="sfrAddr">0xE9F</td>
+            </tr>
+            <tr id="RC0PPS">
+              <th class="sfrName">RC0PPS</th>
+              <td class="sfrAddr">0xEA0</td>
+            </tr>
+            <tr id="RC1PPS">
+              <th class="sfrName">RC1PPS</th>
+              <td class="sfrAddr">0xEA1</td>
+            </tr>
+            <tr id="RC2PPS">
+              <th class="sfrName">RC2PPS</th>
+              <td class="sfrAddr">0xEA2</td>
+            </tr>
+            <tr id="RC3PPS">
+              <th class="sfrName">RC3PPS</th>
+              <td class="sfrAddr">0xEA3</td>
+            </tr>
+            <tr id="RC4PPS">
+              <th class="sfrName">RC4PPS</th>
+              <td class="sfrAddr">0xEA4</td>
+            </tr>
+            <tr id="RC5PPS">
+              <th class="sfrName">RC5PPS</th>
+              <td class="sfrAddr">0xEA5</td>
+            </tr>
+            <tr id="RC6PPS">
+              <th class="sfrName">RC6PPS</th>
+              <td class="sfrAddr">0xEA6</td>
+            </tr>
+            <tr id="RC7PPS">
+              <th class="sfrName">RC7PPS</th>
+              <td class="sfrAddr">0xEA7</td>
+            </tr>
+            <tr id="RD0PPS">
+              <th class="sfrName">RD0PPS</th>
+              <td class="sfrAddr">0xEA8</td>
+            </tr>
+            <tr id="RD1PPS">
+              <th class="sfrName">RD1PPS</th>
+              <td class="sfrAddr">0xEA9</td>
+            </tr>
+            <tr id="RD2PPS">
+              <th class="sfrName">RD2PPS</th>
+              <td class="sfrAddr">0xEAA</td>
+            </tr>
+            <tr id="RD3PPS">
+              <th class="sfrName">RD3PPS</th>
+              <td class="sfrAddr">0xEAB</td>
+            </tr>
+            <tr id="RD4PPS">
+              <th class="sfrName">RD4PPS</th>
+              <td class="sfrAddr">0xEAC</td>
+            </tr>
+            <tr id="RD5PPS">
+              <th class="sfrName">RD5PPS</th>
+              <td class="sfrAddr">0xEAD</td>
+            </tr>
+            <tr id="RD6PPS">
+              <th class="sfrName">RD6PPS</th>
+              <td class="sfrAddr">0xEAE</td>
+            </tr>
+            <tr id="RD7PPS">
+              <th class="sfrName">RD7PPS</th>
+              <td class="sfrAddr">0xEAF</td>
+            </tr>
+            <tr id="RE0PPS">
+              <th class="sfrName">RE0PPS</th>
+              <td class="sfrAddr">0xEB0</td>
+            </tr>
+            <tr id="RE1PPS">
+              <th class="sfrName">RE1PPS</th>
+              <td class="sfrAddr">0xEB1</td>
+            </tr>
+            <tr id="RE2PPS">
+              <th class="sfrName">RE2PPS</th>
+              <td class="sfrAddr">0xEB2</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="CLCDATA">
+              <th class="sfrName">CLCDATA</th>
+              <td class="sfrAddr">0xF0F</td>
+            </tr>
+            <tr id="CLC1CON">
+              <th class="sfrName">CLC1CON</th>
+              <td class="sfrAddr">0xF10</td>
+            </tr>
+            <tr id="CLC1POL">
+              <th class="sfrName">CLC1POL</th>
+              <td class="sfrAddr">0xF11</td>
+            </tr>
+            <tr id="CLC1SEL0">
+              <th class="sfrName">CLC1SEL0</th>
+              <td class="sfrAddr">0xF12</td>
+            </tr>
+            <tr id="CLC1SEL1">
+              <th class="sfrName">CLC1SEL1</th>
+              <td class="sfrAddr">0xF13</td>
+            </tr>
+            <tr id="CLC1SEL2">
+              <th class="sfrName">CLC1SEL2</th>
+              <td class="sfrAddr">0xF14</td>
+            </tr>
+            <tr id="CLC1SEL3">
+              <th class="sfrName">CLC1SEL3</th>
+              <td class="sfrAddr">0xF15</td>
+            </tr>
+            <tr id="CLC1GLS0">
+              <th class="sfrName">CLC1GLS0</th>
+              <td class="sfrAddr">0xF16</td>
+            </tr>
+            <tr id="CLC1GLS1">
+              <th class="sfrName">CLC1GLS1</th>
+              <td class="sfrAddr">0xF17</td>
+            </tr>
+            <tr id="CLC1GLS2">
+              <th class="sfrName">CLC1GLS2</th>
+              <td class="sfrAddr">0xF18</td>
+            </tr>
+            <tr id="CLC1GLS3">
+              <th class="sfrName">CLC1GLS3</th>
+              <td class="sfrAddr">0xF19</td>
+            </tr>
+            <tr id="CLC2CON">
+              <th class="sfrName">CLC2CON</th>
+              <td class="sfrAddr">0xF1A</td>
+            </tr>
+            <tr id="CLC2POL">
+              <th class="sfrName">CLC2POL</th>
+              <td class="sfrAddr">0xF1B</td>
+            </tr>
+            <tr id="CLC2SEL0">
+              <th class="sfrName">CLC2SEL0</th>
+              <td class="sfrAddr">0xF1C</td>
+            </tr>
+            <tr id="CLC2SEL1">
+              <th class="sfrName">CLC2SEL1</th>
+              <td class="sfrAddr">0xF1D</td>
+            </tr>
+            <tr id="CLC2SEL2">
+              <th class="sfrName">CLC2SEL2</th>
+              <td class="sfrAddr">0xF1E</td>
+            </tr>
+            <tr id="CLC2SEL3">
+              <th class="sfrName">CLC2SEL3</th>
+              <td class="sfrAddr">0xF1F</td>
+            </tr>
+            <tr id="CLC2GLS0">
+              <th class="sfrName">CLC2GLS0</th>
+              <td class="sfrAddr">0xF20</td>
+            </tr>
+            <tr id="CLC2GLS1">
+              <th class="sfrName">CLC2GLS1</th>
+              <td class="sfrAddr">0xF21</td>
+            </tr>
+            <tr id="CLC2GLS2">
+              <th class="sfrName">CLC2GLS2</th>
+              <td class="sfrAddr">0xF22</td>
+            </tr>
+            <tr id="CLC2GLS3">
+              <th class="sfrName">CLC2GLS3</th>
+              <td class="sfrAddr">0xF23</td>
+            </tr>
+            <tr id="CLC3CON">
+              <th class="sfrName">CLC3CON</th>
+              <td class="sfrAddr">0xF24</td>
+            </tr>
+            <tr id="CLC3POL">
+              <th class="sfrName">CLC3POL</th>
+              <td class="sfrAddr">0xF25</td>
+            </tr>
+            <tr id="CLC3SEL0">
+              <th class="sfrName">CLC3SEL0</th>
+              <td class="sfrAddr">0xF26</td>
+            </tr>
+            <tr id="CLC3SEL1">
+              <th class="sfrName">CLC3SEL1</th>
+              <td class="sfrAddr">0xF27</td>
+            </tr>
+            <tr id="CLC3SEL2">
+              <th class="sfrName">CLC3SEL2</th>
+              <td class="sfrAddr">0xF28</td>
+            </tr>
+            <tr id="CLC3SEL3">
+              <th class="sfrName">CLC3SEL3</th>
+              <td class="sfrAddr">0xF29</td>
+            </tr>
+            <tr id="CLC3GLS0">
+              <th class="sfrName">CLC3GLS0</th>
+              <td class="sfrAddr">0xF2A</td>
+            </tr>
+            <tr id="CLC3GLS1">
+              <th class="sfrName">CLC3GLS1</th>
+              <td class="sfrAddr">0xF2B</td>
+            </tr>
+            <tr id="CLC3GLS2">
+              <th class="sfrName">CLC3GLS2</th>
+              <td class="sfrAddr">0xF2C</td>
+            </tr>
+            <tr id="CLC3GLS3">
+              <th class="sfrName">CLC3GLS3</th>
+              <td class="sfrAddr">0xF2D</td>
+            </tr>
+            <tr id="CLC4CON">
+              <th class="sfrName">CLC4CON</th>
+              <td class="sfrAddr">0xF2E</td>
+            </tr>
+            <tr id="CLC4POL">
+              <th class="sfrName">CLC4POL</th>
+              <td class="sfrAddr">0xF2F</td>
+            </tr>
+            <tr id="CLC4SEL0">
+              <th class="sfrName">CLC4SEL0</th>
+              <td class="sfrAddr">0xF30</td>
+            </tr>
+            <tr id="CLC4SEL1">
+              <th class="sfrName">CLC4SEL1</th>
+              <td class="sfrAddr">0xF31</td>
+            </tr>
+            <tr id="CLC4SEL2">
+              <th class="sfrName">CLC4SEL2</th>
+              <td class="sfrAddr">0xF32</td>
+            </tr>
+            <tr id="CLC4SEL3">
+              <th class="sfrName">CLC4SEL3</th>
+              <td class="sfrAddr">0xF33</td>
+            </tr>
+            <tr id="CLC4GLS0">
+              <th class="sfrName">CLC4GLS0</th>
+              <td class="sfrAddr">0xF34</td>
+            </tr>
+            <tr id="CLC4GLS1">
+              <th class="sfrName">CLC4GLS1</th>
+              <td class="sfrAddr">0xF35</td>
+            </tr>
+            <tr id="CLC4GLS2">
+              <th class="sfrName">CLC4GLS2</th>
+              <td class="sfrAddr">0xF36</td>
+            </tr>
+            <tr id="CLC4GLS3">
+              <th class="sfrName">CLC4GLS3</th>
+              <td class="sfrAddr">0xF37</td>
+            </tr>
+          </table>
+        </td>
+        <td class="sfrColumn">
+          <table>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="STATUS_SHAD">
+              <th class="sfrName">STATUS_SHAD</th>
+              <td class="sfrAddr">0xFE4</td>
+            </tr>
+            <tr id="WREG_SHAD">
+              <th class="sfrName">WREG_SHAD</th>
+              <td class="sfrAddr">0xFE5</td>
+            </tr>
+            <tr id="BSR_SHAD">
+              <th class="sfrName">BSR_SHAD</th>
+              <td class="sfrAddr">0xFE6</td>
+            </tr>
+            <tr id="PCLATH_SHAD">
+              <th class="sfrName">PCLATH_SHAD</th>
+              <td class="sfrAddr">0xFE7</td>
+            </tr>
+            <tr id="FSR0L_SHAD">
+              <th class="sfrName">FSR0L_SHAD</th>
+              <td class="sfrAddr">0xFE8</td>
+            </tr>
+            <tr id="FSR0H_SHAD">
+              <th class="sfrName">FSR0H_SHAD</th>
+              <td class="sfrAddr">0xFE9</td>
+            </tr>
+            <tr id="FSR1L_SHAD">
+              <th class="sfrName">FSR1L_SHAD</th>
+              <td class="sfrAddr">0xFEA</td>
+            </tr>
+            <tr id="FSR1H_SHAD">
+              <th class="sfrName">FSR1H_SHAD</th>
+              <td class="sfrAddr">0xFEB</td>
+            </tr>
+            <tr><th class="sfrSep">&nbsp;</th></tr>
+            <tr id="STKPTR">
+              <th class="sfrName">STKPTR</th>
+              <td class="sfrAddr">0xFED</td>
+            </tr>
+            <tr id="TOSL">
+              <th class="sfrName">TOSL</th>
+              <td class="sfrAddr">0xFEE</td>
+            </tr>
+            <tr id="TOSH">
+              <th class="sfrName">TOSH</th>
+              <td class="sfrAddr">0xFEF</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="ramGap"><td></td></tr>
+      <tr><td colspan=65 class="ramSumEx">The mirror of [PCL, PCLATH, ...] are not shown.</td></tr>
+    </table>
+    <div class="legendContainer">
+      <div class="legend">
+        <p class="sfrNameEx">&nbsp;<span class="explanation">SFR</span></p>
+        <p class="sfrNameXEx">&nbsp;<span class="explanation">SFR with alias name.</span></p>
+      </div>
+    </div>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:23 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

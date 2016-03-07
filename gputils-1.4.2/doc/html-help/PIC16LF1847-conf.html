@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Molnár Károly">
+    <title>PIC16LF1847</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="classMenu">
+      <a href="index.html">All</a>
+      <a href="enhanced-mcus.html">Enhanced</a>
+      <a href="extended-mcus.html">Extended</a>
+      <a href="regular-mcus.html">Regular</a>
+      <a href="12-bits-mcus.html">12 bits</a>
+      <a href="14-bits-mcus.html">14 bits</a>
+      <a href="16-bits-mcus.html">16 bits</a>
+      <a href="mcus-by-ram-size.html">RAM<br>size</a>
+      <a href="mcus-by-rom-size.html">ROM<br>size</a>
+      <a href="mcus-by-eeprom-size.html">EEPROM<br>size</a>
+      <a href="pic14e_common_sfrs.html">Common<br>SFRs</a>
+    </div>
+    <div class="tabs">
+      <a href="PIC16LF1847-feat.html">Features</a>
+      <a class="selected" href="PIC16LF1847-conf.html">Configuration Bits</a>
+      <a href="PIC16LF1847-ram.html">RAM map</a>
+      <a href="PIC16LF1847-sfr.html">SFR map</a>
+    </div>
+    <table class="configList">
+      <tr><th colspan=5 class="confTableName">PIC16LF1847</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG1 (address:0x8007, mask:0x3FFF, <span class="confSwDefault">default:0x3FFF</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FOSC -- Oscillator Selection (bitmask:0x0007)</th></tr>
+      <tr>
+        <td class="confSwName">FOSC = LP</td>
+        <td class="confSwValue">0x3FF8</td>
+        <td class="confSwExpl">LP Oscillator, Low-power crystal connected between OSC1 and OSC2 pins.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = XT</td>
+        <td class="confSwValue">0x3FF9</td>
+        <td class="confSwExpl">XT Oscillator, Crystal/resonator connected between OSC1 and OSC2 pins.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = HS</td>
+        <td class="confSwValue">0x3FFA</td>
+        <td class="confSwExpl">HS Oscillator, High-speed crystal/resonator connected between OSC1 and OSC2 pins.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = EXTRC</td>
+        <td class="confSwValue">0x3FFB</td>
+        <td class="confSwExpl">EXTRC oscillator: External RC circuit connected to CLKIN pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = INTOSC</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">INTOSC oscillator: I/O function on CLKIN pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = ECL</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">ECL, External Clock, Low Power Mode (0-0.5 MHz): device clock supplied to CLKIN pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">FOSC = ECM</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">ECM, External Clock, Medium Power Mode (0.5-4 MHz): device clock supplied to CLKIN pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FOSC = ECH</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">ECH, External Clock, High Power Mode (4-32 MHz): device clock supplied to CLKIN pin.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WDTE -- Watchdog Timer Enable (bitmask:0x0018)</th></tr>
+      <tr>
+        <td class="confSwName">WDTE = OFF</td>
+        <td class="confSwValue">0x3FE7</td>
+        <td class="confSwExpl">WDT disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTE = SWDTEN</td>
+        <td class="confSwValue">0x3FEF</td>
+        <td class="confSwExpl">WDT controlled by the SWDTEN bit in the WDTCON register.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WDTE = NSLEEP</td>
+        <td class="confSwValue">0x3FF7</td>
+        <td class="confSwExpl">WDT enabled while running and disabled in Sleep.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WDTE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">WDT enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PWRTE -- Power-up Timer Enable (bitmask:0x0020)</th></tr>
+      <tr>
+        <td class="confSwName">PWRTE = ON</td>
+        <td class="confSwValue">0x3FDF</td>
+        <td class="confSwExpl">PWRT enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PWRTE = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">PWRT disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">MCLRE -- MCLR Pin Function Select (bitmask:0x0040)</th></tr>
+      <tr>
+        <td class="confSwName">MCLRE = OFF</td>
+        <td class="confSwValue">0x3FBF</td>
+        <td class="confSwExpl">MCLR/VPP pin function is digital input.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">MCLRE = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">MCLR/VPP pin function is MCLR.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CP -- Flash Program Memory Code Protection (bitmask:0x0080)</th></tr>
+      <tr>
+        <td class="confSwName">CP = ON</td>
+        <td class="confSwValue">0x3F7F</td>
+        <td class="confSwExpl">Program memory code protection is enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CP = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Program memory code protection is disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CPD -- Data Memory Code Protection (bitmask:0x0100)</th></tr>
+      <tr>
+        <td class="confSwName">CPD = ON</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">Data memory code protection is enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CPD = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Data memory code protection is disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BOREN -- Brown-out Reset Enable (bitmask:0x0600)</th></tr>
+      <tr>
+        <td class="confSwName">BOREN = OFF</td>
+        <td class="confSwValue">0x39FF</td>
+        <td class="confSwExpl">Brown-out Reset disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOREN = SBODEN</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">Brown-out Reset controlled by the SBOREN bit in the BORCON register.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">BOREN = NSLEEP</td>
+        <td class="confSwValue">0x3DFF</td>
+        <td class="confSwExpl">Brown-out Reset enabled while running and disabled in Sleep.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BOREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">CLKOUTEN -- Clock Out Enable (bitmask:0x0800)</th></tr>
+      <tr>
+        <td class="confSwName">CLKOUTEN = ON</td>
+        <td class="confSwValue">0x37FF</td>
+        <td class="confSwExpl">CLKOUT function is enabled on the CLKOUT pin.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">CLKOUTEN = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">IESO -- Internal/External Switchover (bitmask:0x1000)</th></tr>
+      <tr>
+        <td class="confSwName">IESO = OFF</td>
+        <td class="confSwValue">0x2FFF</td>
+        <td class="confSwExpl">Internal/External Switchover mode is disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">IESO = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Internal/External Switchover mode is enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">FCMEN -- Fail-Safe Clock Monitor Enable (bitmask:0x2000)</th></tr>
+      <tr>
+        <td class="confSwName">FCMEN = OFF</td>
+        <td class="confSwValue">0x1FFF</td>
+        <td class="confSwExpl">Fail-Safe Clock Monitor is disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">FCMEN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Fail-Safe Clock Monitor is enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=4 class="configWord">CONFIG2 (address:0x8008, mask:0x3703, <span class="confSwDefault">default:0x3703</span>)</th></tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">WRT -- Flash Memory Self-Write Protection (bitmask:0x0003)</th></tr>
+      <tr>
+        <td class="confSwName">WRT = ALL</td>
+        <td class="confSwValue">0x3FFC</td>
+        <td class="confSwExpl">000h to FFFh write protected, no addresses may be modified by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = HALF</td>
+        <td class="confSwValue">0x3FFD</td>
+        <td class="confSwExpl">000h to 7FFh write protected, 800h to FFFh may be modified by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName">WRT = BOOT</td>
+        <td class="confSwValue">0x3FFE</td>
+        <td class="confSwExpl">000h to 1FFh write protected, 200h to FFFh may be modified by EECON control.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">WRT = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Write protection off.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">PLLEN -- PLL Enable (bitmask:0x0100)</th></tr>
+      <tr>
+        <td class="confSwName">PLLEN = OFF</td>
+        <td class="confSwValue">0x3EFF</td>
+        <td class="confSwExpl">4x PLL disabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">PLLEN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">4x PLL enabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">STVREN -- Stack Overflow/Underflow Reset Enable (bitmask:0x0200)</th></tr>
+      <tr>
+        <td class="confSwName">STVREN = OFF</td>
+        <td class="confSwValue">0x3DFF</td>
+        <td class="confSwExpl">Stack Overflow or Underflow will not cause a Reset.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">STVREN = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Stack Overflow or Underflow will cause a Reset.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">BORV -- Brown-out Reset Voltage Selection (bitmask:0x0400)</th></tr>
+      <tr>
+        <td class="confSwName">BORV = HI</td>
+        <td class="confSwValue">0x3BFF</td>
+        <td class="confSwExpl">Brown-out Reset Voltage (Vbor), high trip point selected.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">BORV = LO</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Brown-out Reset Voltage (Vbor), low trip point selected.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">DEBUG -- Debugger enable bit (bitmask:0x1000)</th></tr>
+      <tr>
+        <td class="confSwName">DEBUG = ON</td>
+        <td class="confSwValue">0x2FFF</td>
+        <td class="confSwExpl">Background debugger enabled.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">DEBUG = OFF</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Background debugger disabled.</td>
+      </tr>
+      <tr class="confGap"><td></td></tr>
+      <tr><th colspan=3 class="confOptName">LVP -- Low-Voltage Programming Enable (bitmask:0x2000)</th></tr>
+      <tr>
+        <td class="confSwName">LVP = OFF</td>
+        <td class="confSwValue">0x1FFF</td>
+        <td class="confSwExpl">High-voltage on MCLR/VPP must be used for programming.</td>
+      </tr>
+      <tr>
+        <td class="confSwName confSwDefault">LVP = ON</td>
+        <td class="confSwValue confSwDefault">0x3FFF</td>
+        <td class="confSwExpl confSwDefault">Low-voltage programming enabled.</td>
+      </tr>
+    </table>
+    <div class="legendContainer">
+      <p class="srcInfo">
+        This page generated automatically by the
+        <a href="https://sourceforge.net/p/gputils/code/HEAD/tree/trunk/scripts/tools/device-help.pl"><em>device-help.pl</em></a>
+        program (2016-01-02 14:08:24 UTC) from the <em>8bit_device.info</em> file (rev: 1.27) of <em>mpasmx</em> and from the
+        <a href="http://gputils.sourceforge.net#Download">gputils</a> source package (rev: svn Unversioned directory). The <em>mpasmx</em>
+        is included in the <a href="http://www.microchip.com/pagehandler/en-us/family/mplabx">MPLAB X</a>.
+      </p>
+    </div>
+  </body>
+</html>

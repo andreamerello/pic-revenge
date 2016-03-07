@@ -1,0 +1,394 @@
+/* GNU PIC opcode definitions
+   Copyright (C) 2001, 2002, 2003, 2004, 2005
+   Craig Franklin
+
+This file is part of gputils.
+
+gputils is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+gputils is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gputils; see the file COPYING.  If not, write to
+the Free Software Foundation, 59 Temple Place - Suite 330,
+Boston, MA 02111-1307, USA.  */
+
+#include "stdhdr.h"
+#include "libgputils.h"
+
+/* PIC 12-bit instruction set */
+const struct insn op_12c5xx[] = {
+  { "addwf",   PIC12_MASK_ADDWF,   PIC12_INSN_ADDWF,     ICODE_ADDWF,  INSN_CLASS_OPWF5     },
+  { "andlw",   PIC12_MASK_ANDLW,   PIC12_INSN_ANDLW,     ICODE_ANDLW,  INSN_CLASS_LIT8      },
+  { "andwf",   PIC12_MASK_ANDWF,   PIC12_INSN_ANDWF,     ICODE_ANDWF,  INSN_CLASS_OPWF5     },
+  { "bcf",     PIC12_MASK_BCF,     PIC12_INSN_BCF,       ICODE_BCF,    INSN_CLASS_B5        },
+  { "bsf",     PIC12_MASK_BSF,     PIC12_INSN_BSF,       ICODE_BSF,    INSN_CLASS_B5        },
+  { "btfsc",   PIC12_MASK_BTFSC,   PIC12_INSN_BTFSC,     ICODE_BTFSC,  INSN_CLASS_B5        },
+  { "btfss",   PIC12_MASK_BTFSS,   PIC12_INSN_BTFSS,     ICODE_BTFSS,  INSN_CLASS_B5        },
+  { "call",    PIC12_MASK_CALL,    PIC12_INSN_CALL,      ICODE_CALL,   INSN_CLASS_LIT8C12   },
+  { "clrf",    PIC12_MASK_CLRF,    PIC12_INSN_CLRF,      ICODE_CLRF,   INSN_CLASS_OPF5      },
+  { "clrw",    PIC12_MASK_CLRW,    PIC12_INSN_CLRW,      ICODE_CLRW,   INSN_CLASS_IMPLICIT  },
+  { "clrwdt",  PIC12_MASK_CLRWDT,  PIC12_INSN_CLRWDT,    ICODE_CLRWDT, INSN_CLASS_IMPLICIT  },
+  { "comf",    PIC12_MASK_COMF,    PIC12_INSN_COMF,      ICODE_COMF,   INSN_CLASS_OPWF5     },
+  { "decf",    PIC12_MASK_DECF,    PIC12_INSN_DECF,      ICODE_DECF,   INSN_CLASS_OPWF5     },
+  { "decfsz",  PIC12_MASK_DECFSZ,  PIC12_INSN_DECFSZ,    ICODE_DECFSZ, INSN_CLASS_OPWF5     },
+  { "goto",    PIC12_MASK_GOTO,    PIC12_INSN_GOTO,      ICODE_GOTO,   INSN_CLASS_LIT9      },
+  { "incf",    PIC12_MASK_INCF,    PIC12_INSN_INCF,      ICODE_INCF,   INSN_CLASS_OPWF5     },
+  { "incfsz",  PIC12_MASK_INCFSZ,  PIC12_INSN_INCFSZ,    ICODE_INCFSZ, INSN_CLASS_OPWF5     },
+  { "iorlw",   PIC12_MASK_IORLW,   PIC12_INSN_IORLW,     ICODE_IORLW,  INSN_CLASS_LIT8      },
+  { "iorwf",   PIC12_MASK_IORWF,   PIC12_INSN_IORWF,     ICODE_IORWF,  INSN_CLASS_OPWF5     },
+  { "movf",    PIC12_MASK_MOVF,    PIC12_INSN_MOVF,      ICODE_MOVF,   INSN_CLASS_OPWF5     },
+  { "movlw",   PIC12_MASK_MOVLW,   PIC12_INSN_MOVLW,     ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movwf",   PIC12_MASK_MOVWF,   PIC12_INSN_MOVWF,     ICODE_MOVWF,  INSN_CLASS_OPF5      },
+  { "nop",     PIC12_MASK_NOP,     PIC12_INSN_NOP,       ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "option",  PIC12_MASK_OPTION,  PIC12_INSN_OPTION,    ICODE_OPTION, INSN_CLASS_IMPLICIT  },
+  { "retlw",   PIC12_MASK_RETLW,   PIC12_INSN_RETLW,     ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "return",  PIC12_MASK_RETURN,  PIC12_INSN_RETURN,    ICODE_RETURN, INSN_CLASS_IMPLICIT  }, /* FIXME: special mnemonic */
+  { "rlf",     PIC12_MASK_RLF,     PIC12_INSN_RLF,       ICODE_RLF,    INSN_CLASS_OPWF5     },
+  { "rrf",     PIC12_MASK_RRF,     PIC12_INSN_RRF,       ICODE_RRF,    INSN_CLASS_OPWF5     },
+  { "sleep",   PIC12_MASK_SLEEP,   PIC12_INSN_SLEEP,     ICODE_SLEEP,  INSN_CLASS_IMPLICIT  },
+  { "subwf",   PIC12_MASK_SUBWF,   PIC12_INSN_SUBWF,     ICODE_SUBWF,  INSN_CLASS_OPWF5     },
+  { "swapf",   PIC12_MASK_SWAPF,   PIC12_INSN_SWAPF,     ICODE_SWAPF,  INSN_CLASS_OPWF5     },
+  { "tris",    PIC12_MASK_TRIS,    PIC12_INSN_TRIS,      ICODE_TRIS,   INSN_CLASS_OPF3      },
+  { "xorlw",   PIC12_MASK_XORLW,   PIC12_INSN_XORLW,     ICODE_XORLW,  INSN_CLASS_LIT8      },
+  { "xorwf",   PIC12_MASK_XORWF,   PIC12_INSN_XORWF,     ICODE_XORWF,  INSN_CLASS_OPWF5     }
+};
+
+const int num_op_12c5xx = TABLE_SIZE(op_12c5xx);
+
+/* PIC 12-bit Enhanced instruction set */
+const struct insn op_16c5xx_enh[] = {
+  { "movlb",   PIC12E_MASK_MOVLB,  PIC12E_INSN_MOVLB,    ICODE_MOVLB,  INSN_CLASS_LIT3      },
+  { "retfie",  PIC12E_MASK_RETFIE, PIC12E_INSN_RETFIE,   ICODE_RETFIE, INSN_CLASS_IMPLICIT  },
+  { "return",  PIC12E_MASK_RETURN, PIC12E_INSN_RETURN,   ICODE_RETURN, INSN_CLASS_IMPLICIT  }
+};
+
+const int num_op_16c5xx_enh = TABLE_SIZE(op_16c5xx_enh);
+
+/* Scenix SX has a superset of the PIC 12-bit instruction set. */
+/*
+ * It would be nice if there was a more elegant way to do this,
+ * either by adding a flags field to struct insn, or by allowing a
+ * processor to have more than one associated table.
+ */
+const struct insn op_sx[] = {
+  { "addwf",   PIC12_MASK_ADDWF,   PIC12_INSN_ADDWF,     ICODE_ADDWF,  INSN_CLASS_OPWF5     },
+  { "andlw",   PIC12_MASK_ANDLW,   PIC12_INSN_ANDLW,     ICODE_ANDLW,  INSN_CLASS_LIT8      },
+  { "andwf",   PIC12_MASK_ANDWF,   PIC12_INSN_ANDWF,     ICODE_ANDWF,  INSN_CLASS_OPWF5     },
+  { "bank",    SX_MASK_BANK,       SX_INSN_BANK,         ICODE_BANK,   INSN_CLASS_LIT3_BANK }, /* SX only */
+  { "bcf",     PIC12_MASK_BCF,     PIC12_INSN_BCF,       ICODE_BCF,    INSN_CLASS_B5        },
+  { "bsf",     PIC12_MASK_BSF,     PIC12_INSN_BSF,       ICODE_BSF,    INSN_CLASS_B5        },
+  { "btfsc",   PIC12_MASK_BTFSC,   PIC12_INSN_BTFSC,     ICODE_BTFSC,  INSN_CLASS_B5        },
+  { "btfss",   PIC12_MASK_BTFSS,   PIC12_INSN_BTFSS,     ICODE_BTFSS,  INSN_CLASS_B5        },
+  { "call",    PIC12_MASK_CALL,    PIC12_INSN_CALL,      ICODE_CALL,   INSN_CLASS_LIT8C12   },
+  { "clrf",    PIC12_MASK_CLRF,    PIC12_INSN_CLRF,      ICODE_CLRF,   INSN_CLASS_OPF5      },
+  { "clrw",    PIC12_MASK_CLRW,    PIC12_INSN_CLRW,      ICODE_CLRW,   INSN_CLASS_IMPLICIT  },
+  { "clrwdt",  PIC12_MASK_CLRWDT,  PIC12_INSN_CLRWDT,    ICODE_CLRWDT, INSN_CLASS_IMPLICIT  },
+  { "comf",    PIC12_MASK_COMF,    PIC12_INSN_COMF,      ICODE_COMF,   INSN_CLASS_OPWF5     },
+  { "decf",    PIC12_MASK_DECF,    PIC12_INSN_DECF,      ICODE_DECF,   INSN_CLASS_OPWF5     },
+  { "decfsz",  PIC12_MASK_DECFSZ,  PIC12_INSN_DECFSZ,    ICODE_DECFSZ, INSN_CLASS_OPWF5     },
+  { "goto",    PIC12_MASK_GOTO,    PIC12_INSN_GOTO,      ICODE_GOTO,   INSN_CLASS_LIT9      },
+  { "incf",    PIC12_MASK_INCF,    PIC12_INSN_INCF,      ICODE_INCF,   INSN_CLASS_OPWF5     },
+  { "incfsz",  PIC12_MASK_INCFSZ,  PIC12_INSN_INCFSZ,    ICODE_INCFSZ, INSN_CLASS_OPWF5     },
+  { "iorlw",   PIC12_MASK_IORLW,   PIC12_INSN_IORLW,     ICODE_IORLW,  INSN_CLASS_LIT8      },
+  { "iorwf",   PIC12_MASK_IORWF,   PIC12_INSN_IORWF,     ICODE_IORWF,  INSN_CLASS_OPWF5     },
+  { "iread",   SX_MASK_IREAD,      SX_INSN_IREAD,        ICODE_IREAD,  INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "mode",    SX_MASK_MODE,       SX_INSN_MODE,         ICODE_MODE,   INSN_CLASS_LIT4      }, /* SX only */
+  { "movf",    PIC12_MASK_MOVF,    PIC12_INSN_MOVF,      ICODE_MOVF,   INSN_CLASS_OPWF5     },
+  { "movlw",   PIC12_MASK_MOVLW,   PIC12_INSN_MOVLW,     ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movmw",   SX_MASK_MOVMW,      SX_INSN_MOVMW,        ICODE_MOVMW,  INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "movwf",   PIC12_MASK_MOVWF,   PIC12_INSN_MOVWF,     ICODE_MOVWF,  INSN_CLASS_OPF5      },
+  { "movwm",   SX_MASK_MOVWM,      SX_INSN_MOVWM,        ICODE_MOVWM,  INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "nop",     PIC12_MASK_NOP,     PIC12_INSN_NOP,       ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "option",  PIC12_MASK_OPTION,  PIC12_INSN_OPTION,    ICODE_OPTION, INSN_CLASS_IMPLICIT  },
+  { "page",    SX_MASK_PAGE,       SX_INSN_PAGE,         ICODE_PAGE,   INSN_CLASS_LIT3_PAGE }, /* SX only */
+  { "reti",    SX_MASK_RETI,       SX_INSN_RETI,         ICODE_RETI,   INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "retiw",   SX_MASK_RETIW,      SX_INSN_RETIW,        ICODE_RETIW,  INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "retlw",   PIC12_MASK_RETLW,   PIC12_INSN_RETLW,     ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "retp",    SX_MASK_RETP,       SX_INSN_RETP,         ICODE_RETP,   INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "return",  SX_MASK_RETURN,     SX_INSN_RETURN,       ICODE_RETURN, INSN_CLASS_IMPLICIT  }, /* SX only */
+  { "rlf",     PIC12_MASK_RLF,     PIC12_INSN_RLF,       ICODE_RLF,    INSN_CLASS_OPWF5     },
+  { "rrf",     PIC12_MASK_RRF,     PIC12_INSN_RRF,       ICODE_RRF,    INSN_CLASS_OPWF5     },
+  { "sleep",   PIC12_MASK_SLEEP,   PIC12_INSN_SLEEP,     ICODE_SLEEP,  INSN_CLASS_IMPLICIT  },
+  { "subwf",   PIC12_MASK_SUBWF,   PIC12_INSN_SUBWF,     ICODE_SUBWF,  INSN_CLASS_OPWF5     },
+  { "swapf",   PIC12_MASK_SWAPF,   PIC12_INSN_SWAPF,     ICODE_SWAPF,  INSN_CLASS_OPWF5     },
+  { "tris",    PIC12_MASK_TRIS,    PIC12_INSN_TRIS,      ICODE_TRIS,   INSN_CLASS_OPF5      }, /* FIXME: This should probably be INSN_CLASS_OPF3 as for 12c5xx? */
+  { "xorlw",   PIC12_MASK_XORLW,   PIC12_INSN_XORLW,     ICODE_XORLW,  INSN_CLASS_LIT8      },
+  { "xorwf",   PIC12_MASK_XORWF,   PIC12_INSN_XORWF,     ICODE_XORWF,  INSN_CLASS_OPWF5     }
+};
+
+const int num_op_sx = TABLE_SIZE(op_sx);
+
+/* PIC 14-bit instruction set */
+struct insn op_16cxx[] = {
+  { "addlw",   PIC14_MASK_ADDLW,   PIC14_INSN_ADDLW,     ICODE_ADDLW,  INSN_CLASS_LIT8      },
+  { "addwf",   PIC14_MASK_ADDWF,   PIC14_INSN_ADDWF,     ICODE_ADDWF,  INSN_CLASS_OPWF7     },
+  { "andlw",   PIC14_MASK_ANDLW,   PIC14_INSN_ANDLW,     ICODE_ANDLW,  INSN_CLASS_LIT8      },
+  { "andwf",   PIC14_MASK_ANDWF,   PIC14_INSN_ANDWF,     ICODE_ANDWF,  INSN_CLASS_OPWF7     },
+  { "bcf",     PIC14_MASK_BCF,     PIC14_INSN_BCF,       ICODE_BCF,    INSN_CLASS_B7        },
+  { "bsf",     PIC14_MASK_BSF,     PIC14_INSN_BSF,       ICODE_BSF,    INSN_CLASS_B7        },
+  { "btfsc",   PIC14_MASK_BTFSC,   PIC14_INSN_BTFSC,     ICODE_BTFSC,  INSN_CLASS_B7        },
+  { "btfss",   PIC14_MASK_BTFSS,   PIC14_INSN_BTFSS,     ICODE_BTFSS,  INSN_CLASS_B7        },
+  { "call",    PIC14_MASK_CALL,    PIC14_INSN_CALL,      ICODE_CALL,   INSN_CLASS_LIT11     },
+  { "clrf",    PIC14_MASK_CLRF,    PIC14_INSN_CLRF,      ICODE_CLRF,   INSN_CLASS_OPF7      },
+  { "clrw",    PIC14_MASK_CLRW,    PIC14_INSN_CLRW,      ICODE_CLRW,   INSN_CLASS_IMPLICIT  },
+  { "clrwdt",  PIC14_MASK_CLRWDT,  PIC14_INSN_CLRWDT,    ICODE_CLRWDT, INSN_CLASS_IMPLICIT  },
+  { "comf",    PIC14_MASK_COMF,    PIC14_INSN_COMF,      ICODE_COMF,   INSN_CLASS_OPWF7     },
+  { "decf",    PIC14_MASK_DECF,    PIC14_INSN_DECF,      ICODE_DECF,   INSN_CLASS_OPWF7     },
+  { "decfsz",  PIC14_MASK_DECFSZ,  PIC14_INSN_DECFSZ,    ICODE_DECFSZ, INSN_CLASS_OPWF7     },
+  { "goto",    PIC14_MASK_GOTO,    PIC14_INSN_GOTO,      ICODE_GOTO,   INSN_CLASS_LIT11     },
+  { "halt",    PIC14_MASK_HALT,    PIC14_INSN_HALT,      ICODE_HALT,   INSN_CLASS_IMPLICIT  },  /* undocumented */
+  { "incf",    PIC14_MASK_INCF,    PIC14_INSN_INCF,      ICODE_INCF,   INSN_CLASS_OPWF7     },
+  { "incfsz",  PIC14_MASK_INCFSZ,  PIC14_INSN_INCFSZ,    ICODE_INCFSZ, INSN_CLASS_OPWF7     },
+  { "iorlw",   PIC14_MASK_IORLW,   PIC14_INSN_IORLW,     ICODE_IORLW,  INSN_CLASS_LIT8      },
+  { "iorwf",   PIC14_MASK_IORWF,   PIC14_INSN_IORWF,     ICODE_IORWF,  INSN_CLASS_OPWF7     },
+  { "movf",    PIC14_MASK_MOVF,    PIC14_INSN_MOVF,      ICODE_MOVF,   INSN_CLASS_OPWF7     },
+  { "movlw",   PIC14_MASK_MOVLW,   PIC14_INSN_MOVLW,     ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movwf",   PIC14_MASK_MOVWF,   PIC14_INSN_MOVWF,     ICODE_MOVWF,  INSN_CLASS_OPF7      },
+  { "nop",     PIC14_MASK_NOP,     PIC14_INSN_NOP,       ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "option",  PIC14_MASK_OPTION,  PIC14_INSN_OPTION,    ICODE_OPTION, INSN_CLASS_IMPLICIT  },
+  { "retfie",  PIC14_MASK_RETFIE,  PIC14_INSN_RETFIE,    ICODE_RETFIE, INSN_CLASS_IMPLICIT  },
+  { "retlw",   PIC14_MASK_RETLW,   PIC14_INSN_RETLW,     ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "return",  PIC14_MASK_RETURN,  PIC14_INSN_RETURN,    ICODE_RETURN, INSN_CLASS_IMPLICIT  },
+  { "rlf",     PIC14_MASK_RLF,     PIC14_INSN_RLF,       ICODE_RLF,    INSN_CLASS_OPWF7     },
+  { "rrf",     PIC14_MASK_RRF,     PIC14_INSN_RRF,       ICODE_RRF,    INSN_CLASS_OPWF7     },
+  { "sleep",   PIC14_MASK_SLEEP,   PIC14_INSN_SLEEP,     ICODE_SLEEP,  INSN_CLASS_IMPLICIT  },
+  { "sublw",   PIC14_MASK_SUBLW,   PIC14_INSN_SUBLW,     ICODE_SUBLW,  INSN_CLASS_LIT8      },
+  { "subwf",   PIC14_MASK_SUBWF,   PIC14_INSN_SUBWF,     ICODE_SUBWF,  INSN_CLASS_OPWF7     },
+  { "swapf",   PIC14_MASK_SWAPF,   PIC14_INSN_SWAPF,     ICODE_SWAPF,  INSN_CLASS_OPWF7     },
+  { "tris",    PIC14_MASK_TRIS,    PIC14_INSN_TRIS,      ICODE_TRIS,   INSN_CLASS_OPF7      },
+  { "xorlw",   PIC14_MASK_XORLW,   PIC14_INSN_XORLW,     ICODE_XORLW,  INSN_CLASS_LIT8      },
+  { "xorwf",   PIC14_MASK_XORWF,   PIC14_INSN_XORWF,     ICODE_XORWF,  INSN_CLASS_OPWF7     }
+};
+
+const int num_op_16cxx = TABLE_SIZE(op_16cxx);
+
+const struct strict_insn op_16cxx_strict_mask[] = {
+  { "addlw",   0x3f00 },
+  { "clrw",    0x3fff },
+  { "movlw",   0x3f00 },
+  { "nop",     0x3fff },
+  { "retlw",   0x3f00 },
+  { "sublw",   0x3f00 }
+};
+
+const int num_op_16cxx_strict_mask = TABLE_SIZE(op_16cxx_strict_mask);
+
+
+/* PIC 14-bit Enhanced instruction set */
+const struct insn op_16cxx_enh[] = {
+  { "addfsr",  PIC14E_MASK_ADDFSR, PIC14E_INSN_ADDFSR,   ICODE_ADDFSR, INSN_CLASS_LITFSR_14 },
+  { "addlw",   PIC14E_MASK_ADDLW,  PIC14E_INSN_ADDLW,    ICODE_ADDLW,  INSN_CLASS_LIT8      },
+  { "addwfc",  PIC14E_MASK_ADDWFC, PIC14E_INSN_ADDWFC,   ICODE_ADDWFC, INSN_CLASS_OPWF7     },
+  { "asrf",    PIC14E_MASK_ASRF,   PIC14E_INSN_ASRF,     ICODE_ASRF,   INSN_CLASS_OPWF7     },
+  { "bra",     PIC14E_MASK_BRA,    PIC14E_INSN_BRA,      ICODE_BRA,    INSN_CLASS_RBRA9     },
+  { "brw",     PIC14E_MASK_BRW,    PIC14E_INSN_BRW,      ICODE_BRW,    INSN_CLASS_IMPLICIT  },
+  { "callw",   PIC14E_MASK_CALLW,  PIC14E_INSN_CALLW,    ICODE_CALLW,  INSN_CLASS_IMPLICIT  },
+  { "lslf",    PIC14E_MASK_LSLF,   PIC14E_INSN_LSLF,     ICODE_LSLF,   INSN_CLASS_OPWF7     },
+  { "lsrf",    PIC14E_MASK_LSRF,   PIC14E_INSN_LSRF,     ICODE_LSRF,   INSN_CLASS_OPWF7     },
+  { "moviw",   PIC14E_MASK_MOVIW,  PIC14E_INSN_MOVIW,    ICODE_MOVIW,  INSN_CLASS_MOVINDF   },
+  { "movlb",   PIC14E_MASK_MOVLB,  PIC14E_INSN_MOVLB,    ICODE_MOVLB,  INSN_CLASS_LIT5      },
+  { "movlp",   PIC14E_MASK_MOVLP,  PIC14E_INSN_MOVLP,    ICODE_MOVLP,  INSN_CLASS_LIT7      },
+  { "movlw",   PIC14E_MASK_MOVLW,  PIC14E_INSN_MOVLW,    ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movwi",   PIC14E_MASK_MOVWI,  PIC14E_INSN_MOVWI,    ICODE_MOVWI,  INSN_CLASS_MOVINDF   },
+  { "nop",     PIC14E_MASK_NOP,    PIC14E_INSN_NOP,      ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "reset",   PIC14E_MASK_RESET,  PIC14E_INSN_RESET,    ICODE_RESET,  INSN_CLASS_IMPLICIT  },
+  { "retlw",   PIC14E_MASK_RETLW,  PIC14E_INSN_RETLW,    ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "sublw",   PIC14E_MASK_SUBLW,  PIC14E_INSN_SUBLW,    ICODE_SUBLW,  INSN_CLASS_LIT8      },
+  { "subwfb",  PIC14E_MASK_SUBWFB, PIC14E_INSN_SUBWFB,   ICODE_SUBWFB, INSN_CLASS_OPWF7     }
+};
+
+const int num_op_16cxx_enh = TABLE_SIZE(op_16cxx_enh);
+
+/* PIC 16-bit instruction set */
+const struct insn op_17cxx[] = {
+  { "addlw",   PIC16_MASK_ADDLW,   PIC16_INSN_ADDLW,     ICODE_ADDLW,  INSN_CLASS_LIT8      },
+  { "addwf",   PIC16_MASK_ADDWF,   PIC16_INSN_ADDWF,     ICODE_ADDWF,  INSN_CLASS_OPWF8     },
+  { "addwfc",  PIC16_MASK_ADDWFC,  PIC16_INSN_ADDWFC,    ICODE_ADDWFC, INSN_CLASS_OPWF8     },
+  { "andlw",   PIC16_MASK_ANDLW,   PIC16_INSN_ANDLW,     ICODE_ANDLW,  INSN_CLASS_LIT8      },
+  { "andwf",   PIC16_MASK_ANDWF,   PIC16_INSN_ANDWF,     ICODE_ANDWF,  INSN_CLASS_OPWF8     },
+  { "bcf",     PIC16_MASK_BCF,     PIC16_INSN_BCF,       ICODE_BCF,    INSN_CLASS_B8        },
+  { "bsf",     PIC16_MASK_BSF,     PIC16_INSN_BSF,       ICODE_BSF,    INSN_CLASS_B8        },
+  { "btfsc",   PIC16_MASK_BTFSC,   PIC16_INSN_BTFSC,     ICODE_BTFSC,  INSN_CLASS_B8        },
+  { "btfss",   PIC16_MASK_BTFSS,   PIC16_INSN_BTFSS,     ICODE_BTFSS,  INSN_CLASS_B8        },
+  { "btg",     PIC16_MASK_BTG,     PIC16_INSN_BTG,       ICODE_BTG,    INSN_CLASS_B8        },
+  { "call",    PIC16_MASK_CALL,    PIC16_INSN_CALL,      ICODE_CALL,   INSN_CLASS_LIT13     },
+  { "clrf",    PIC16_MASK_CLRF,    PIC16_INSN_CLRF,      ICODE_CLRF,   INSN_CLASS_OPWF8     },
+  { "clrwdt",  PIC16_MASK_CLRWDT,  PIC16_INSN_CLRWDT,    ICODE_CLRWDT, INSN_CLASS_IMPLICIT  },
+  { "comf",    PIC16_MASK_COMF,    PIC16_INSN_COMF,      ICODE_COMF,   INSN_CLASS_OPWF8     },
+  { "cpfseq",  PIC16_MASK_CPFSEQ,  PIC16_INSN_CPFSEQ,    ICODE_CPFSEQ, INSN_CLASS_OPF8      },
+  { "cpfsgt",  PIC16_MASK_CPFSGT,  PIC16_INSN_CPFSGT,    ICODE_CPFSGT, INSN_CLASS_OPF8      },
+  { "cpfslt",  PIC16_MASK_CPFSLT,  PIC16_INSN_CPFSLT,    ICODE_CPFSLT, INSN_CLASS_OPF8      },
+  { "daw",     PIC16_MASK_DAW,     PIC16_INSN_DAW,       ICODE_DAW,    INSN_CLASS_OPWF8     },
+  { "dcfsnz",  PIC16_MASK_DCFSNZ,  PIC16_INSN_DCFSNZ,    ICODE_DCFSNZ, INSN_CLASS_OPWF8     },
+  { "decf",    PIC16_MASK_DECF,    PIC16_INSN_DECF,      ICODE_DECF,   INSN_CLASS_OPWF8     },
+  { "decfsz",  PIC16_MASK_DECFSZ,  PIC16_INSN_DECFSZ,    ICODE_DECFSZ, INSN_CLASS_OPWF8     },
+  { "goto",    PIC16_MASK_GOTO,    PIC16_INSN_GOTO,      ICODE_GOTO,   INSN_CLASS_LIT13     },
+  { "incf",    PIC16_MASK_INCF,    PIC16_INSN_INCF,      ICODE_INCF,   INSN_CLASS_OPWF8     },
+  { "incfsz",  PIC16_MASK_INCFSZ,  PIC16_INSN_INCFSZ,    ICODE_INCFSZ, INSN_CLASS_OPWF8     },
+  { "infsnz",  PIC16_MASK_INFSNZ,  PIC16_INSN_INFSNZ,    ICODE_INFSNZ, INSN_CLASS_OPWF8     },
+  { "iorlw",   PIC16_MASK_IORLW,   PIC16_INSN_IORLW,     ICODE_IORLW,  INSN_CLASS_LIT8      },
+  { "iorwf",   PIC16_MASK_IORWF,   PIC16_INSN_IORWF,     ICODE_IORWF,  INSN_CLASS_OPWF8     },
+  { "lcall",   PIC16_MASK_LCALL,   PIC16_INSN_LCALL,     ICODE_LCALL,  INSN_CLASS_LIT8C16   },
+  { "movfp",   PIC16_MASK_MOVFP,   PIC16_INSN_MOVFP,     ICODE_MOVFP,  INSN_CLASS_FP        },
+  { "movlb",   PIC16_MASK_MOVLB,   PIC16_INSN_MOVLB,     ICODE_MOVLB,  INSN_CLASS_LIT8      },
+  { "movlr",   PIC16_MASK_MOVLR,   PIC16_INSN_MOVLR,     ICODE_MOVLR,  INSN_CLASS_LIT4H     },
+  { "movlw",   PIC16_MASK_MOVLW,   PIC16_INSN_MOVLW,     ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movpf",   PIC16_MASK_MOVPF,   PIC16_INSN_MOVPF,     ICODE_MOVPF,  INSN_CLASS_PF        },
+  { "movwf",   PIC16_MASK_MOVWF,   PIC16_INSN_MOVWF,     ICODE_MOVWF,  INSN_CLASS_OPF8      },
+  { "mullw",   PIC16_MASK_MULLW,   PIC16_INSN_MULLW,     ICODE_MULLW,  INSN_CLASS_LIT8      },
+  { "mulwf",   PIC16_MASK_MULWF,   PIC16_INSN_MULWF,     ICODE_MULWF,  INSN_CLASS_OPF8      },
+  { "negw",    PIC16_MASK_NEGW,    PIC16_INSN_NEGW,      ICODE_NEGW,   INSN_CLASS_OPWF8     },
+  { "nop",     PIC16_MASK_NOP,     PIC16_INSN_NOP,       ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "retfie",  PIC16_MASK_RETFIE,  PIC16_INSN_RETFIE,    ICODE_RETFIE, INSN_CLASS_IMPLICIT  },
+  { "retlw",   PIC16_MASK_RETLW,   PIC16_INSN_RETLW,     ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "return",  PIC16_MASK_RETURN,  PIC16_INSN_RETURN,    ICODE_RETURN, INSN_CLASS_IMPLICIT  },
+  { "rlcf",    PIC16_MASK_RLCF,    PIC16_INSN_RLCF,      ICODE_RLCF,   INSN_CLASS_OPWF8     },
+  { "rlncf",   PIC16_MASK_RLNCF,   PIC16_INSN_RLNCF,     ICODE_RLNCF,  INSN_CLASS_OPWF8     },
+  { "rrcf",    PIC16_MASK_RRCF,    PIC16_INSN_RRCF,      ICODE_RRCF,   INSN_CLASS_OPWF8     },
+  { "rrncf",   PIC16_MASK_RRNCF,   PIC16_INSN_RRNCF,     ICODE_RRNCF,  INSN_CLASS_OPWF8     },
+  { "setf",    PIC16_MASK_SETF,    PIC16_INSN_SETF,      ICODE_SETF,   INSN_CLASS_OPWF8     },
+  { "sleep",   PIC16_MASK_SLEEP,   PIC16_INSN_SLEEP,     ICODE_SLEEP,  INSN_CLASS_IMPLICIT  },
+  { "sublw",   PIC16_MASK_SUBLW,   PIC16_INSN_SUBLW,     ICODE_SUBLW,  INSN_CLASS_LIT8      },
+  { "subwf",   PIC16_MASK_SUBWF,   PIC16_INSN_SUBWF,     ICODE_SUBWF,  INSN_CLASS_OPWF8     },
+  { "subwfb",  PIC16_MASK_SUBWFB,  PIC16_INSN_SUBWFB,    ICODE_SUBWFB, INSN_CLASS_OPWF8     },
+  { "swapf",   PIC16_MASK_SWAPF,   PIC16_INSN_SWAPF,     ICODE_SWAPF,  INSN_CLASS_OPWF8     },
+  { "tablrd",  PIC16_MASK_TABLRD,  PIC16_INSN_TABLRD,    ICODE_TABLRD, INSN_CLASS_TBL3      },
+  { "tablwt",  PIC16_MASK_TABLWT,  PIC16_INSN_TABLWT,    ICODE_TABLWT, INSN_CLASS_TBL3      },
+  { "tlrd",    PIC16_MASK_TLRD,    PIC16_INSN_TLRD,      ICODE_TLRD,   INSN_CLASS_TBL2      },
+  { "tlwt",    PIC16_MASK_TLWT,    PIC16_INSN_TLWT,      ICODE_TLWT,   INSN_CLASS_TBL2      },
+  { "tstfsz",  PIC16_MASK_TSTFSZ,  PIC16_INSN_TSTFSZ,    ICODE_TSTFSZ, INSN_CLASS_OPF8      },
+  { "xorlw",   PIC16_MASK_XORLW,   PIC16_INSN_XORLW,     ICODE_XORLW,  INSN_CLASS_LIT8      },
+  { "xorwf",   PIC16_MASK_XORWF,   PIC16_INSN_XORWF,     ICODE_XORWF,  INSN_CLASS_OPWF8     }
+};
+
+const int num_op_17cxx = TABLE_SIZE(op_17cxx);
+
+const struct insn op_18cxx[] = {
+  { "addlw",   PIC16E_MASK_ADDLW,  PIC16E_INSN_ADDLW,    ICODE_ADDLW,  INSN_CLASS_LIT8      },
+  { "addwf",   PIC16E_MASK_ADDWF,  PIC16E_INSN_ADDWF,    ICODE_ADDWF,  INSN_CLASS_OPWFA8    },
+  { "addwfc",  PIC16E_MASK_ADDWFC, PIC16E_INSN_ADDWFC,   ICODE_ADDWFC, INSN_CLASS_OPWFA8    },
+  { "andlw",   PIC16E_MASK_ANDLW,  PIC16E_INSN_ANDLW,    ICODE_ANDLW,  INSN_CLASS_LIT8      },
+  { "andwf",   PIC16E_MASK_ANDWF,  PIC16E_INSN_ANDWF,    ICODE_ANDWF,  INSN_CLASS_OPWFA8    },
+  { "bc",      PIC16E_MASK_BC,     PIC16E_INSN_BC,       ICODE_BC,     INSN_CLASS_RBRA8     },
+  { "bcf",     PIC16E_MASK_BCF,    PIC16E_INSN_BCF,      ICODE_BCF,    INSN_CLASS_BA8       },
+  { "bn",      PIC16E_MASK_BN,     PIC16E_INSN_BN,       ICODE_BN,     INSN_CLASS_RBRA8     },
+  { "bnc",     PIC16E_MASK_BNC,    PIC16E_INSN_BNC,      ICODE_BNC,    INSN_CLASS_RBRA8     },
+  { "bnn",     PIC16E_MASK_BNN,    PIC16E_INSN_BNN,      ICODE_BNN,    INSN_CLASS_RBRA8     },
+  { "bnov",    PIC16E_MASK_BNOV,   PIC16E_INSN_BNOV,     ICODE_BNOV,   INSN_CLASS_RBRA8     },
+  { "bnz",     PIC16E_MASK_BNZ,    PIC16E_INSN_BNZ,      ICODE_BNZ,    INSN_CLASS_RBRA8     },
+  { "bov",     PIC16E_MASK_BOV,    PIC16E_INSN_BOV,      ICODE_BOV,    INSN_CLASS_RBRA8     },
+  { "bra",     PIC16E_MASK_BRA,    PIC16E_INSN_BRA,      ICODE_BRA,    INSN_CLASS_RBRA11    },
+  { "bsf",     PIC16E_MASK_BSF,    PIC16E_INSN_BSF,      ICODE_BSF,    INSN_CLASS_BA8       },
+  { "btfsc",   PIC16E_MASK_BTFSC,  PIC16E_INSN_BTFSC,    ICODE_BTFSC,  INSN_CLASS_BA8       },
+  { "btfss",   PIC16E_MASK_BTFSS,  PIC16E_INSN_BTFSS,    ICODE_BTFSS,  INSN_CLASS_BA8       },
+  { "btg",     PIC16E_MASK_BTG,    PIC16E_INSN_BTG,      ICODE_BTG,    INSN_CLASS_BA8       },
+  { "bz",      PIC16E_MASK_BZ,     PIC16E_INSN_BZ,       ICODE_BZ,     INSN_CLASS_RBRA8     },
+  { "call",    PIC16E_MASK_CALL,   PIC16E_INSN_CALL,     ICODE_CALL,   INSN_CLASS_CALL20    },
+  { "clrf",    PIC16E_MASK_CLRF,   PIC16E_INSN_CLRF,     ICODE_CLRF,   INSN_CLASS_OPFA8     },
+  { "clrwdt",  PIC16E_MASK_CLRWDT, PIC16E_INSN_CLRWDT,   ICODE_CLRWDT, INSN_CLASS_IMPLICIT  },
+  { "comf",    PIC16E_MASK_COMF,   PIC16E_INSN_COMF,     ICODE_COMF,   INSN_CLASS_OPWFA8    },
+  { "cpfseq",  PIC16E_MASK_CPFSEQ, PIC16E_INSN_CPFSEQ,   ICODE_CPFSEQ, INSN_CLASS_OPFA8     },
+  { "cpfsgt",  PIC16E_MASK_CPFSGT, PIC16E_INSN_CPFSGT,   ICODE_CPFSGT, INSN_CLASS_OPFA8     },
+  { "cpfslt",  PIC16E_MASK_CPFSLT, PIC16E_INSN_CPFSLT,   ICODE_CPFSLT, INSN_CLASS_OPFA8     },
+  { "daw",     PIC16E_MASK_DAW,    PIC16E_INSN_DAW,      ICODE_DAW,    INSN_CLASS_IMPLICIT  },
+  { "dcfsnz",  PIC16E_MASK_DCFSNZ, PIC16E_INSN_DCFSNZ,   ICODE_DCFSNZ, INSN_CLASS_OPWFA8    },
+  { "decf",    PIC16E_MASK_DECF,   PIC16E_INSN_DECF,     ICODE_DECF,   INSN_CLASS_OPWFA8    },
+  { "decfsz",  PIC16E_MASK_DECFSZ, PIC16E_INSN_DECFSZ,   ICODE_DECFSZ, INSN_CLASS_OPWFA8    },
+  { "goto",    PIC16E_MASK_GOTO,   PIC16E_INSN_GOTO,     ICODE_GOTO,   INSN_CLASS_LIT20     },
+  { "halt",    PIC16E_MASK_HALT,   PIC16E_INSN_HALT,     ICODE_HALT,   INSN_CLASS_IMPLICIT  }, /* undocumented */
+  { "incf",    PIC16E_MASK_INCF,   PIC16E_INSN_INCF,     ICODE_INCF,   INSN_CLASS_OPWFA8    },
+  { "incfsz",  PIC16E_MASK_INCFSZ, PIC16E_INSN_INCFSZ,   ICODE_INCFSZ, INSN_CLASS_OPWFA8    },
+  { "infsnz",  PIC16E_MASK_INFSNZ, PIC16E_INSN_INFSNZ,   ICODE_INFSNZ, INSN_CLASS_OPWFA8    },
+  { "iorlw",   PIC16E_MASK_IORLW,  PIC16E_INSN_IORLW,    ICODE_IORLW,  INSN_CLASS_LIT8      },
+  { "iorwf",   PIC16E_MASK_IORWF,  PIC16E_INSN_IORWF,    ICODE_IORWF,  INSN_CLASS_OPWFA8    },
+  { "lfsr",    PIC16E_MASK_LFSR,   PIC16E_INSN_LFSR,     ICODE_LFSR,   INSN_CLASS_FLIT12    },
+  { "movf",    PIC16E_MASK_MOVF,   PIC16E_INSN_MOVF,     ICODE_MOVF,   INSN_CLASS_OPWFA8    },
+  { "movff",   PIC16E_MASK_MOVFF,  PIC16E_INSN_MOVFF,    ICODE_MOVFF,  INSN_CLASS_FF        },
+  { "movlb",   PIC16E_MASK_MOVLB,  PIC16E_INSN_MOVLB,    ICODE_MOVLB,  INSN_CLASS_LIT4L     },
+  { "movlw",   PIC16E_MASK_MOVLW,  PIC16E_INSN_MOVLW,    ICODE_MOVLW,  INSN_CLASS_LIT8      },
+  { "movwf",   PIC16E_MASK_MOVWF,  PIC16E_INSN_MOVWF,    ICODE_MOVWF,  INSN_CLASS_OPFA8     },
+  { "mullw",   PIC16E_MASK_MULLW,  PIC16E_INSN_MULLW,    ICODE_MULLW,  INSN_CLASS_LIT8      },
+  { "mulwf",   PIC16E_MASK_MULWF,  PIC16E_INSN_MULWF,    ICODE_MULWF,  INSN_CLASS_OPFA8     },
+  { "negf",    PIC16E_MASK_NEGF,   PIC16E_INSN_NEGF,     ICODE_NEGF,   INSN_CLASS_OPFA8     },
+  { "nop",     PIC16E_MASK_NOP,    PIC16E_INSN_NOP,      ICODE_NOP,    INSN_CLASS_IMPLICIT  },
+  { "pop",     PIC16E_MASK_POP,    PIC16E_INSN_POP,      ICODE_POP,    INSN_CLASS_IMPLICIT  },
+  { "push",    PIC16E_MASK_PUSH,   PIC16E_INSN_PUSH,     ICODE_PUSH,   INSN_CLASS_IMPLICIT  },
+  { "rcall",   PIC16E_MASK_RCALL,  PIC16E_INSN_RCALL,    ICODE_RCALL,  INSN_CLASS_RBRA11    },
+  { "reset",   PIC16E_MASK_RESET,  PIC16E_INSN_RESET,    ICODE_RESET,  INSN_CLASS_IMPLICIT  },
+  { "retfie",  PIC16E_MASK_RETFIE, PIC16E_INSN_RETFIE,   ICODE_RETFIE, INSN_CLASS_LIT1      },
+  { "retlw",   PIC16E_MASK_RETLW,  PIC16E_INSN_RETLW,    ICODE_RETLW,  INSN_CLASS_LIT8      },
+  { "return",  PIC16E_MASK_RETURN, PIC16E_INSN_RETURN,   ICODE_RETURN, INSN_CLASS_LIT1      },
+  { "rlcf",    PIC16E_MASK_RLCF,   PIC16E_INSN_RLCF,     ICODE_RLCF,   INSN_CLASS_OPWFA8    },
+  { "rlncf",   PIC16E_MASK_RLNCF,  PIC16E_INSN_RLNCF,    ICODE_RLNCF,  INSN_CLASS_OPWFA8    },
+  { "rrcf",    PIC16E_MASK_RRCF,   PIC16E_INSN_RRCF,     ICODE_RRCF,   INSN_CLASS_OPWFA8    },
+  { "rrncf",   PIC16E_MASK_RRNCF,  PIC16E_INSN_RRNCF,    ICODE_RRNCF,  INSN_CLASS_OPWFA8    },
+  { "setf",    PIC16E_MASK_SETF,   PIC16E_INSN_SETF,     ICODE_SETF,   INSN_CLASS_OPFA8     },
+  { "sleep",   PIC16E_MASK_SLEEP,  PIC16E_INSN_SLEEP,    ICODE_SLEEP,  INSN_CLASS_IMPLICIT  },
+  { "subfwb",  PIC16E_MASK_SUBFWB, PIC16E_INSN_SUBFWB,   ICODE_SUBFWB, INSN_CLASS_OPWFA8    },
+  { "sublw",   PIC16E_MASK_SUBLW,  PIC16E_INSN_SUBLW,    ICODE_SUBLW,  INSN_CLASS_LIT8      },
+  { "subwf",   PIC16E_MASK_SUBWF,  PIC16E_INSN_SUBWF,    ICODE_SUBWF,  INSN_CLASS_OPWFA8    },
+  { "subwfb",  PIC16E_MASK_SUBWFB, PIC16E_INSN_SUBWFB,   ICODE_SUBWFB, INSN_CLASS_OPWFA8    },
+  { "swapf",   PIC16E_MASK_SWAPF,  PIC16E_INSN_SWAPF,    ICODE_SWAPF,  INSN_CLASS_OPWFA8    },
+  { "tblrd",   PIC16E_MASK_TBLRD,  PIC16E_INSN_TBLRD,    ICODE_TBLRD,  INSN_CLASS_TBL       },
+  { "tblwt",   PIC16E_MASK_TBLWT,  PIC16E_INSN_TBLWT,    ICODE_TBLWT,  INSN_CLASS_TBL       },
+  { "trap",    PIC16E_MASK_TRAP,   PIC16E_INSN_TRAP,     ICODE_TRAP,   INSN_CLASS_IMPLICIT  }, /* undocumented */
+  { "tret",    PIC16E_MASK_TRET,   PIC16E_INSN_TRET,     ICODE_TRET,   INSN_CLASS_IMPLICIT  }, /* undocumented */
+  { "tstfsz",  PIC16E_MASK_TSTFSZ, PIC16E_INSN_TSTFSZ,   ICODE_TSTFSZ, INSN_CLASS_OPFA8     },
+  { "xorlw",   PIC16E_MASK_XORLW,  PIC16E_INSN_XORLW,    ICODE_XORLW,  INSN_CLASS_LIT8      },
+  { "xorwf",   PIC16E_MASK_XORWF,  PIC16E_INSN_XORWF,    ICODE_XORWF,  INSN_CLASS_OPWFA8    }
+};
+
+const int num_op_18cxx = TABLE_SIZE(op_18cxx);
+
+/* PIC 16-bit "Special" instruction set */
+const struct insn op_18cxx_sp[] = {
+  { "clrc",    0xffff, PIC16ES_INSN_CLRC,    0, INSN_CLASS_IMPLICIT  },
+  { "clrdc",   0xffff, PIC16ES_INSN_CLRDC,   0, INSN_CLASS_IMPLICIT  },
+  { "clrn",    0xffff, PIC16ES_INSN_CLRN,    0, INSN_CLASS_IMPLICIT  },
+  { "clrov",   0xffff, PIC16ES_INSN_CLROV,   0, INSN_CLASS_IMPLICIT  },
+  { "clrw",    0xffff, PIC16ES_INSN_CLRW,    0, INSN_CLASS_IMPLICIT  },
+  { "clrz",    0xffff, PIC16ES_INSN_CLRZ,    0, INSN_CLASS_IMPLICIT  },
+  { "setc",    0xffff, PIC16ES_INSN_SETC,    0, INSN_CLASS_IMPLICIT  },
+  { "setdc",   0xffff, PIC16ES_INSN_SETDC,   0, INSN_CLASS_IMPLICIT  },
+  { "setn",    0xffff, PIC16ES_INSN_SETN,    0, INSN_CLASS_IMPLICIT  },
+  { "setov",   0xffff, PIC16ES_INSN_SETOV,   0, INSN_CLASS_IMPLICIT  },
+  { "setz",    0xffff, PIC16ES_INSN_SETZ,    0, INSN_CLASS_IMPLICIT  },
+  { "skpc",    0xffff, PIC16ES_INSN_SKPC,    0, INSN_CLASS_IMPLICIT  },
+  { "skpdc",   0xffff, PIC16ES_INSN_SKPDC,   0, INSN_CLASS_IMPLICIT  },
+  { "skpn",    0xffff, PIC16ES_INSN_SKPN,    0, INSN_CLASS_IMPLICIT  },
+  { "skpov",   0xffff, PIC16ES_INSN_SKPOV,   0, INSN_CLASS_IMPLICIT  },
+  { "skpz",    0xffff, PIC16ES_INSN_SKPZ,    0, INSN_CLASS_IMPLICIT  },
+  { "skpnc",   0xffff, PIC16ES_INSN_SKPNC,   0, INSN_CLASS_IMPLICIT  },
+  { "skpndc",  0xffff, PIC16ES_INSN_SKPNDC,  0, INSN_CLASS_IMPLICIT  },
+  { "skpnn",   0xffff, PIC16ES_INSN_SKPNN,   0, INSN_CLASS_IMPLICIT  },
+  { "skpnov",  0xffff, PIC16ES_INSN_SKPNOV,  0, INSN_CLASS_IMPLICIT  },
+  { "skpnz",   0xffff, PIC16ES_INSN_SKPNZ,   0, INSN_CLASS_IMPLICIT  },
+  { "tgc",     0xffff, PIC16ES_INSN_TGC,     0, INSN_CLASS_IMPLICIT  },
+  { "tgdc",    0xffff, PIC16ES_INSN_TGDC,    0, INSN_CLASS_IMPLICIT  },
+  { "tgn",     0xffff, PIC16ES_INSN_TGN,     0, INSN_CLASS_IMPLICIT  },
+  { "tgov",    0xffff, PIC16ES_INSN_TGOV,    0, INSN_CLASS_IMPLICIT  },
+  { "tgz",     0xffff, PIC16ES_INSN_TGZ,     0, INSN_CLASS_IMPLICIT  }
+};
+
+const int num_op_18cxx_sp = TABLE_SIZE(op_18cxx_sp);
+
+/* PIC 16-bit Extended instruction set */
+const struct insn op_18cxx_ext[] = {
+  { "addfsr",  PIC16EX_MASK_ADDFSR,  PIC16EX_INSN_ADDFSR,  ICODE_ADDFSR,  INSN_CLASS_LITFSR_16 },
+  { "addulnk", PIC16EX_MASK_ADDULNK, PIC16EX_INSN_ADDULNK, ICODE_ADDULNK, INSN_CLASS_LIT6      },
+  { "callw",   PIC16EX_MASK_CALLW,   PIC16EX_INSN_CALLW,   ICODE_CALLW,   INSN_CLASS_IMPLICIT  },
+  { "movsf",   PIC16EX_MASK_MOVSF,   PIC16EX_INSN_MOVSF,   ICODE_MOVSF,   INSN_CLASS_SF        },
+  { "movss",   PIC16EX_MASK_MOVSS,   PIC16EX_INSN_MOVSS,   ICODE_MOVSS,   INSN_CLASS_SS        },
+  { "pushl",   PIC16EX_MASK_PUSHL,   PIC16EX_INSN_PUSHL,   ICODE_PUSHL,   INSN_CLASS_LIT8      },
+  { "subfsr",  PIC16EX_MASK_SUBFSR,  PIC16EX_INSN_SUBFSR,  ICODE_SUBFSR,  INSN_CLASS_LITFSR_16 },
+  { "subulnk", PIC16EX_MASK_SUBULNK, PIC16EX_INSN_SUBULNK, ICODE_SUBULNK, INSN_CLASS_LIT6      }
+};
+
+const int num_op_18cxx_ext = TABLE_SIZE(op_18cxx_ext);

@@ -1,0 +1,690 @@
+.headContainer
+  {
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+  }
+
+.headSide
+  {
+  display: inline-block;
+  position: relative;
+  float: left;
+  }
+
+.heading
+  {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 900px;
+  float: left;
+  padding: 0.6em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 2em;
+  color: black;
+  background: #E0E0F0;
+     -moz-box-shadow: 0 0 1em #C0C0C0;
+  -webkit-box-shadow: 0 0 1em #C0C0C0;
+          box-shadow: 0 0 1em #C0C0C0;
+  background:    -moz-linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  background:     -ms-linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  background:      -o-linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  background: -webkit-linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  background:         linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  -pie-background:    linear-gradient(left, #FF8080, #FFFF80, #80FF80, #8080FF, #FF80FF);
+  background: -webkit-gradient(linear, left top, right top, from(#FF8080), to(#FF80FF));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8080', endColorstr='#FF80FF');
+  }
+
+.tabs
+  {
+  display: inline-block;
+  margin: 0;
+  padding: 2em 1.5em 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+  }
+
+.classMenu
+  {
+  height: 2em;
+  margin: 1.5em 0 1.5em 3em;
+  }
+
+.tabs a, .classMenu a
+  {
+  z-index: 1;
+  position: relative;
+  padding: 0.5em 0.5em;
+  display: table-cell;
+  list-style: none;
+  background: #E0E0F0;
+  color: #0000E0;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #C0C0C0;
+     -moz-box-shadow: 0 0 1em #C0C0C0;
+  -webkit-box-shadow: 0 0 1em #C0C0C0;
+          box-shadow: 0 0 1em #C0C0C0;
+  }
+
+.tabs a
+  {
+     -moz-border-radius: 0.5em 0.5em 0 0;
+  -webkit-border-radius: 0.5em 0.5em 0 0;
+          border-radius: 0.5em 0.5em 0 0;
+  border-bottom: 0;
+  }
+
+.classMenu a
+  {
+     -moz-box-shadow: 0 0 1em #C0C0C0;
+  -webkit-box-shadow: 0 0 1em #C0C0C0;
+          box-shadow: 0 0 1em #C0C0C0;
+  }
+
+.tabs a.selected
+  {
+  z-index: 3;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+          box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  background: #FFFFFF;
+  }
+
+.tabs a:hover, .classMenu a:hover
+  {
+  z-index: 2;
+  background:    -moz-linear-gradient(#FFFFFF, #E0E0F0 100%);
+  background:     -ms-linear-gradient(#FFFFFF, #E0E0F0 100%);
+  background:      -o-linear-gradient(#FFFFFF, #E0E0F0 100%);
+  background: -webkit-linear-gradient(#FFFFFF, #E0E0F0 100%);
+  background:         linear-gradient(#FFFFFF, #E0E0F0 100%);
+  -pie-background:    linear-gradient(#FFFFFF, #E0E0F0 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFFFFF), to(#E0E0F0));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E0E0F0');
+  }
+
+.tabs a:hover
+  {
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000;
+          box-shadow: 0.2em 0.2em 0.8em #000000;
+  transform: scale(1.1, 1.3) translateY(-4px);
+  }
+
+.tabs a.selected:hover
+  {
+  z-index: 3;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+          box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  }
+
+.classMenu a:hover
+  {
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000;
+          box-shadow: 0.2em 0.2em 0.8em #000000;
+  transform: scale(1.1, 1.3) translateY(6px);
+  }
+
+.classMenu a:active
+  {
+     -moz-box-shadow: 0 1px 2px #C0C0C0 inset;
+  -webkit-box-shadow: 0 1px 2px #C0C0C0 inset;
+          box-shadow: 0 1px 2px #C0C0C0 inset;
+  }
+
+.heading,
+.mcuListHeader, .mcuList, .classMenu a, .mcuLink, .mcuDSheet,
+.featList, .featTableName, .featName,
+.configList, .confTableName, .configWord, .confOptName,
+.ramMap, .ramTableName, .ramBank,
+.sfrMap, .sfrCommonTable, .sfrTableName, .sfrBank, .sfrName, .sfrNameX,
+.srcInfo
+  {
+     -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+  }
+
+.mcuList, .featList, .configList, .ramMap, .sfrMap, .sfrCommonTable
+  {
+  z-index: 2;
+  position: relative;
+  width: auto;
+  padding: 1em 1em;
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+          box-shadow: 0.2em 0.2em 0.8em #000000, inset 0 0 0.5em #C000C0;
+  }
+
+.mcuList
+  {
+  display: inline-block;
+  min-width: 880px;
+  }
+
+.mcuTable
+  {
+  display: inline;
+  table-layout: fixed;
+  }
+
+/*----------------------------------------------*/
+
+.mcuListHeader, .featTableName, .confTableName, .ramTableName, .sfrTableName
+  {
+  background: #CAB2DE;
+  border-color: #CAB2DE;
+  border-style: outset;
+  }
+
+.mcuAttrP12, .mcuAttrP14, .mcuAttrP16, .mcuAttrP12E, .mcuAttrP12E, .mcuAttrP14E, .mcuAttrP14E, .mcuAttrP16E
+  {
+  padding: 0.2em 0.625em;
+  text-align: center;
+  font: bold 1em Georgia;
+  }
+
+.mcuAttrP12
+  {
+  background: #FFB4B4;
+  }
+
+.mcuAttrP14
+  {
+  background: #B4B4FF;
+  }
+
+.mcuAttrP16
+  {
+  background: #B4FFB4;
+  }
+
+.mcuAttrP12E
+  {
+  background: #FFB4FF;
+  }
+
+.mcuAttrP12E
+  {
+  background: #FFB4FF;
+  }
+
+.mcuAttrP14E
+  {
+  background: #9BF0F0;
+  }
+
+.mcuAttrP14E
+  {
+  background: #9BF0F0;
+  }
+
+.mcuAttrP16E
+  {
+  background: #EBEB81;
+  }
+
+.mcuListHeader, .configWord,
+.featValue,
+.confSwName, .confSwValue, .confSwExpl,
+.ramBank,
+.sfrBank, .sfrAddr, .sfrSep
+  {
+  padding: 0.2em 0.625em;
+  }
+
+.mcuListHeader
+  {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1.2em;
+  border-width: 4px;
+  }
+
+.mcuLink
+  {
+  display: block;
+  width: 12em;
+  padding: 0.14em 0 0.14em 0.6em;
+  text-align: left;
+  text-decoration: none;
+  background: #49DDFF;
+  border: 2px outset #D7DEB2;
+     -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+     -moz-box-shadow: 0 0 2px 4px #D7DEB2 inset;
+  -webkit-box-shadow: 0 0 2px 4px #D7DEB2 inset;
+          box-shadow: 0 0 2px 4px #D7DEB2 inset;
+  }
+
+.mcuDSheet
+  {
+  display: block;
+  width: 12em;
+  padding: 0.14em 0 0.14em 0.6em;
+  text-align: center;
+  text-decoration: none;
+  background: #FFA949;
+  border: 2px outset #B2DECD;
+     -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+     -moz-box-shadow: 0 0 2px 4px #B2DECD inset;
+  -webkit-box-shadow: 0 0 2px 4px #B2DECD inset;
+          box-shadow: 0 0 2px 4px #B2DECD inset;
+  }
+
+.mcuLink:hover
+  {
+  background: #F0FFA1;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #D7DEB2 inset;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #D7DEB2 inset;
+          box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #D7DEB2 inset;
+  transform: scale(1.1, 1.3);
+  }
+
+.mcuDSheet:hover
+  {
+  background: #A1FFC3;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #B2DECD inset;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #B2DECD inset;
+          box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 2px 4px #B2DECD inset;
+  transform: scale(1.1, 1.3);
+  }
+
+.mcuLink:active, .mcuDSheet:active
+  {
+  border: 2px inset;
+     -moz-box-shadow: 0 0 10px 6px #B7BD97 inset;
+  -webkit-box-shadow: 0 0 10px 6px #B7BD97 inset;
+          box-shadow: 0 0 10px 6px #B7BD97 inset;
+  }
+
+.featValue,
+.confSwName, .confSwValue, .confSwExpl,
+.sfrAddr
+  {
+  background: #BAE7B8;
+  }
+
+.confSwDefault
+  {
+  background: #E79C96;
+  }
+
+/*----------------------------------------------*/
+
+.featTableName,
+.confTableName, .configWord,
+.ramBank, .ramTableName,
+.sfrBank, .sfrTableName
+  {
+  text-align: center;
+  border-width: 4px;
+  }
+
+.featTableName, .confTableName, .ramTableName, .sfrTableName
+  {
+  font:bold 1.5em Georgia;
+  line-height: 1.75em;
+  }
+
+.mcuGap, .featGap, .confGap, .ramGap, .sfrGap
+  {
+  height: 1em;
+  background: transparent;
+  }
+
+.configWord, .ramBank, .sfrBank
+  {
+  font-size: 1.3em;
+  background: #D7DEB2;
+  border-color: #D7DEB2;
+  border-style: ridge;
+  }
+
+.featName, .featValue,
+.confOptName, .confSwName, .confSwValue, .confSwExpl,
+.sfrName, .sfrNameX, .sfrAddr
+  {
+  text-align: left;
+  }
+
+.featName, .confOptName, .sfrName, .sfrNameX, .sfrSep
+  {
+  padding: 0.5em 0.75em;
+  }
+
+.featName, .confOptName, .sfrName, .sfrNameX
+  {
+  border-style: solid;
+  border-width: 0;
+  }
+
+.featName, .confOptName, .sfrName, .sfrNameEx
+  {
+  background: #A5BDE4;
+  }
+
+.ramColumn, .sfrColumn
+  {
+  width: 130px;
+  padding: 5px;
+  background: #DEFFFE;
+  border: 1px solid #C0C0C0;
+     -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+          border-radius: 0.3em;
+     -moz-box-shadow: 0 0 0.2em #C0C0C0;
+  -webkit-box-shadow: 0 0 0.2em #C0C0C0;
+          box-shadow: 0 0 0.2em #C0C0C0;
+  }
+
+.ramColCont
+  {
+  position: relative;
+  }
+
+/* This a tooltip. */
+
+.ramTt
+  {
+  display: none;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+  left: 20px;
+  background: #F0FFA1;
+  padding: 0.2em 0.8em;
+     -moz-border-radius: 0 1em 1em 2em;
+  -webkit-border-radius: 0 1em 1em 2em;
+          border-radius: 0 1em 1em 2em;
+     -moz-box-shadow: 0 0 1.5em #C0C0C0;
+  -webkit-box-shadow: 0 0 1.5em #C0C0C0;
+          box-shadow: 0 0 1.5em #C0C0C0;
+  }
+
+.ramGPR:hover .ramTt,
+.ramSFR:hover .ramTt,
+.ramCOM:hover .ramTt,
+.ramMIR:hover .ramTt,
+.ramBAD:hover .ramTt
+  {
+  z-index: 100;
+  display: block;
+  }
+
+/* This accessories of the tooltip. This is a beak which point towards the left side. */
+
+.ramGPR:hover .ramTt:after,
+.ramSFR:hover .ramTt:after,
+.ramCOM:hover .ramTt:after,
+.ramMIR:hover .ramTt:after,
+.ramBAD:hover .ramTt:after
+  {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 100%;
+  border-right: 15px solid #F0FFA1;
+  border-bottom: 5px solid transparent;
+  }
+
+.ramTt a
+  {
+  display: block;
+  background: #F0FFA1;
+  text-decoration: none;
+     -moz-border-radius: 0.875em 0.875em 0.875em 1.75em;
+  -webkit-border-radius: 0.875em 0.875em 0.875em 1.75em;
+          border-radius: 0.875em 0.875em 0.875em 1.75em;
+     -moz-box-shadow: 0 0 10px 10px #F0FFA1 inset;
+  -webkit-box-shadow: 0 0 10px 10px #F0FFA1 inset;
+          box-shadow: 0 0 10px 10px #F0FFA1 inset;
+  }
+
+.ramTt a:link
+  {
+  color: #874EAD;
+  }
+
+.ramTt a:hover
+  {
+  background: #49DDFF;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 10px 10px #F0FFA1 inset;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 10px 10px #F0FFA1 inset;
+          box-shadow: 0.2em 0.2em 0.8em #000000, 0 0 10px 10px #F0FFA1 inset;
+  transform: scale(1.2, 1.3);
+  }
+
+.ramAcc
+  {
+  z-index: 5;
+  position: absolute;
+  width: 1px;
+  height: 0;
+  background: transparent;
+  box-shadow: 2px 0 #303030,
+              2px 0 #303030,
+              7px 0 #303030,
+              12px 0 #303030,
+              17px 0 #303030,
+              22px 0 #303030,
+              27px 0 #303030,
+              32px 0 #303030,
+              37px 0 #303030,
+              42px 0 #303030,
+              47px 0 #303030,
+              52px 0 #303030,
+              57px 0 #303030,
+              62px 0 #303030,
+              67px 0 #303030,
+              72px 0 #303030,
+              77px 0 #303030,
+              82px 0 #303030,
+              87px 0 #303030,
+              92px 0 #303030,
+              97px 0 #303030,
+              102px 0 #303030,
+              107px 0 #303030,
+              112px 0 #303030,
+              117px 0 #303030,
+              122px 0 #303030,
+              127px 0 #303030;
+  }
+
+.ramGPR, .ramGPREx
+  {
+  background: #76CB76;
+  }
+
+.ramSFR, .ramSFREx
+  {
+  background: #F48282;
+  }
+
+.ramCOM, .ramCOMEx
+  {
+  background: #DFA9FF;
+  }
+
+.ramMIR, .ramMIREx
+  {
+  background: #76CBFF;
+  }
+
+.ramBAD, .ramBADEx
+  {
+  background: #C0C0C0;
+  }
+
+.ramGPR, .ramSFR, .ramCOM, .ramMIR, .ramBAD
+  {
+  position: relative;
+  width: 130px;
+  }
+
+.ramSFR .ramTt:active
+  {
+  background: #94A9FF;
+  }
+
+.ramMap, .sfrMap
+  {
+  min-width: 500px;
+  }
+
+.sfrCommonTable
+  {
+  min-width: 480px;
+  }
+
+.ramSum
+  {
+  padding: 0.4em 0;
+  font-size: 0.75em;
+  text-align: center;
+  }
+
+.sfrColumn
+  {
+  vertical-align: top;
+  }
+
+.sfrName, .sfrNameX, .sfrAddr, .sfrSep
+  {
+  font-size: 0.75em;
+  }
+
+.sfrNameX, .sfrNameXEx
+  {
+  background: #ECA4FC;
+  }
+
+.sfrNameX span
+  {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background: #F0FFA1;
+  padding: 0.2em 0.4em;
+     -moz-border-radius: 0 0.75em 0.75em 0.75em;
+  -webkit-border-radius: 0 0.75em 0.75em 0.75em;
+          border-radius: 0 0.75em 0.75em 0.75em;
+     -moz-box-shadow: 0.2em 0.2em 0.8em #000000;
+  -webkit-box-shadow: 0.2em 0.2em 0.8em #000000;
+          box-shadow: 0.2em 0.2em 0.8em #000000;
+  }
+
+.sfrNameX:hover span
+  {
+  z-index: 100;                 /* This will surely be enough. */
+  display: block;
+  cursor: text;
+  }
+
+.ramSFREx, .ramGPREx, .ramCOMEx, .ramMIREx, .ramBADEx,
+.sfrNameEx, .sfrNameXEx, .sfrAccess, .menuEx
+  {
+  padding: 0;
+  width: 50px;
+  margin-left: 20px;
+  border: 1px solid #A0A0A0;
+     -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+     -moz-box-shadow: 0 0 0.5em #C0C0C0;
+  -webkit-box-shadow: 0 0 0.5em #C0C0C0;
+          box-shadow: 0 0 0.5em #C0C0C0;
+  }
+
+.sfrAccess
+  {
+  background: #C87548;
+  color: #FDFFC7;
+  }
+
+.legendContainer
+  {
+  position: relative;
+  width: 1024px;
+  margin: 1.5em auto 0 auto;
+  }
+
+.legend
+  {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 22em;
+  }
+
+.ramAccEx
+  {
+  position: absolute;
+  width: 1px;
+  height: 1.21em;         /* .explanation->(font-size + padding-top + padding-bottom) */
+  background: transparent;
+  box-shadow: 2px 0 #303030,
+              2px 0 #303030,
+              7px 0 #303030,
+              12px 0 #303030,
+              17px 0 #303030,
+              22px 0 #303030,
+              27px 0 #303030,
+              32px 0 #303030,
+              37px 0 #303030,
+              42px 0 #303030,
+              47px 0 #303030;
+  }
+
+.explanation, .ramSumEx
+  {
+  font-size: 0.75em;
+  background: #BAA78F;
+     -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+          border-radius: 0.5em;
+  }
+
+.explanation
+  {
+  position: relative;
+  padding: 0.2em 0.4em;
+  top: -1px;
+  left: 55px;
+  white-space: nowrap;
+     -moz-box-shadow: 0 0 0.5em #C0C0C0;
+  -webkit-box-shadow: 0 0 0.5em #C0C0C0;
+          box-shadow: 0 0 0.5em #C0C0C0;
+  }
+
+.ramSumEx
+  {
+  padding: 0.3em 0.4em;
+  }
+
+.srcInfo
+  {
+  width: 92%;
+  font-size: 0.8em;
+  padding: 0.3em 0.5em;
+  background: #BA8F94;
+     -moz-box-shadow: 0 0 0.5em #C0C0C0;
+  -webkit-box-shadow: 0 0 0.5em #C0C0C0;
+          box-shadow: 0 0 0.5em #C0C0C0;
+  }
