@@ -1,0 +1,3 @@
+[submodule "sdcc-examples"]
+	path = sdcc-examples
+	url = https://github.com/diegoherranz/sdcc-examples.git
