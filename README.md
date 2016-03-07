@@ -7,7 +7,7 @@ So, long time was past since last time I hacked with a PIC microcontroller on my
 (despite I use some dsPIC on my job, but this is another story).
 
 I started to moving toward ARM stuff (both MCU and Linux SoC) and other stuff, my new
-PC has not a parallel port for programming PICs and IIRC the last time I tried to compile
+PC has not a parallel port for programming PICs, and IIRC the last time I tried to compile
 the IDE I used to develop on PICs on my Linux box, it failed, because the SW went
 unmaintained.
 
@@ -21,21 +21,25 @@ This revived my interest in my old PIC microcontrollers, and I had to find a way
 use them on a recent PC/SW, so that I could also make my friend able to experiment with
 them. Also, of course, I wanted to go with only FOSS :)
 
+This repo contains a collection of SW tools, documentation, and schematics that makes
+you able to compile a PIC bare-metal application and flash it on a real device.
+
+Software
+--------
+
+The first thing I was worried about has been how to flash a PIC device.
+
 After googling around I found "k8048" project, from Darron Broad.
 [This is a link to the original site] (http://dev.kewl.org/k8048/Doc/)
 
-It's a nice, Open Source, SW capable of programming a wide range of PICs microcontroller by
-using, among other things, the RPi as programmer, exploiting some GPIOs!
-Since for certain usages, an HW adapter is still needed, and since I have my old
+It's a nice, Open Source, SW capable of programming a wide range of PICs microcontrollers
+by using, among other things, the RPi as programmer, exploiting some GPIOs!
+Since for certain usages, an HW adapter is still needed, and since I had my old
 programmer already done, with proper socket for my PICs already soldered, I decided
 to adapted my old parallel programmer to be driven by my RPi2 :)
 
 In this repo you can find a mirror of latest stable version of k8048, with some
-patches and scripts by me (most notably RPi2 support) as well as some photos and
-HW schematics.
-
-Software
---------
+patches and scripts by me (most notably RPi2 support).
 
 The dotfiles directory contains my config file for k8048, that is suitable for
 usage on RPi2, with my HW programmer (see the next chapter for details).
@@ -48,7 +52,26 @@ programmer (so that input are inputs, output are outputs, VPP control is switche
 as well as a script to manually turn on and off VCC (that is, my custom HW programmer
 can switch on/off VPP and VCC as well, but the latter is not supported by k8048, so
 you have to switch it on manually after running k8048, and to switch it off before
-removing the PIC from the socket.
+removing the PIC from the socket).
+
+Now that I could program a PIC, of course, I need the toolchain.
+
+The GNU gputils project contains an assembler and linker for pic devices. It supports
+a wide range of PIC devices and seems to be pretty common, mature and tested. So, I added
+a snapshot of the latest version to my repo.
+
+There is also a simulator (gpsim) but I have bot tried it yet.
+
+Since programming in ASM is a little overkilling, I needed a C compiler.
+After searching on google it turned out that SDCC should be able to cross-compile for
+PIC16 and PIC18 device family. It relies on gputils.
+I added a git submodule to the latest stable version.
+
+Finally I wanted few simple already-made examples to test the whole thing.
+I found a git repo with few examples for both PIC16 and PIC18 devices; they was made
+for SDCC, so I added another git submodule :)
+
+With this SW collection, you should be covered on all the workflow, from C to HW :)
 
 Hardware
 --------
