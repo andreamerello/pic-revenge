@@ -203,3 +203,35 @@ pi@raspberrypi:~$ p14 id
 [2007] [CONFIG]   3F7B
 [2100] [DATA]     0040 BYTES
 ```
+
+The next step, back to the PC, I compiled my first example.
+You can find it in *my-examples/pic16f871/blink* folder.
+
+```
+[0]andrea@horizon:~/PROGETTI/pic_revenge/my-examples/pic16f871/blink [master *]
+blink$ make
+sdcc --use-non-free -mpic14 -p16f871 blink_led.c
+blink_led.asm:162:Message[312] Page or Bank selection not needed for this device. No code generated.
+message: Using default linker script "/usr/local/share/gputils/lkr/16f871_g.lkr".
+warning: Relocation of section "UDL_idata_0" failed, relocating to a shared memory location.
+warning: Relocation of section "UDL_blink_led_0" failed, relocating to a shared memory location.
+warning: Relocation of section "ID_idata_0" failed, relocating to a shared memory location.
+[0]andrea@horizon:~/PROGETTI/pic_revenge/my-examples/pic16f871/blink [master *]
+blink$
+```
+As you can see the make process throws out several warnings. These are not from SDCC, instead, these complaints are from the *gpasm* tool.
+
+The first one should indicate that in this device the page selection for code area is not necessary (or something like that). Gpasm will simply ignore the back selection directive, so all should be ok.
+
+I have no idea what the other three are, but on the internet it seems people don't worry about them :P
+
+Now I copied the .hex file on my RPi (I used *scp*) and I programmed my device.
+
+```
+pi@raspberrypi:~$ ./pic-revenge/scripts/vcc.sh on
+pi@raspberrypi:~$ p14 program blink_led.hex
+Total: 538
+pi@raspberrypi:~$ ./pic-revenge/scripts/vcc.sh off
+```
+
+Finally I put the device on a breadboard, and my LED blinks!
