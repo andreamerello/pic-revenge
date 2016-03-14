@@ -34,16 +34,21 @@ After googling around I found "k8048" project, from Darron Broad.
 
 After hacking a bit with it (you can find all this stuff in past git history),
 I noticed that it changed name and place; the new one is called "pickle",
-also from Darron Broad.
+also from Darron Broad. So I switched to this now one.
 [This is a link to the original site] (http://wiki.kewl.org/dokuwiki/projects:pickle)
 
 It's a nice, Open Source, SW capable of programming a wide range of PICs microcontrollers
 by using, among other things, the RPi as programmer, exploiting some GPIOs!
-Since for certain usages, an HW adapter is still needed, and since I had my old
-programmer already done, with proper socket for my PICs already soldered, I decided
-to adapted my old parallel programmer to be driven by my RPi2 :)
 
-In this repo you can find, amond other things, a mirror of latest stable version of pickle, with some scripts and stuff by me.
+There are various PIC devices, certain could be programmed directly with the 3.3V GPIOs,
+other requires 5V signals and a high voltage (up to 13V) Vpp supply.
+
+Since most (if not all) PICs in my drawer required 5V programming, and I had my old
+programmer already done, with proper socket for my PICs already
+soldered, and voltage shifting circuit, I decided to adapted this old parallel programmer
+to be driven by my RPi2 :)
+
+In this repo you can find, amond other things, a mirror of latest stable version of pickle, schematic for my HW programmer, and various scripts and misc stuff by me.
 
 The dotfiles directory contains my config file for pickle, that is suitable for
 usage on RPi2, with my HW programmer (see the next chapter for details).
@@ -70,6 +75,15 @@ Since programming in ASM is a little overkilling, I needed a C compiler.
 After searching on google it turned out that SDCC should be able to cross-compile for
 PIC16 and PIC18 device family. It relies on gputils.
 I added a git submodule to the latest stable version.
+
+I tried to use also more recent versions of SDCC (6f53db86cd1d9a6adfbc41c78de61489a00b4760), but I had to hack with aclocal to successfully compile it.
+
+Basically it complained because it tried to explicitly run aclocal-1.15 (while I have 1.14), but updating it resulted in an another, earlier error.
+
+The workaround that worked for me is to keep the "aclocal" 1.14 binary, while providing *also* the "aclocal-1.15" binary. I have no idea of what is going on...
+
+BTW While compiling demo code, the hash of the resulting HEX were different, but both
+worked.
 
 Finally I wanted few simple already-made examples to test the whole thing.
 I found a git repo with few examples for both PIC16 and PIC18 devices; they was made
@@ -114,10 +128,14 @@ could readily made with spare parts I had at home :)
 The jumper purpose is to eventually disable the resistors if I want to switch back
 to 5V signals.
 
-In my programmer I used a 7812 regulator to obtain the 13V supply from an external supply,
-and a 7805 to obtain the +5V from the +13V rail.
+In my programmer I used a 7812 regulator to obtain the 13V supply (that is the needed Vpp
+for my PICs) from an external supply, and a 7805 to obtain the +5V from the +13V rail.
 
 In order to make the 7812 to ouput about 13V I put a couple of diodes in series to its GND pin. The external power supply is something around 18V.
+
+You can omit (short) the diodes to achieve 12V or change the 7812 with a 7809 to
+achieve 9V, depending by your needs. A LM317, with proper resistors, and a couple of
+jumpers, could be a better choice to obtain configurable Vpp.
 
 I have also two leds on the front panel (they are not visible in the pictures) to monitor
 the VCC (+5V) and VPP (+13V) states.
