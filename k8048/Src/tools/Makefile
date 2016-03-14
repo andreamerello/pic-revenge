@@ -1,2 +1,0 @@
-clean:
-	find . -name "*~" -delete

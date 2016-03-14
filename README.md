@@ -32,16 +32,20 @@ The first thing I was worried about has been how to flash a PIC device.
 After googling around I found "k8048" project, from Darron Broad.
 [This is a link to the original site] (http://dev.kewl.org/k8048/Doc/)
 
+After hacking a bit with it (you can find all this stuff in past git history),
+I noticed that it changed name and place; the new one is called "pickle",
+also from Darron Broad.
+[This is a link to the original site] (http://wiki.kewl.org/dokuwiki/projects:pickle)
+
 It's a nice, Open Source, SW capable of programming a wide range of PICs microcontrollers
 by using, among other things, the RPi as programmer, exploiting some GPIOs!
 Since for certain usages, an HW adapter is still needed, and since I had my old
 programmer already done, with proper socket for my PICs already soldered, I decided
 to adapted my old parallel programmer to be driven by my RPi2 :)
 
-In this repo you can find a mirror of latest stable version of k8048, with some
-patches and scripts by me (most notably RPi2 support).
+In this repo you can find, amond other things, a mirror of latest stable version of pickle, with some scripts and stuff by me.
 
-The dotfiles directory contains my config file for k8048, that is suitable for
+The dotfiles directory contains my config file for pickle, that is suitable for
 usage on RPi2, with my HW programmer (see the next chapter for details).
 
 I also moved the default GPIO used in the original configuration sample file, so
@@ -50,8 +54,8 @@ that they do not collide with the RPi serial port (that I use as tty).
 In the script directory you can find a script to setup GPIO before powering up the
 programmer (so that input are inputs, output are outputs, VPP control is switched off)
 as well as a script to manually turn on and off VCC (that is, my custom HW programmer
-can switch on/off VPP and VCC as well, but the latter is not supported by k8048, so
-you have to switch it on manually after running k8048, and to switch it off before
+can switch on/off VPP and VCC as well, but the latter is not supported by pickle, so
+you have to switch it on manually after running pickle, and to switch it off before
 removing the PIC from the socket).
 
 Now that I could program a PIC, of course, I need the toolchain.
@@ -164,20 +168,20 @@ to remotely reset the RPi when I hack with the RPi kernel and I'm not at home
 (usually the girl house). The ARM board runs my UAKEH project and controls also
 other stuff, but it's OT here :P
 
-Finally I run k8048, and...
+Finally I run pickle, and...
 
 This is the first success log, of my setup correctly identifying a PIC16F871 :) :)
 
 ```
-pi@raspberrypi:~$ k14 id
+pi@raspberrypi:~$ p14 id
 [0000] [PROGRAM]  0800 WORDS
 [2000] [USERID0]  3FFF .
 [2001] [USERID1]  3FFF .
 [2002] [USERID2]  3FFF .
 [2003] [USERID3]  3FFF .
-[2004] [RESERVED] 0000
-[2005] [RESERVED] 0000
+[2004] [RESERVED] 3FFF
+[2005] [RESERVED] 3FFF
 [2006] [DEVICEID] 0D21 DEV:D20 REV:01 PIC16F871
-[2007] [CONFIG]   3FFF
+[2007] [CONFIG]   3F7B
 [2100] [DATA]     0040 BYTES
 ```
