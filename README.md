@@ -31,7 +31,7 @@ Software
 
 The first thing I was worried about has been how to flash a PIC device.
 
-Googling around, I found "k8048" project, from Darron Broad.
+Googling around, I found *"k8048"* project, from Darron Broad.
 [This is a link to the original site] (http://dev.kewl.org/k8048/Doc/)
 
 After hacking a bit with it (you can find all this stuff in past git history),
@@ -77,8 +77,8 @@ I added a git submodule to the latest stable version.
 
 I tried to use also more recent versions of SDCC (6f53db86cd1d9a6adfbc41c78de61489a00b4760), but I had to do ugly hacks with aclocal to successfully compile it.
 
-Basically it complained because it tried to explicitly run aclocal-1.15 (while I had only 1.14), and updating it resulted in an another, even earlier error.
-The workaround that worked for me is to keep the "aclocal" 1.14 binary, while providing *also* the "aclocal-1.15" binary.
+Basically it complained because it tried to explicitly run *"aclocal-1.15"* (while I had only 1.14), and updating it resulted in an another, even earlier error.
+The workaround that worked for me is to keep the *"aclocal"* 1.14 binary, while providing *also* the *"aclocal-1.15"* binary.
 I have no idea of what is going on... BTW While compiling demo code with these two SDCC versions the hash of the resulting HEX were different, but both worked.
 
 Other than this, I thinke one time I saw SDCC compiling error that I think went away by building on one single core (no *-j8* make option), but I'm not sure about his.
