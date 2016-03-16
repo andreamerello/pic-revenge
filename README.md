@@ -82,8 +82,28 @@ Basically it complained because it tried to explicitly run aclocal-1.15 (while I
 
 The workaround that worked for me is to keep the "aclocal" 1.14 binary, while providing *also* the "aclocal-1.15" binary. I have no idea of what is going on...
 
-BTW While compiling demo code, the hash of the resulting HEX were different, but both
-worked.
+BTW While compiling demo code with these two SDCC versions, the hash of the resulting HEX were different, but both worked.
+
+Other than this, I thinke one time I saw SDCC compiling error that I think went away by building on one single core (no *-j8* make option), but I'm not sure about his.
+
+I think I used these options configuring SDCC (./configure ...)
+```
+--disable-mcs51-port
+--disable-z80-port
+--disable-z180-port
+--disable-r2k-port
+--disable-r3ka-port
+--disable-gbz80-port
+--disable-tlcs90-port
+--disable-ds390-port
+--disable-ds400-port
+--disable-pic14-port
+--disable-pic16-port
+--disable-hc08-port
+--disable-s08-port
+--disable-stm8-port
+```
+Basically I disabled all archs except pic-16 and pic-14 in order to speed-up build
 
 Finally I wanted few simple already-made examples to test the whole thing.
 I found a git repo with few examples for both PIC16 and PIC18 devices; they was made
