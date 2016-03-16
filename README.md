@@ -21,8 +21,10 @@ This revived my interest in my old PIC microcontrollers, and I had to find a way
 use them on a recent PC/SW, so that I could also make my friend able to experiment with
 them. Also, of course, I wanted to go with only FOSS :)
 
-This repo contains a collection of SW tools, documentation, and schematics that makes
-you able to compile a PIC bare-metal application and flash it on a real device.
+This repo contains a collection of SW tools, documentation (you are reading it right now!),
+schematics, and various scripts, config files, and examples, that makes you able to
+compile a PIC bare-metal application and flash it on a real device.
+
 
 Software
 --------
@@ -44,14 +46,11 @@ There are various PIC devices, certain could be programmed directly with the 3.3
 other require 5V signals and a high voltage (up to 13V) Vpp supply.
 
 Since most (if not all) PICs in my drawer required 5V programming, and I had my old
-programmer already done, with proper socket for my PICs already
+parallel-port programmer already done, with proper socket for my PICs already
 soldered, and voltage shifting circuit, I decided to adapted this old parallel programmer
-to be driven by my RPi2 :)
-
-In this repo you can find, amond other things, a mirror of latest stable version of pickle, schematic for my HW programmer, and various scripts and misc stuff by me.
-
-The dotfiles directory contains my config file for pickle, that is suitable for
-usage on RPi2, with my HW programmer (see the next chapter for details).
+to be driven by my RPi2 (see the next chapter for details); BTW the dotfiles directory
+contains my config file for pickle, that is suitable for usage on RPi2 with my HW
+programmer.
 
 I also moved the default GPIO used in the original configuration sample file, so
 that they do not collide with the RPi serial port (that I use as tty).
