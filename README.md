@@ -35,7 +35,7 @@ Googling around, I found "k8048" project, from Darron Broad.
 [This is a link to the original site] (http://dev.kewl.org/k8048/Doc/)
 
 After hacking a bit with it (you can find all this stuff in past git history),
-I noticed that it changed name and place; the new one is called "pickle",
+I noticed that it changed name and place; the new one is called *"pickle"*,
 also from Darron Broad. So I switched to this now one.
 [This is a link to the original site] (http://wiki.kewl.org/dokuwiki/projects:pickle)
 
@@ -59,29 +59,27 @@ In the script directory you can find a script to setup GPIO before powering up t
 programmer (so that input are inputs, output are outputs, VPP control is switched off)
 as well as a script to manually turn on and off VCC (that is, my custom HW programmer
 can switch on/off VPP and VCC as well, but the latter is not supported by pickle, so
-you have to switch it on manually after running pickle, and to switch it off before
+you have to switch it on manually before running pickle, and to switch it off before
 removing the PIC from the socket).
 
 Now that I could program a PIC, of course, I need the toolchain.
 
-The GNU gputils project contains an assembler and linker for pic devices. It supports
+The GNU *"gputils"* project contains an assembler and a linker for pic devices. It supports
 a wide range of PIC devices and seems to be pretty common, mature and tested. So, I added
 a snapshot of the latest version to my repo.
 
-There is also a simulator (gpsim) but I have bot tried it yet.
+There is also a simulator, *"gpsim"*, but I have not tried it yet.
 
-Since programming in ASM is a little overkilling, I needed a C compiler.
-After searching on google it turned out that SDCC should be able to cross-compile for
+Since programming in ASM is a little overkilling, I looked for a C compiler.
+After searching on Google it turned out that *"SDCC"* should be able to cross-compile for
 PIC16 and PIC18 device family. It relies on gputils.
 I added a git submodule to the latest stable version.
 
-I tried to use also more recent versions of SDCC (6f53db86cd1d9a6adfbc41c78de61489a00b4760), but I had to hack with aclocal to successfully compile it.
+I tried to use also more recent versions of SDCC (6f53db86cd1d9a6adfbc41c78de61489a00b4760), but I had to do ugly hacks with aclocal to successfully compile it.
 
-Basically it complained because it tried to explicitly run aclocal-1.15 (while I have 1.14), but updating it resulted in an another, earlier error.
-
-The workaround that worked for me is to keep the "aclocal" 1.14 binary, while providing *also* the "aclocal-1.15" binary. I have no idea of what is going on...
-
-BTW While compiling demo code with these two SDCC versions, the hash of the resulting HEX were different, but both worked.
+Basically it complained because it tried to explicitly run aclocal-1.15 (while I had only 1.14), and updating it resulted in an another, even earlier error.
+The workaround that worked for me is to keep the "aclocal" 1.14 binary, while providing *also* the "aclocal-1.15" binary.
+I have no idea of what is going on... BTW While compiling demo code with these two SDCC versions the hash of the resulting HEX were different, but both worked.
 
 Other than this, I thinke one time I saw SDCC compiling error that I think went away by building on one single core (no *-j8* make option), but I'm not sure about his.
 
@@ -100,11 +98,11 @@ I think I used these options configuring SDCC (./configure ...)
 --disable-s08-port
 --disable-stm8-port
 ```
-Basically I disabled all archs except pic-16 and pic-14 in order to speed-up build
+Basically I disabled all archs except pic-16 and pic-14 in order to speed-up build.
 
-Finally I wanted few simple already-made examples to test the whole thing.
+Finally I wanted few simple already-made examples to start with.
 I found a git repo with few examples for both PIC16 and PIC18 devices; they was made
-for SDCC, so I added another git submodule :)
+for SDCC, so I added another git submodule to my repo :)
 
 With this SW collection, you should be covered on all the workflow, from C to HW :)
 
@@ -120,7 +118,7 @@ The hardware programmer was done as per a schematic found over the internet year
 
 ![programmer schematic](images/programmer_schem.gif)
 
-The original schematic is in black, while the red stuff has been added for the RPi.
+The original schematic is in black, while the red stuff has been added by me for the RPi.
 Basically the two transistors act as switches to enable/disable the VCC and VPP,
 while the IC SN74LS07 is a Open Collector buffer.
 
@@ -135,9 +133,6 @@ The only problem was about the logic level of the data from the programmer to th
 RPi, that has 5V high level. I don't know if the RPi inputs are 5V tolerant, I
 think they aren't, and I wanted to go safe, so I decided to modify the circuit.
 
-**NOTE: this means that you will probably FRY you RPi** without the resistor and if you forget
-to close the jumper.
-
 As you can see, in red, I have added a couple of resistors to lower the 5V signal
 to about 3.3V. Maybe there are better solutions, but this was something that I
 could readily made with spare parts I had at home :)
@@ -145,10 +140,14 @@ could readily made with spare parts I had at home :)
 The jumper purpose is to eventually disable the resistors if I want to switch back
 to 5V signals.
 
+**NOTE: this means that you will probably FRY you RPi** without the resistors or if
+you forget to close the jumper.
+
 In my programmer I used a 7812 regulator to obtain the 13V supply (that is the needed Vpp
 for my PICs) from an external supply, and a 7805 to obtain the +5V from the +13V rail.
 
-In order to make the 7812 to ouput about 13V I put a couple of diodes in series to its GND pin. The external power supply is something around 18V.
+In order to make the 7812 to ouput about 13V I put a couple of diodes in series to its GND pin.
+The external power supply is something around 18V.
 
 You can omit (short) the diodes to achieve 12V or change the 7812 with a 7809 to
 achieve 9V, depending by your needs. A LM317, with proper resistors, and a couple of
