@@ -29,7 +29,7 @@ Software
 
 The first thing I was worried about has been how to flash a PIC device.
 
-After googling around I found "k8048" project, from Darron Broad.
+Googling around, I found "k8048" project, from Darron Broad.
 [This is a link to the original site] (http://dev.kewl.org/k8048/Doc/)
 
 After hacking a bit with it (you can find all this stuff in past git history),
@@ -41,7 +41,7 @@ It's a nice, Open Source, SW capable of programming a wide range of PICs microco
 by using, among other things, the RPi as programmer, exploiting some GPIOs!
 
 There are various PIC devices, certain could be programmed directly with the 3.3V GPIOs,
-other requires 5V signals and a high voltage (up to 13V) Vpp supply.
+other require 5V signals and a high voltage (up to 13V) Vpp supply.
 
 Since most (if not all) PICs in my drawer required 5V programming, and I had my old
 programmer already done, with proper socket for my PICs already
