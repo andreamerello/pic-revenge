@@ -138,7 +138,11 @@ to about 3.3V. Maybe there are better solutions, but this was something that I
 could readily made with spare parts I had at home :)
 
 The jumper purpose is to eventually disable the resistors if I want to switch back
-to 5V signals.
+to 5V signals. If you don't need to keep backward compatibility wrt the parallel port
+you can either:
+- place a short instead of the jumper
+- wire the pullup resistorto the 3.3V from RPi instead of 5V, thus you don't need the
+red components.
 
 **NOTE: this means that you will probably FRY you RPi** without the resistors or if
 you forget to close the jumper.
