@@ -25,6 +25,19 @@ This repo contains a collection of SW tools, documentation (you are reading it r
 schematics, and various scripts, config files, and examples, that makes you able to
 compile a PIC bare-metal application and flash it on a real device.
 
+** -- DISCLAIMER -- **
+
+this is an hobby project, this is NOT for people who don't know what
+they are doing. Always check and verify with respect to YOUR judge. I don't provide
+ANY warranty about anything here. If you end up burning or broking something it's your
+own responsibility. All you do, is at your own risk.
+
+ALL THE CONTENT (INCLUDING, BUT NOT LIMITED TO, SOFTWARE, DOCUMENTATION, INSTRUCTIONS, HARDWARE SCHEMATICS)
+OF THIS REPO ("THE CONTENT" FROM NOW ON) IS PROVIDED "AS IS".THE AUTHOR, THE OWNER OF THE REPO, ANY CONTRIBUTOR AND ME, DISCLAIM
+ALL WARRANTIES WITH REGARD TO THE CONTENT INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE CONTENT.
 
 Software
 --------
@@ -108,6 +121,30 @@ With this SW collection, you should be covered on all the workflow, from C to HW
 
 Hardware
 --------
+
+OK, we have a RPi, and the programmer SW drives the RPi's GPIOs in order to produce the correct signals (think to
+voltage square waves) in order to "program" the PIC. This is basically trasferring information (your program) to
+the PIC by modulating the voltage on the GPIOs.
+
+So, why do we need a HW "programmer"? Can't we just connect our RPi to the PIC without any extra HW (except for
+wires ?).
+
+Well, it depends. I need it for programming my old PICs. For newer PICs you don't need it (actually you **MUST**
+not use it).
+
+These are the two motivations because you need this HW for old PICs:
+
+1) Old PICs are powered by 5V (if your PIC is powered @ 3.3V, then you **must** not use these programmers) while
+   the RPI GPIOs works @ 3.3V
+
+2) Old PICs need the so called "Vpp" (Voltage Per Programming), so you have to provide a 13V or 9V supply to
+   the PIC. Again, some PICs don't need, or even don't want it.
+
+The HW "programer" (well, maybe the term "interface" might be more adequate) performs voltage level shifting
+and provides the Vpp when the SW decides to enable it.
+
+You can find a nice PIC table on pikle webpage. You can check the Vpp voltage (if needed) and the supply voltage
+for your PICs. **Always make sure you are doing right here, otherwise you will fry the PIC.**
 
 [Here] (doc/prog1.md) you can find the description of my old parallel programmer,
 including modifications for using it with the RPi.
