@@ -86,15 +86,17 @@ There is also a simulator, *"gpsim"*, but I have not tried it yet.
 Since programming in ASM is a little overkilling, I looked for a C compiler.
 After searching on Google it turned out that *"SDCC"* should be able to cross-compile for
 PIC16 and PIC18 device family. It relies on gputils.
-I added a git submodule to the latest stable version.
 
-I tried to use also more recent versions of SDCC (6f53db86cd1d9a6adfbc41c78de61489a00b4760), but I had to do ugly hacks with aclocal to successfully compile it.
+Initially I added a git submodule to the latest stable version, but it turned out it emitted buggy
+ASM code for my PIC. So I've been forced to update to a newer version (even if not released as "stable").
+
+Unfortunately I had to do ugly hacks with aclocal to successfully compile this newer version.
 
 Basically it complained because it tried to explicitly run *"aclocal-1.15"* (while I had only 1.14), and updating it resulted in an another, even earlier error.
 The workaround that worked for me is to keep the *"aclocal"* 1.14 binary, while providing *also* the *"aclocal-1.15"* binary.
 I have no idea of what is going on... BTW While compiling demo code with these two SDCC versions the hash of the resulting HEX were different, but both worked.
 
-Other than this, I thinke one time I saw SDCC compiling error that I think went away by building on one single core (no *-j8* make option), but I'm not sure about his.
+Other than this, I think one time I saw SDCC compiling error that I think went away by building on one single core (no *-j8* make option), but I'm not sure about his.
 
 I think I used these options configuring SDCC (./configure ...)
 ```
