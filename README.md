@@ -27,7 +27,7 @@ compile a PIC bare-metal application and flash it on a real device.
 
 **DISCLAIMER**
 
-**this is an hobby project, this is NOT for people who don't know what
+**This is an hobby project, this is NOT for people who don't know what
 they are doing. Always check and verify with respect to YOUR judge. I don't provide
 ANY warranty about anything here. If you end up burning or broking something it's your
 own responsibility. All you do, is at your own risk.**
@@ -153,7 +153,7 @@ After having succesfully used it I also designed another programmer from scratch
 This one should be more "didactical", it does not uses any IC, and can be made of
 esily available parts.
 
-You cand find related documentation [Here] (doc/prog2.md)
+You can find related documentation [Here] (doc/prog2.md)
 
 And finally..
 -------------
