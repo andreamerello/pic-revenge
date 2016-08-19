@@ -56,7 +56,8 @@ The LED:
 
 Now connects the LED to your second circuit (the one with the switch)
 
-```                   dummy RPi ~ external circuit
+```
+                      dummy RPi ~ external circuit
                                 ~
  +------------+  +3.3V     /    ~      led     R
  | Generator  |-----------+  o--------I>|---/\/\/----
@@ -85,7 +86,9 @@ This means that:
 
 Now repeat the experiment with the switch
 
-```                   dummy RPi ~ external circuit
+
+```
+                      dummy RPi ~ external circuit
                                 ~                 +3.3V
  +------------+  +3.3V     /    ~      led     R    |
  | Generator  |-----------+  o--------I>|---/\/\/----
@@ -121,7 +124,8 @@ The "real" open-collector
 (I'm going to omit the generator from the schematic. I'm just using "GND" and "3.3V" labels)
 
 
-```    dummy RPi   ~ external circuit
+```
+       dummy RPi   ~ external circuit
                    ~
          /         ~     led     R
      ---+  o------------|<I---/\/\/---
@@ -130,7 +134,8 @@ The "real" open-collector
 
 ```
 
-```    dummy RPi   ~ external circuit
+```
+       dummy RPi   ~ external circuit
                    ~               +3.3V
          /         ~    led     R    |
      ---+  o------------|<I---/\/\/---
@@ -165,8 +170,8 @@ Now look at this
   |    switch           ~                |
  GND                    ~               GND
                         ~
-```
 
+```
 
 What does happen here ?
 
