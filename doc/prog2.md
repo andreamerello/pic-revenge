@@ -18,7 +18,7 @@ Schematic explanation
 ----------------------
 
 Basically you can see three main blocks:
-- The first one (upper) is the simplest, it employies a NPN transistor, and it manages the PGC signal (ProGramming Clock)
+- The first one (upper) is the simplest, it employees a NPN transistor, and it manages the PGC signal (ProGramming Clock)
 - The second one (middle) is very similar to the previous one, but it has few extra components. It manages the PGD (ProGramming Data)
 - The last one seems very different, but if you look at it carefully, you'll note that it is composed by two sub-blocks; the one at the left is
 indeed about the same thing of the previous two blocks. This whole block is the Vpp switch circuit.
@@ -44,7 +44,7 @@ This means that when the RPi wants to represent a logic *H*, it will apply 3.3V 
 GPIO, and when it wants to represent a logic *L*, it will put the GPIO to 0V.
 
 So, it is like a 3.3V generator with a switch on its "+" wire, operated by the CPU:
-when the switch is closed, the 3.3V are available on the ouput (GPIO);
+when the switch is closed, the 3.3V are available on the output (GPIO);
 when the switch is opened, the output will go to 0V. We can emulate a RPi GPIO this way, right?
 
 ...**NO!!**, this is not exactly what happens!
@@ -101,7 +101,7 @@ Well, you have probably already guessed:
   lights when the GPIO is connected to GND
 - The dummy RPi "connects" to the 3.3V or remains *floating* depending by switch state
 
-No current can flow throught a *floating* thing..
+No current can flow through a *floating* thing..
 
 If you measure the Voltage at the output of our RPi you may be surprised that it's
 *not* zero, even when the switch opened.
@@ -145,7 +145,7 @@ However this time, the first one (LED attached to GND) does not work, the second
 So this time our dummy RPi has a real *open-collector* output: It can *sink* current,
 but it cannot *source* current.
 
-That is, when the swith is close, we can *firmly* sustain 0V condition, when the switch
+That is, when the switch is close, we can *firmly* sustain 0V condition, when the switch
 is opened, our output is *floating*, and its only connection become the R and LED path
 to the 3.3V - if you measure the voltage with a DMM you will see about 3.3V (don't touch
 anything with your fingers, otherwise your measure will be not precise).
@@ -171,12 +171,12 @@ Now look at this
 What does happen here ?
 
 Well, when the switch is closed, it's almost the same; you just waste a, possibly small,
-amount of current, that flows throught *Rpup*. LED is off, because you have 0V at both
+amount of current, that flows thought *Rpup*. LED is off, because you have 0V at both
 its leads, and no current can flow.
 
 But when the switch is opened the LED will lit. It will be less bright, but it will lit.
 
-The current flows throught the LED, it's R, and *Rpup*.
+The current flows thought the LED, it's R, and *Rpup*.
 The voltage at the output of out GPIO would be neither 0V or 3.3V. The more the "load" (the led + its R) draws current, the lower the V will be.
 
 Let's simplify things. Let's look again at these two circuits:
@@ -211,7 +211,7 @@ Let's simplify things. Let's look again at these two circuits:
 Here, all is the same, but we have no LEDs, so we can easily apply Ohm law.
 The first circuit is trivial:
 - switch closed: V on the GPIO = 0V; I(Rpup) = 3.3/Rpup; I(Rload) = 3.3/Rload - current flows
-- switch opened: V on the GPIO = 3.3V; both leads of Rpup and Rlaod are @3.3V, so voltage *across* them is zero; I(Rpup) = 0/Rpdn; I(Rload) = 0/Rload - no current flows
+- switch opened: V on the GPIO = 3.3V; both leads of Rpup and Rload are @3.3V, so voltage *across* them is zero; I(Rpup) = 0/Rpdn; I(Rload) = 0/Rload - no current flows
 
 It's evident that:
 1) the output voltage is nominal in both cases (3.3V when the switch is opened, 0V when its closed)
@@ -222,7 +222,7 @@ In the second circuit:
 - switch closed: V on the GPIO = 3.3V; I(Rpup) = 3.3/Rpup; I(Rload) = 0/Rload
 - switch opened: V on the GPIO = X; I(Rpup) = I(Rload) = 3.3V/(Rpup + Rload).
 
-Calculating "X" is easy: It's equal to the V across Rload. We know the curent flowing through Rload (let's call it *I*), so:
+Calculating "X" is easy: It's equal to the V across Rload. We know the current flowing through Rload (let's call it *I*), so:
 
 X = Rload * I = Rload * 3.3V/(Rpup + Rload)
 
@@ -261,15 +261,15 @@ GPIO--/\/\---| T         ~            |
 The transistor T act exactly as a remotely-operated switch.
 Our circuit is the same as above, just the switch is controlled by a RPi GPIO.
 
-So what happens exacly?
+So what happens exactly?
 - when the RPi GPIO is high the switch (transistor) closes, and we get 0V on the output (no current in Rload)
-- when the Rpi GPIO is low the switch (transistor) opens, and we get (nearly) 3.3V on the output (provided that the load draws small current amout, that is Rload is >> than Rpup
+- when the Rpi GPIO is low the switch (transistor) opens, and we get (nearly) 3.3V on the output (provided that the load draws small current amount, that is Rload is >> than Rpup
 
 We have basically reproduced the raspberry GPIO on our output. We have two side effects however
 1) the logic states are inverted (but this is not a problem, just reverse them in SW)
 2) the current the load can draw must be very mild.
 
-Rlim is just to limit the current amout flowing from the RPi to our circuit. Is is required not to fry the RPi and/or the transistor.
+Rlim is just to limit the current am-out flowing from the RPi to our circuit. Is is required not to fry the RPi and/or the transistor.
 
 This is a true open-collector. The name "open-collector" is because of the the upper leg of our transistor (that is called "collector"); it would be basically "open", "floating" .. and we put Rpup to avoid this...
 
@@ -295,7 +295,7 @@ GPIO--/\/\---| T         ~            |
 ```
 
 - when the RPi GPIO is high the switch (transistor) closes, and we get 0V on the output (no current in Rload)
-- when the Rpi GPIO is low the switch (transistor) opens, and we get (nearly) 5V on the output (provided that the load draws small current amout, that is Rload is >> than Rpup
+- when the Rpi GPIO is low the switch (transistor) opens, and we get (nearly) 5V on the output (provided that the load draws small current amount, that is Rload is >> than Rpup
 
 Wow! we can now control a 5V output with our RPi!
 This is what we needed!
@@ -312,7 +312,7 @@ Consider that our dummy RPi (well, let's call it open-collector level shifter) i
 
 The output state is basically unpredictable! the voltage at the input of our circuit is undefined. It can be anything. If you touch the input with a finger the voltage will jump high to low or vice-versa. Our circuit, left alone, goes crazy!
 
-This is not necessarily a problem, however it would be as if we send random commands to a PIC eventually attached. It's better to avoid it, in norder not to perform unwanted actions..
+This is not necessarily a problem, however it would be as if we send random commands to a PIC eventually attached. It's better to avoid it, in order not to perform unwanted actions..
 
 Fortunately there is a trick to force it to assume a "default" value in this kind of situations!
 
@@ -341,10 +341,10 @@ However, when the RPi is detached, or it's GPIO is not driving our input, the vo
 
 This way the default value is zero on the input, that means 5V on the output. Could we do also the opposite? Well.. Yes and no..
 
-If we connect Rpd (that is "Resistor Pull-Down") to +5V (and we have to change it's name in "Rpup") we can achieve this.. But there are brawbacks!
+If we connect Rpd (that is "Resistor Pull-Down") to +5V (and we have to change it's name in "Rpup") we can achieve this.. But there are drawbacks!
 1) If the RPi GPIO is configured as an input, we are basically pushing 5V into the RPi GPIO, flowing through Rpup and Rlim. This is not good!
 
-2) We are in the "less-safe" state: our output is firmly driven at 0V. If something odd happens, the output is stiff, and it will desperately try to remain to 0V even at the cost to burnout the transistor (thing about a short-circuit, let's say we have a zero-ohm Rload because something metallic is falled on the PIC socket connector). On the other hand we know that the 5V state is weak. Whatever it happens we'll provide mild current, and it's more unlikely to cause damages with mild currents ;)
+2) We are in the "less-safe" state: our output is firmly driven at 0V. If something odd happens, the output is stiff, and it will desperately try to remain to 0V even at the cost to burnout the transistor (thing about a short-circuit, let's say we have a zero-ohm Rload because something metallic is fallen on the PIC socket connector). On the other hand we know that the 5V state is weak. Whatever it happens we'll provide mild current, and it's more unlikely to cause damages with mild currents ;)
 
 
 That's it!
@@ -361,7 +361,7 @@ Look at the second block in the programmer schematic. It's identical to the firs
 
 This circuits can *also* work as the first one: when the RPi drives it's GPIO (with zero or 3.3V), we get the output assume 5V and 0V respectively.However another scenario is possible..
 
-Suppose that the PIC wants to send data back to the RPi by using the same pin. Actually the second block is connected to the PIC PGD pin, that *is* a bidirectional data signal. This means that when we send proper commands to the PIC on the PGD pin, the PIC stop listening to signals coming from PGD, and switch it's PGD pin to output mode! It's like configuring the RPi GPIOs as inputs and outputs.. The PIC does this dinamically depending by the command we send him.
+Suppose that the PIC wants to send data back to the RPi by using the same pin. Actually the second block is connected to the PIC PGD pin, that *is* a bidirectional data signal. This means that when we send proper commands to the PIC on the PGD pin, the PIC stop listening to signals coming from PGD, and switch it's PGD pin to output mode! It's like configuring the RPi GPIOs as inputs and outputs.. The PIC does this dynamically depending by the command we send him.
 
 If our RPi is driving it's GPIO high (thus our circuit output is low), it would be a problem: our circuit pushes low PGD line firmly, while the PIC is pretending to drive it high and low at it's own desire. This is a short circuit!
 
@@ -369,10 +369,10 @@ But if we are smart enough (and hopefully our SW is), and we put our RPi output 
 
 In this conditions, the PIC will win! it's totem-pole drive, is capable to both sink and source a (relatively) big current amount; some current will flow in the Rpup, but this is not an issue, and the PGD pic PIN can freely be high or low as per PIC desire.
 
-So, if we could route this signal to a RPi input, we could listen to the PIC when it's driving the PGD output. This is exaclty what we have done here.
+So, if we could route this signal to a RPi input, we could listen to the PIC when it's driving the PGD output. This is exactly what we have done here.
 We have also a wire to a RPi input that serves for this purpose!
 
-However remember that the PIC works at 5V, while our RPI works at 3.3V.. We need another voltage shifter! Fortunately this time is easyier: we have to *lower* the voltage, and for this purpose a couple of resistors are enough!
+However remember that the PIC works at 5V, while our RPI works at 3.3V.. We need another voltage shifter! Fortunately this time is easier: we have to *lower* the voltage, and for this purpose a couple of resistors are enough!
 
 The voltage divider
 -------------------
@@ -401,7 +401,7 @@ What's on the output?
 Suppose that R1 == R2. We would get 2.5V ! This can be calculated using the Ohm law.
 
 Remember that I = V / R, thus the total current flowing from the 5V source and the GND is I = 5 / (R1 + R2), And V(R2) is V = R2 * I.
-So the voltage across R2 (that is the same as the voltege on the output) is
+So the voltage across R2 (that is the same as the voltage on the output) is
 V = R2 * (5 / (R1 + R2))
 
 So in our example with R1 == R2
