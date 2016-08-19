@@ -18,7 +18,7 @@ Schematic explanation
 ----------------------
 
 Basically you can see three main blocks:
-- The first one (upper) is the simplest, it employees a NPN transistor, and it manages the PGC signal (ProGramming Clock)
+- The first one (upper) is the simplest, it employs a NPN transistor, and it manages the PGC signal (ProGramming Clock)
 - The second one (middle) is very similar to the previous one, but it has few extra components. It manages the PGD (ProGramming Data)
 - The last one seems very different, but if you look at it carefully, you'll note that it is composed by two sub-blocks; the one at the left is
 indeed about the same thing of the previous two blocks. This whole block is the Vpp switch circuit.
