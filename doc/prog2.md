@@ -74,7 +74,7 @@ Ok, for now nothing weird :)
 
 But now let's do this change: Connect the LED (with it's resistor) to the RPi GPIO and to the 3.3V
 
-- switches *off when the RPi GPIO has *H* level
+- switches *off* when the RPi GPIO has *H* level
 - switches *on* when the RPi GPIO has *L* level
 
 We have swapped on/off states with respect to logic levels, but we are still able to control
@@ -274,7 +274,7 @@ We have basically reproduced the raspberry GPIO on our output. We have two side 
 1) the logic states are inverted (but this is not a problem, just reverse them in SW)
 2) the current the load can draw must be very mild.
 
-Rlim is just to limit the current am-out flowing from the RPi to our circuit. Is is required not to fry the RPi and/or the transistor.
+Rlim is just to limit the current amount flowing from the RPi to our circuit. Is is required not to fry the RPi and/or the transistor.
 
 This is a true open-collector. The name "open-collector" is because of the the upper leg of our transistor (that is called "collector"); it would be basically "open", "floating" .. and we put Rpup to avoid this...
 
@@ -347,6 +347,7 @@ However, when the RPi is detached, or it's GPIO is not driving our input, the vo
 This way the default value is zero on the input, that means 5V on the output. Could we do also the opposite? Well.. Yes and no..
 
 If we connect Rpd (that is "Resistor Pull-Down") to +5V (and we have to change it's name in "Rpup") we can achieve this.. But there are drawbacks!
+
 1) If the RPi GPIO is configured as an input, we are basically pushing 5V into the RPi GPIO, flowing through Rpup and Rlim. This is not good!
 
 2) We are in the "less-safe" state: our output is firmly driven at 0V. If something odd happens, the output is stiff, and it will desperately try to remain to 0V even at the cost to burnout the transistor (thing about a short-circuit, let's say we have a zero-ohm Rload because something metallic is fallen on the PIC socket connector). On the other hand we know that the 5V state is weak. Whatever it happens we'll provide mild current, and it's more unlikely to cause damages with mild currents ;)
@@ -415,7 +416,7 @@ V = R * 5 / 2R = 5 / 2 = 2.5V
 
 Is this true for whatever R value ? Yes and no!
 
-Huge R value will works until the current we can provide on output becomes too mild to be useful. Lowering R value will make the output more "stiff" (that is more current can be drawn without affecting the voltage too much), but more current will also from through R1 and R2. The resistor would heat up, and our voltage source struggles.
+Huge R value will works until the current we can provide on output becomes too mild to be useful. Lowering R value will make the output more "stiff" (that is more current can be drawn without affecting the voltage too much), but more current will also flow from through R1 and R2. The resistors would heat up, and our voltage source struggles.
 
 This kind of circuit can be used only when mild current output are required! I wouldn't use it for power feeding a device. This is OK only to represent logical values !
 
