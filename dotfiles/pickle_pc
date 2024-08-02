@@ -1,0 +1,29 @@
+
+
+
+## for JDM programmer
+#DEVICE=FTDI
+#IFACE=0
+#BITRULES=0x0F14
+#SLEEP=2
+#VPP=0
+#PGC=1
+#PGDO=2
+#PGDI=3
+#PGM=-1 # DISABLED
+#DEBUG=1
+#FWSLEEP=30
+
+## for ICSP
+DEVICE=FTDI
+IFACE=0
+BITRULES=0x0F00
+SLEEP=2
+VPP=-1  # DISABLED
+PGC=1
+PGDO=2
+PGDI=3
+#PGD=3  ### put 4k7 resistor between PGDI and PGDO. Connect PGDI to PIC directly
+PGM=0
+DEBUG=1
+FWSLEEP=30
